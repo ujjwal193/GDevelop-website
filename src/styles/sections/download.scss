@@ -10,4 +10,33 @@
 	.tab-content {
 		@include tab-content($main-color-light, black);
 	}
+
+	.title-row {
+		.badge {
+			@include badge($grey-color);
+			vertical-align: middle;
+			margin-bottom: 5px;
+			margin-left: 5px;
+		}
+	}
+
+	.download-divider {
+		text-align: center;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 10px;
+		margin-bottom: 15px;
+
+		.center {
+			display: inline-block;
+			margin-left: 5px;
+			margin-right: 5px;
+		}
+		.line {
+			vertical-align: middle;
+			display: inline-block;
+			border-bottom: 1px solid #BBB;
+			width: 30%;
+		}
+	}
 }

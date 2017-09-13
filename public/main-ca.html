@@ -66,9 +66,9 @@
               <li><a href="https://trello.com/b/qf0lM7k8/gdevelop-roadmap"  target="_blank" class="btn btn-primary">Full de ruta</a></li>
               <li><a href="https://crowdin.com/project/gdevelop" target="_blank" class="btn btn-primary">Traduccions</a></li>
             </ul>
-            <h4>GDevelop-based web app</h4>
+            <h4>Try GDevelop <i>in your browser</i></h4>
             <ul>
-              <li><a href="https://gdevapp.com" target="_blank" class="btn btn-primary">Provi GDevApp</a></li>
+              <li><a  target="_blank" target="_blank" class="btn btn-primary" onclick="onTryOnline()">Launch GDevelop</a></li>
             </ul>
           </div>
         </div>
@@ -98,7 +98,7 @@
         </div>
         <div class="row">
           <div class="col-md-offset-3 col-md-3">
-            <a href="#download" class="btn btn-lg btn-primary" role="section-link">Descarregar</a>
+            <a href="https://4ian.github.io/GD" target="_blank" class="btn btn-lg btn-primary" role="section-link" onclick="onTryOnline()">Try it online</a>
           </div>
           <div class="col-md-3">
             <a href="#events" class="btn btn-lg btn-info" role="section-link">Aprèn més</a>
@@ -107,12 +107,12 @@
       </div>
       <div class="bottom-screen">
       </div>
-      <div class="bub-banner">
+      <!-- <div class="bub-banner">
         <a href="https://www.kickstarter.com/projects/iamlilbub/lil-bubs-hello-earth-a-retro-8-bit-mobile-video-ga">
           <img src="assets/bub/helloearth.png" />
         </a>
         <a href="#bub-game" class="btn btn-lg btn-info">Powered by GDevelop!</a>
-      </div>
+      </div> -->
     </div>
 
     <!-- Events section -->
@@ -574,11 +574,66 @@
       </div>
     </div>
 
+
     <!-- Download section -->
     <div class="section-download" id="download">
+      <!-- Download v5 section -->
       <div class="row title-row">
         <div class="col-md-12">
-          <h4>Descàrrega de GDevelop</h4>
+          <h4>Try GDevelop 5<span class="badge">Beta</span></h4>
+          <p class="text-muted text-center small">The new GDevelop version, still in <b>Beta</b>. The documentation and tutorials are still being written!</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div role="tabpanel">
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" role="tablist">
+              <li role="presentation" class="active"><a href="#gd5-desktop-dl" aria-controls="gd5-desktop-dl" role="tab" data-toggle="tab">Download</a></li>
+              <li role="presentation"><a href="#gd5-online" aria-controls="gd5-online" role="tab" data-toggle="tab">Try online</a></li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+              <div role="tabpanel" class="tab-pane fade in active" id="gd5-desktop-dl">
+                <div class="row">
+                  <div class="col-md-offset-1 col-md-10 text-center">
+                      <p>Download GDevelop 5 to use it on your computer</p>
+                      <div class="row">
+                        <div class="col-md-12">
+                          <a href="https://github.com/4ian/GD/releases/download/4.0.95/GDevelop.IDE.Setup.5.0.0-beta5.exe" target="_blank" class="btn btn-lg btn-primary" onclick="onGD5WinDl()">Windows</a>
+                          <a href="https://github.com/4ian/GD/releases/download/4.0.95/GDevelop.IDE-5.0.0-beta5.dmg" target="_blank" class="btn btn-lg btn-primary" onclick="onGD5LinuxDl()">macOS</a>
+                          <a href="https://github.com/4ian/GD/releases/download/4.0.95/gdevelop-electron-app-5.0.0-beta5.tar.gz" target="_blank" class="btn btn-lg btn-primary" onclick="onGD5MacOSDl()">Linux</a>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+              <div role="tabpanel" class="tab-pane fade" id="gd5-online">
+                <div class="row">
+                  <div class="col-md-offset-2 col-md-8 text-center">
+                    <p>Try GDevelop 5 directly from your browser</p>
+                    <div class="row">
+                      <div class="col-md-12">
+                        <a href="https://4ian.github.io/GD" target="_blank" class="btn btn-default btn-primary btn-lg" onclick="onTryOnline()">Try the webapp</a><br>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row download-divider">
+        <div class="line"></div>
+        <div class="center">or</div>
+        <div class="line"></div>
+      </div>
+      <!-- Download v4 section -->
+      <div class="row title-row">
+        <div class="col-md-12">
+          <h4>Download GDevelop 4</h4>
           <p class="text-muted text-center small">Aviat estaràs creant els teus propis jocs sense necessitat de programació!</p>
         </div>
       </div>
@@ -733,7 +788,7 @@
     <footer class="text-center">
       <div class="row">
         <div class="col-md-offset-2 col-md-8 text-center">
-          <p class="text-muted">2008-2016 - <a href="http://florianrival.com" target="_blank">Florian Rival</a></p>
+          <p class="text-muted">2008-2017 - <a href="https://www.linkedin.com/in/florianrival/" target="_blank">Florian Rival</a></p>
           <p class="text-muted">GDevelop va ser creat amb <span class = "glyphicon glyphicon-cor"> </span> per <a href="http://florianrival.com" target="_blank">Florian Rival</a>, with contributors adding features, fixing bugs, sending new examples, improving the wiki, and helping each other on <a href="http://forum.compilgames.net" target="_blank">the forum</a>.</p>
         </div>
       </div>

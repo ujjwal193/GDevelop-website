@@ -195,6 +195,30 @@ hr {
   color: black;
   padding: 10px; }
 
+.section-download .title-row .badge {
+  background-color: #8c8c8c;
+  border-color: #8c8c8c;
+  box-shadow: 0px 2px 0 #595959;
+  vertical-align: middle;
+  margin-bottom: 5px;
+  margin-left: 5px; }
+
+.section-download .download-divider {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  margin-bottom: 15px; }
+  .section-download .download-divider .center {
+    display: inline-block;
+    margin-left: 5px;
+    margin-right: 5px; }
+  .section-download .download-divider .line {
+    vertical-align: middle;
+    display: inline-block;
+    border-bottom: 1px solid #BBB;
+    width: 30%; }
+
 .section-events .background {
   z-index: -10;
   position: absolute;
