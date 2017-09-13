@@ -117,6 +117,26 @@ function onOSXDl() {
 	window.ga('send', 'event', "download-" + lang, "click", "osx");
 }
 
+function onTryOnline() {
+	console.log("Try online");
+	window.ga('send', 'event', "gd5-" + lang, "click", "webapp");
+}
+
+function onGD5WinDl() {
+	console.log("GD5 Windows");
+	window.ga('send', 'event', "gd5-" + lang, "click", "windows");
+}
+
+function onGD5LinuxDl() {
+	console.log("GD5 Linux");
+	window.ga('send', 'event', "gd5-" + lang, "click", "linux");
+}
+
+function onGD5MacOSDl() {
+	console.log("GD5 macOS");
+	window.ga('send', 'event', "gd5-" + lang, "click", "macOS");
+}
+
 function onGitHubOpened() {
 	console.log("GitHub");
 	window.ga('send', 'event', "github", "opened");
