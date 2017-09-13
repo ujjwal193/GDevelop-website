@@ -119,22 +119,32 @@ function onOSXDl() {
 
 function onTryOnline() {
 	console.log("Try online");
-	window.ga('send', 'event', "gd5-" + lang, "click", "webapp");
+	window.ga('send', 'event', "webapp-" + lang, "click", "webapp");
 }
 
+var gd5Downloaded = false;
 function onGD5WinDl() {
+	if (gd5Downloaded) return;
+	gd5Downloaded = true;
+
 	console.log("GD5 Windows");
-	window.ga('send', 'event', "gd5-" + lang, "click", "windows");
+	window.ga('send', 'event', "download-" + lang, "click", "gd5-windows");
 }
 
 function onGD5LinuxDl() {
+	if (gd5Downloaded) return;
+	gd5Downloaded = true;
+
 	console.log("GD5 Linux");
-	window.ga('send', 'event', "gd5-" + lang, "click", "linux");
+	window.ga('send', 'event', "download-" + lang, "click", "gd5-linux");
 }
 
 function onGD5MacOSDl() {
+	if (gd5Downloaded) return;
+	gd5Downloaded = true;
+
 	console.log("GD5 macOS");
-	window.ga('send', 'event', "gd5-" + lang, "click", "macOS");
+	window.ga('send', 'event', "download-" + lang, "click", "gd5-macOS");
 }
 
 function onGitHubOpened() {
