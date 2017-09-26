@@ -49,7 +49,7 @@ gulp.task('wiredep', ['ejs'], function () {
  */
 gulp.task('ejs', function (cb) {
 	var langs = getAvailableLanguagesCatalogs();
-	gutil.log("Found these languages catalogs (with translation ratio >0.7): ", langs);
+	gutil.log("Found these languages catalogs (with translation ratio >0.6): ", langs);
 
 	//A separate gulp stream must be launched for generating html files
 	//for each language.
@@ -163,7 +163,7 @@ function getAvailableLanguagesCatalogs() {
 			return;
 
 		var ratio = getTranslatedRatio(require('./locale/' + file));
-		if (ratio > 0.7) availableLangs.push(path.basename(file, ".json"));
+		if (ratio > 0.6) availableLangs.push(path.basename(file, ".json"));
 	});
 
 	return availableLangs;
