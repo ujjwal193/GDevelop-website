@@ -13,16 +13,18 @@
 
     <title><%= _('GDevelop - Create games without programming - Open source HTML5 and native game creator') %></title>
 
-    <!-- bower:css -->
-    <!-- endbower -->
-    <link rel="stylesheet" href="assets/flags/flag-icon.min.css" />
-    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="<%- getBowerComponentsRoot() %>/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="<%- getBowerComponentsRoot() %>/normalize.css/normalize.css">
+    <link rel="stylesheet" href="<%- getBowerComponentsRoot() %>/slick.js/slick/slick.css">
+    <link rel="stylesheet" href="<%- getBowerComponentsRoot() %>/slick.js/slick/slick-theme.css">
+    <link rel="stylesheet" href="<%- getAssetsRoot() %>/flags/flag-icon.min.css" />
+    <link rel="stylesheet" href="<%- getStylesRoot() %>/styles.css" />
 
     <!-- Fonts -->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Asap:400,700' rel='stylesheet' type='text/css'>
-    <link href='assets/fonts/stylesheet.css' rel='stylesheet' type='text/css'>
-    <link href='assets/fonts/font-awesome.min.css' rel='stylesheet' type='text/css'>
+    <link href='<%- getAssetsRoot() %>/fonts/stylesheet.css' rel='stylesheet' type='text/css'>
+    <link href='<%- getAssetsRoot() %>/fonts/font-awesome.min.css' rel='stylesheet' type='text/css'>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -105,7 +107,7 @@
       </div>
       <!-- <div class="bub-banner">
         <a href="https://www.kickstarter.com/projects/iamlilbub/lil-bubs-hello-earth-a-retro-8-bit-mobile-video-ga">
-          <img src="assets/bub/helloearth.png" />
+          <img src="<%- getAssetsRoot() %>/bub/helloearth.png" />
         </a>
         <a href="#bub-game" class="btn btn-lg btn-info">Powered by GDevelop!</a>
       </div> -->
@@ -128,7 +130,7 @@
           <div class="well">
             <div class="row">
               <div class="col-md-6 text-center">
-                <img src="assets/events.png" class="img-responsive" alt="<%= _('Events are composed of conditions, on the left, and actions that are run when conditions are fulfilled') %>" />
+                <img src="<%- getAssetsRoot() %>/events.png" class="img-responsive" alt="<%= _('Events are composed of conditions, on the left, and actions that are run when conditions are fulfilled') %>" />
               </div>
               <div class="col-md-6 text-center">
                 <p><%= _('When Space is pressed, the character animation and a sound are played. If a bomb touches the character, they are both destroyed.') %></p>
@@ -161,7 +163,7 @@
                  data-ad-slot="7881198846"
                  data-ad-format="horizontal"></ins>
           </div>
-          <img src="assets/phone-with-game.png" alt="<%= _('Create games for Android and iOS without programming') %>" />
+          <img src="<%- getAssetsRoot() %>/phone-with-game.png" alt="<%= _('Create games for Android and iOS without programming') %>" />
         </div>
       </div>
 
@@ -391,144 +393,144 @@
         <div class="col-md-12 text-center">
           <div class="games-carousel">
             <div>
-              <img src="assets/games-gallery/big_kungfu.png" class="game-screenshot" alt="Endless Kung-Fu, a game created without programming with GDevelop">
+              <img src="<%- getAssetsRoot() %>/games-gallery/big_kungfu.png" class="game-screenshot" alt="Endless Kung-Fu, a game created without programming with GDevelop">
               <h3>Endless Kung-Fu</h3>
               <h4><%= _('by') %> NetDancer Games</h4>
               <a href="https://play.google.com/store/apps/details?id=com.netdancergames.endlesskungfu" target="_blank" class="btn btn-default btn-primary btn-lg"><%= _('Download') %></a>
             </div>
             <div>
-              <img src="assets/games-gallery/big_megapanicpixel.jpg" class="game-screenshot" alt="Mega Panic Pixel, a game created without programming with GDevelop">
+              <img src="<%- getAssetsRoot() %>/games-gallery/big_megapanicpixel.jpg" class="game-screenshot" alt="Mega Panic Pixel, a game created without programming with GDevelop">
               <h3>Mega Panic Pixel</h3>
               <h4><%= _('by') %> NanoSoft</h4>
               <a href="http://gamejolt.com/games/arcade/mega-panic-pixel-alpha-wip/42664/" target="_blank" class="btn btn-default btn-primary btn-lg"><%= _('Download') %></a>
             </div>
             <div>
-              <img src="assets/games-gallery/big_hyperspace.jpg" class="game-screenshot" alt="Hyperspace Dogfights, a game created without programming with GDevelop">
+              <img src="<%- getAssetsRoot() %>/games-gallery/big_hyperspace.jpg" class="game-screenshot" alt="Hyperspace Dogfights, a game created without programming with GDevelop">
               <h3>Hyperspace Dogfights</h3>
               <h4><%= _('by') %>  Sleeper_Games</h4>
               <a href="http://steamcommunity.com/sharedfiles/filedetails/?id=892686140" target="_blank" class="btn btn-default btn-primary btn-lg"><%= _('Steam Greenlight') %></a>
             </div>
             <div>
-              <img src="assets/games-gallery/big_iletait.png" class="game-screenshot" alt="Il etait..., a game created without programming with GDevelop">
+              <img src="<%- getAssetsRoot() %>/games-gallery/big_iletait.png" class="game-screenshot" alt="Il etait..., a game created without programming with GDevelop">
               <h3>Il etait...</h3>
               <h4><%= _('by') %> Vivet, Bravo &amp; Corbel</h4>
               <a href="http://www.witly.fr/portfolio/html5gamejam/" target="_blank" class="btn btn-default btn-primary btn-lg"><%= _('Play') %></a>
             </div>
             <div>
-              <img src="assets/games-gallery/big_lotus.png" class="game-screenshot" alt="Lotus Meditation..., a game created without programming with GDevelop">
+              <img src="<%- getAssetsRoot() %>/games-gallery/big_lotus.png" class="game-screenshot" alt="Lotus Meditation..., a game created without programming with GDevelop">
               <h3>Lotus Meditation...</h3>
               <h4><%= _('by') %> YogaPlay</h4>
               <a href="http://gamejolt.com/games/lotus-meditation/107904" target="_blank" class="btn btn-default btn-primary btn-lg"><%= _('Play') %></a>
             </div>
             <div>
-              <img src="assets/games-gallery/big_driftroads.jpg" class="game-screenshot" alt="Drift Roads, a game created without programming with GDevelop">
+              <img src="<%- getAssetsRoot() %>/games-gallery/big_driftroads.jpg" class="game-screenshot" alt="Drift Roads, a game created without programming with GDevelop">
               <h3>Drift Roads</h3>
               <h4><%= _('by') %> donut_prod</h4>
               <a href="http://www.fdumortier.com/games/Drift Roads.zip" class="btn btn-default btn-primary btn-lg"><%= _('Download') %></a>
             </div>
             <div>
-              <img src="assets/games-gallery/big_euf.jpg" class="game-screenshot" alt="Eternity Under Fire, a game created without programming with GDevelop">
+              <img src="<%- getAssetsRoot() %>/games-gallery/big_euf.jpg" class="game-screenshot" alt="Eternity Under Fire, a game created without programming with GDevelop">
               <h3>Eternity Under Fire</h3>
               <h4><%= _('by') %> 4ian</h4>
               <a class="btn btn-default btn-primary btn-lg"><%= _('Bundled') %> with GD!</a>
             </div>
             <div>
-              <img src="assets/games-gallery/big_tva.png" class="game-screenshot" alt="Tank Versus Alien, a game created without programming with GDevelop">
+              <img src="<%- getAssetsRoot() %>/games-gallery/big_tva.png" class="game-screenshot" alt="Tank Versus Alien, a game created without programming with GDevelop">
               <h3>Tank Versus Alien</h3>
               <h4><%= _('by') %> JohNy</h4>
               <a href="http://tva.clay.io/" target="_blank" class="btn btn-default btn-primary btn-lg"><%= _('Play') %></a>
             </div>
             <div>
-              <img src="assets/games-gallery/big_dix.png" class="game-screenshot" alt="DIX, a game created without programming with GDevelop">
+              <img src="<%- getAssetsRoot() %>/games-gallery/big_dix.png" class="game-screenshot" alt="DIX, a game created without programming with GDevelop">
               <h3>DIX</h3>
               <h4><%= _('by') %> TheFrogStudio.net</h4>
               <a href="http://dix.thefrogstudio.net/" target="_blank" class="btn btn-default btn-primary btn-lg"><%= _('Play') %></a>
             </div>
             <div>
-              <img src="assets/games-gallery/big_bios.jpg" class="game-screenshot" alt="Blazing Inferno of Space, a game created without programming with GDevelop">
+              <img src="<%- getAssetsRoot() %>/games-gallery/big_bios.jpg" class="game-screenshot" alt="Blazing Inferno of Space, a game created without programming with GDevelop">
               <h3>Blazing Inferno of Space</h3>
               <h4><%= _('by') %> MillionthVector</h4>
               <a href="http://www.compilgames.net/dl/BIoS.zip" class="btn btn-default btn-primary btn-lg"><%= _('Download') %></a>
             </div>
             <div>
-              <img src="assets/games-gallery/big_eccedeus.jpg" class="game-screenshot" alt="Ecce Deus, a game created without programming with GDevelop">
+              <img src="<%- getAssetsRoot() %>/games-gallery/big_eccedeus.jpg" class="game-screenshot" alt="Ecce Deus, a game created without programming with GDevelop">
               <h3>Ecce Deus</h3>
               <h4><%= _('by') %> 4ian</h4>
               <a href="http://www.compilgames.net/eccedeus" target="_blank" class="btn btn-default btn-primary btn-lg"><%= _('Download') %></a>
             </div>
             <div>
-              <img src="assets/games-gallery/big_bzombies.jpg" class="game-screenshot" alt="Bloody Zombies, a game created without programming with GDevelop">
+              <img src="<%- getAssetsRoot() %>/games-gallery/big_bzombies.jpg" class="game-screenshot" alt="Bloody Zombies, a game created without programming with GDevelop">
               <h3>Bloody Zombies</h3>
               <h4><%= _('by') %> donut_prod</h4>
               <a href="http://www.fdumortier.com/games/Bloody zombies.exe" class="btn btn-default btn-primary btn-lg"><%= _('Download') %></a>
             </div>
             <div>
-              <img src="assets/games-gallery/big_mathepferd.jpg" class="game-screenshot" alt="Mathe Pferd, a game created without programming with GDevelop">
+              <img src="<%- getAssetsRoot() %>/games-gallery/big_mathepferd.jpg" class="game-screenshot" alt="Mathe Pferd, a game created without programming with GDevelop">
               <h3>Mathe Pferd</h3>
               <h4> </h4>
               <a href="http://trancefer.wmw.cc/index.php/mathepferd" target="_blank" class="btn btn-default btn-primary btn-lg"><%= _('Download') %></a>
             </div>
             <div>
-              <img src="assets/games-gallery/big_minotaure.jpg" class="game-screenshot" alt="Minotaure, a game created without programming with GDevelop">
+              <img src="<%- getAssetsRoot() %>/games-gallery/big_minotaure.jpg" class="game-screenshot" alt="Minotaure, a game created without programming with GDevelop">
               <h3>Minotaure</h3>
               <h4><%= _('by') %> Juhlenedni</h4>
             </div>
             <div>
-              <img src="assets/games-gallery/big_run.png" class="game-screenshot" alt="Run, a game created without programming with GDevelop">
+              <img src="<%- getAssetsRoot() %>/games-gallery/big_run.png" class="game-screenshot" alt="Run, a game created without programming with GDevelop">
               <h3>Run</h3>
               <h4><%= _('by') %> graphichorse</h4>
               <a href="http://www.graphichorsegames.com/p/run.html" target="_blank" class="btn btn-default btn-primary btn-lg"><%= _('Download') %></a>
             </div>
             <div>
-              <img src="assets/games-gallery/big_stg.png" class="game-screenshot" alt="Super Thomas Galaxy, a game created without programming with GDevelop">
+              <img src="<%- getAssetsRoot() %>/games-gallery/big_stg.png" class="game-screenshot" alt="Super Thomas Galaxy, a game created without programming with GDevelop">
               <h3>Super Thomas Galaxy</h3>
               <h4><%= _('by') %> Blady and ThomasCVB</h4>
               <a href="http://blady.fr/stg/" target="_blank" class="btn btn-default btn-primary btn-lg"><%= _('Download') %></a>
             </div>
             <div>
-              <img src="assets/games-gallery/big_gleamy.png" class="game-screenshot" alt="Gleamy, a game created without programming with GDevelop">
+              <img src="<%- getAssetsRoot() %>/games-gallery/big_gleamy.png" class="game-screenshot" alt="Gleamy, a game created without programming with GDevelop">
               <h3>Gleamy</h3>
               <h4><%= _('by') %> livekontesk</h4>
               <a href="http://www.compilgames.net/dl/hosted/gleamy_demo.rar" class="btn btn-default btn-primary btn-lg"><%= _('Download') %></a>
             </div>
             <div>
-              <img src="assets/games-gallery/big_modelo.png" class="game-screenshot" alt="Modelo, a game created without programming with GDevelop">
+              <img src="<%- getAssetsRoot() %>/games-gallery/big_modelo.png" class="game-screenshot" alt="Modelo, a game created without programming with GDevelop">
               <h3>Modelo</h3>
               <h4><%= _('by') %> AjidoDm</h4>
               <a href="http://www.compilgames.net/dl/hosted/Modelo.exe" class="btn btn-default btn-primary btn-lg"><%= _('Download') %></a>
             </div>
             <div>
-              <img src="assets/games-gallery/big_pixelblack.jpg" class="game-screenshot" alt="Pixel Black, a game created without programming with GDevelop">
+              <img src="<%- getAssetsRoot() %>/games-gallery/big_pixelblack.jpg" class="game-screenshot" alt="Pixel Black, a game created without programming with GDevelop">
               <h3>Pixel Black</h3>
               <h4><%= _('by') %> EMKBRO</h4>
               <a href="http://gamejolt.com/games/platformer/pixelblack/44361/" target="_blank" class="btn btn-default btn-primary btn-lg"><%= _('Download') %></a>
             </div>
             <div>
-              <img src="assets/games-gallery/big_burgersenfolie.jpg" class="game-screenshot" alt="Key To Nowhere, a game created without programming with GDevelop">
+              <img src="<%- getAssetsRoot() %>/games-gallery/big_burgersenfolie.jpg" class="game-screenshot" alt="Key To Nowhere, a game created without programming with GDevelop">
               <h3>Burgers en folie</h3>
               <h4><%= _('by') %> Fax</h4>
               <a href="http://www.terre-et-glace.com/projets/Burgers%20En%20Folie/jeu/html" target="_blank" class="btn btn-default btn-primary btn-lg"><%= _('Play') %></a>
             </div>
             <div>
-              <img src="assets/games-gallery/big_keytonowhere.jpg" class="game-screenshot" alt="Key To Nowhere, a game created without programming with GDevelop">
+              <img src="<%- getAssetsRoot() %>/games-gallery/big_keytonowhere.jpg" class="game-screenshot" alt="Key To Nowhere, a game created without programming with GDevelop">
               <h3>Key To Nowhere</h3>
               <h4><%= _('by') %> Ricardo Graca</h4>
               <a href="http://rizomatico.org/games/keytonowhere/" target="_blank" class="btn btn-default btn-primary btn-lg"><%= _('Play') %></a>
             </div>
             <div>
-              <img src="assets/games-gallery/big_introspectus.jpg" class="game-screenshot" alt="Introspectus, a game created without programming with GDevelop">
+              <img src="<%- getAssetsRoot() %>/games-gallery/big_introspectus.jpg" class="game-screenshot" alt="Introspectus, a game created without programming with GDevelop">
               <h3>Introspectus</h3>
               <h4><%= _('by') %> SquameGames</h4>
               <a href="https://squamegames.itch.io/introspectus" target="_blank" class="btn btn-default btn-primary btn-lg"><%= _('Play') %></a>
             </div>
             <div>
-              <img src="assets/games-gallery/big_discolors.png" class="game-screenshot" alt="Discolors, a game created without programming with GDevelop">
+              <img src="<%- getAssetsRoot() %>/games-gallery/big_discolors.png" class="game-screenshot" alt="Discolors, a game created without programming with GDevelop">
               <h3>Discolors</h3>
               <h4><%= _('by') %> Ousaf</h4>
               <a href="http://publishers.softgames.com/en/games/discolors" target="_blank" class="btn btn-default btn-primary btn-lg"><%= _('Play') %></a>
             </div>
             <div>
-              <img src="assets/games-gallery/big_ruxby.jpg" class="game-screenshot" alt="Ruxby, a game created without programming with GDevelop">
+              <img src="<%- getAssetsRoot() %>/games-gallery/big_ruxby.jpg" class="game-screenshot" alt="Ruxby, a game created without programming with GDevelop">
               <h3>Ruxby</h3>
               <h4><%= _('by') %> Twisted Kitty</h4>
               <a href="http://legion-of-doom.wix.com/twistedkitty" target="_blank" class="btn btn-default btn-primary btn-lg"><%= _('Play') %></a>
@@ -556,16 +558,16 @@
         <div class="col-md-offset-4 col-md-4 col-xs-offset-2 col-xs-8">
           <a href="http://lilbub.com/game" class="ks-button">
             BACK THIS PROJECT ON
-            <img src="assets/bub/kickstarter-logo-light.png"/>
+            <img src="<%- getAssetsRoot() %>/bub/kickstarter-logo-light.png"/>
           </a>
         </div>
       </div>
       <div class="row download-buttons-row">
         <div class="col-md-offset-3 col-md-3 col-xs-offset-1 col-xs-5">
-          <a href="https://itunes.apple.com/us/app/lil-bubs-hello-earth/id1123383033?mt=8" class="app-store-button"><img alt="App Store" src="assets/bub/app-store.png" /></a>
+          <a href="https://itunes.apple.com/us/app/lil-bubs-hello-earth/id1123383033?mt=8" class="app-store-button"><img alt="App Store" src="<%- getAssetsRoot() %>/bub/app-store.png" /></a>
         </div>
         <div class="col-md-3 col-xs-5">
-          <a href="https://play.google.com/store/apps/details?id=com.lilbub.game" class="play-store-button"><img alt="Play Store" src="assets/bub/play-store.png" /></a>
+          <a href="https://play.google.com/store/apps/details?id=com.lilbub.game" class="play-store-button"><img alt="Play Store" src="<%- getAssetsRoot() %>/bub/play-store.png" /></a>
         </div>
       </div>
     </div>
@@ -814,8 +816,11 @@
     (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
 
-    <!-- bower:js -->
-    <!-- endbower -->
-    <script src="js/scripts.min.js"></script>
+    <script src="<%- getBowerComponentsRoot() %>/modernizr/modernizr.js"></script>
+    <script src="<%- getBowerComponentsRoot() %>/jquery/dist/jquery.js"></script>
+    <script src="<%- getBowerComponentsRoot() %>/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="<%- getBowerComponentsRoot() %>/slick.js/slick/slick.min.js"></script>
+    <script src="<%- getBowerComponentsRoot() %>/platform/platform.js"></script>
+    <script src="<%- getJsRoot() %>/scripts.min.js"></script>
   </body>
 </html>

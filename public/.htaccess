@@ -8,27 +8,27 @@ AddHandler x-mapp-php6 .php .htm
   deny from all
 </Files>
 
-Redirect 301 /indexFR.html /main-fr.html
-Redirect 301 /indexFR.php /main-fr.html
-Redirect 301 /contact.php /main-fr.html
-Redirect 301 /contributeFR.php /main-fr.html
-Redirect 301 /donateFR.php /main-fr.html
-Redirect 301 /events.php /main-fr.html
-Redirect 301 /fonctions.php /main-fr.html
-Redirect 301 /jeux.php /main-fr.html
-Redirect 301 /ide.php /main-fr.html
-Redirect 301 /presentation.php /main-fr.html
-Redirect 301 /fonctions.html /main-fr.html
-Redirect 301 /jeux.html /main-fr.html
-Redirect 301 /Rgst-Jrc.php /main-fr.html
+Redirect 301 /indexFR.html fr/index.html
+Redirect 301 /indexFR.php fr/index.html
+Redirect 301 /contact.php fr/index.html
+Redirect 301 /contributeFR.php fr/index.html
+Redirect 301 /donateFR.php fr/index.html
+Redirect 301 /events.php fr/index.html
+Redirect 301 /fonctions.php fr/index.html
+Redirect 301 /jeux.php fr/index.html
+Redirect 301 /ide.php fr/index.html
+Redirect 301 /presentation.php fr/index.html
+Redirect 301 /fonctions.html fr/index.html
+Redirect 301 /jeux.html fr/index.html
+Redirect 301 /Rgst-Jrc.php fr/index.html
 
-Redirect 301 /contactEN.php /main.html
-Redirect 301 /contribute.php /main.html
-Redirect 301 /donate.php /main.html
-Redirect 301 /eventsEN.php /main.html
-Redirect 301 /fonctionsEN.php /main.html
-Redirect 301 /jeuxEN.php /main.html
-Redirect 301 /ideEN.php /main.html
-Redirect 301 /presentationEN.php /main.html
-Redirect 301 /events.html /main.html
-Redirect 301 /gd.php /main.html
+Redirect 301 /contactEN.php /index.html
+Redirect 301 /contribute.php /index.html
+Redirect 301 /donate.php /index.html
+Redirect 301 /eventsEN.php /index.html
+Redirect 301 /fonctionsEN.php /index.html
+Redirect 301 /jeuxEN.php /index.html
+Redirect 301 /ideEN.php /index.html
+Redirect 301 /presentationEN.php /index.html
+Redirect 301 /events.html /index.html
+Redirect 301 /gd.php /index.html
