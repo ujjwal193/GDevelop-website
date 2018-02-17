@@ -5,12 +5,15 @@
   "main": "index.js",
   "repository": "git@github.com:4ian/GDevelop-website.git",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "gulp",
+    "deploy": "node scripts/deploy.js"
   },
   "author": "Florian Rival",
   "license": "MIT",
   "dependencies": {
     "async": "^0.9.0",
+    "gh-pages": "^1.0.0",
+    "git-rev": "^0.2.1",
     "gulp": "^3.8.11",
     "gulp-add": "0.0.2",
     "gulp-batch": "^1.0.5",
@@ -20,7 +23,9 @@
     "gulp-util": "^3.0.4",
     "gulp-watch": "^4.2.4",
     "imagemin-pngquant": "^4.0.0",
-    "wiredep": "^2.2.2"
+    "is-git-clean": "^1.1.0",
+    "minimist": "^1.2.0",
+    "shelljs": "^0.7.8"
   },
   "devDependencies": {
     "gulp-imagemin": "^2.2.1",

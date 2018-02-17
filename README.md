@@ -1,5 +1,4 @@
-GDevelop website
-===
+# GDevelop website
 
 This is the repository for the new website for **[GDevelop](http://www.compilgames.net)**, the open source game creator requiring no programming skills.
 
@@ -9,9 +8,9 @@ If you want to **translate the website to your language**, just go on [the Crowd
 
 ## Development
 
-Ensure you have [Node.js](https://nodejs.org) installed. Bower is used for managing front-end dependencies, EJS templates files are used to write the pages and gulp is used to launch tasks. 
+Ensure you have [Node.js](https://nodejs.org) installed. Bower is used for managing front-end dependencies, EJS templates files are used to write the pages and gulp is used to launch tasks.
 
-Translations are stored into *locale* directory, in plain JSON files. Internationalized files (for example, main-fr.html for main.ejs) are automatically build for each language with a catalog which has a high translation ratio (>70% translated strings).
+Translations are stored into *locale* directory, in plain JSON files. Internationalized files (for example, fr/index.html for main.ejs) are automatically build for each language with a catalog which has a high translation ratio (>70% translated strings).
 
 ### Installation
 
@@ -30,7 +29,7 @@ A gulp *watch* task is available that monitors any changes to the .ejs, .js or .
 
     gulp watch
 
-Simply open main.html to see the website. Language redirections is handled by index.php (require that you access to this file using a PHP server).
+Simply open index.html to see the website. Language redirections is handled by index.php (require that you access to this file using a PHP server).
 
 ### Updating translations
 
@@ -41,6 +40,10 @@ In .ejs files, make sure that any string to be translated is wrapped inside a ca
  * Update *locale/catalog.json* by running `gulp update-translation`.
  * The *catalog.json* should then be uploaded to the [the Crowdin translation project](https://crowdin.com/project/gdevelop-website) by the project administrator.
  * To update the translations, build the project on the Crowdin page, download the archive and replace *.json* files in *locale* directory by the ones contained in the archive.
+
+### Deployment
+
+    npm run deploy
 
 ## License
 

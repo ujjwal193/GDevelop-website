@@ -7,13 +7,12 @@ var batch = require('gulp-batch');
 var ejs = require('gulp-ejs');
 var gutil = require('gulp-util');
 var async = require('async');
-var wiredep = require('wiredep').stream;
 var fs = require('fs');
 var path = require('path');
 var imagemin = require('gulp-imagemin');
 var pngquant = require('imagemin-pngquant');
 
-gulp.task('default', ['sass', 'uglify', 'wiredep', 'imagemin']);
+gulp.task('default', ['sass', 'uglify', 'ejs', 'imagemin']);
 
 /**
  * Build styles files
@@ -35,16 +34,6 @@ gulp.task('uglify', function() {
     .pipe(uglify())
     .pipe(rename('scripts.min.js'))
     .pipe(gulp.dest('public/js'));
-});
-
-/**
- * Add bower dependencies into .html files
- */
-gulp.task('wiredep', ['ejs'], function() {
-  gulp
-    .src(['public/*.html'])
-    .pipe(wiredep())
-    .pipe(gulp.dest('public'));
 });
 
 /**
@@ -151,7 +140,7 @@ gulp.task('watch', function() {
   gulp.watch('src/styles/**/*.scss', ['sass']);
   gulp.watch('src/js/*.js', ['uglify']);
   gulp.watch('src/assets/**/*.svg', ['copy-svg']);
-  gulp.watch(['src/*.ejs', 'locale/*.json'], ['wiredep']);
+  gulp.watch(['src/*.ejs', 'locale/*.json'], ['ejs']);
 });
 
 /**
