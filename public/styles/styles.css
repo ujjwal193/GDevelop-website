@@ -630,6 +630,12 @@ footer {
     transition: 0.5s;
     left: 0; }
 
+.language-dropdown {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 20; }
+
 body {
   overflow-x: hidden;
   font: 'open_sansregular', Verdana;

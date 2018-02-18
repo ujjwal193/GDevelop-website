@@ -1,16 +1,17 @@
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var uglify = require('gulp-uglify');
-var rename = require('gulp-rename');
-var watch = require('gulp-watch');
-var batch = require('gulp-batch');
-var ejs = require('gulp-ejs');
-var gutil = require('gulp-util');
-var async = require('async');
-var fs = require('fs');
-var path = require('path');
-var imagemin = require('gulp-imagemin');
-var pngquant = require('imagemin-pngquant');
+const gulp = require('gulp');
+const sass = require('gulp-sass');
+const uglify = require('gulp-uglify');
+const rename = require('gulp-rename');
+const watch = require('gulp-watch');
+const batch = require('gulp-batch');
+const ejs = require('gulp-ejs');
+const gutil = require('gulp-util');
+const async = require('async');
+const fs = require('fs');
+const path = require('path');
+const imagemin = require('gulp-imagemin');
+const pngquant = require('imagemin-pngquant');
+const ISO6391 = require('iso-639-1');
 
 gulp.task('default', ['sass', 'uglify', 'ejs', 'imagemin']);
 
@@ -40,7 +41,8 @@ gulp.task('uglify', function() {
  * Create HTML files from .ejs files
  */
 gulp.task('ejs', function(cb) {
-  var langs = getAvailableLanguagesCatalogs();
+  const isDefaultLanguage = langCode => langCode == 'en';
+  const langs = getAvailableLanguagesCatalogs();
   gutil.log(
     'Found these languages catalogs (with translation ratio >0.6): ',
     langs
@@ -51,12 +53,12 @@ gulp.task('ejs', function(cb) {
   allTasks = langs.map(function(langCode) {
     return function(cb) {
       //Open the language catalog
-      var isDefaultLanguage = langCode == 'en';
-      var catalog = isDefaultLanguage
+      var catalog = isDefaultLanguage(langCode)
         ? ''
         : require('./locale/' + langCode + '.json');
-      var root = isDefaultLanguage ? '.' : '..';
-      var destination = 'public/' + (isDefaultLanguage ? '' : langCode);
+      var root = isDefaultLanguage(langCode) ? '.' : '..';
+      var destination =
+        'public/' + (isDefaultLanguage(langCode) ? '' : langCode);
 
       //Launch a stream for generating the .ejs file for this language
       gulp
@@ -79,18 +81,15 @@ gulp.task('ejs', function(cb) {
 
               return str;
             },
-            getAssetsRoot: function() {
-              return root + '/assets';
-            },
-            getStylesRoot: function() {
-              return root + '/styles';
-            },
-            getJsRoot: function() {
-              return root + '/js';
-            },
-            getBowerComponentsRoot: function() {
-              return root + '/bower_components';
-            },
+            getRoot: () => root,
+            getAssetsRoot: () => root + '/assets',
+            getStylesRoot: () => root + '/styles',
+            getJsRoot: () => root + '/js',
+            getBowerComponentsRoot: () => root + '/bower_components',
+            langsInfo: langs.map(langCode => ({
+              link: isDefaultLanguage(langCode) ? '' : langCode,
+              name: ISO6391.getName(langCode),
+            })),
           }).on('error', cb)
         )
         .pipe(gulp.dest(destination));
@@ -129,18 +128,11 @@ gulp.task('update-translation', function() {
         _: function(str) {
           if (str !== '__langCode__') allStrings[str] = str;
         },
-        getAssetsRoot: function() {
-          return '';
-        },
-        getStylesRoot: function() {
-          return '';
-        },
-        getJsRoot: function() {
-          return '';
-        },
-        getBowerComponentsRoot: function() {
-          return '';
-        },
+        getAssetsRoot: () => '',
+        getStylesRoot: () => '',
+        getJsRoot: () => '',
+        getBowerComponentsRoot: () => '',
+        langs: [],
       }).on('error', gutil.log)
     );
 });

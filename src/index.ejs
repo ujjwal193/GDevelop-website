@@ -73,6 +73,18 @@
       </div>
     </div>
 
+    <div class="language-dropdown dropdown">
+      <button class="btn btn-info btn-lg dropdown-toggle" type="button" id="language-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+        Language
+        <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="language-dropdown">
+        <% for(var i=0; i<langsInfo.length; i++) {%>
+          <li><a href="<%= getRoot() + '/' + langsInfo[i].link %>"><%= langsInfo[i].name %></a></li>
+        <% } %>
+      </ul>
+    </div>
+
     <!-- Bottom right navigation bar -->
     <div class="nav-page sections-list">
       <ul class="nav nav-tabs nav-stacked">
