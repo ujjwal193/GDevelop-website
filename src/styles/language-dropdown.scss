@@ -1,7 +1,11 @@
 .language-dropdown {
 	//Position
 	position: fixed;
-	top: 10px;
+	top: 30px;
 	right: 10px;
 	z-index: 20;
+
+	@media (min-width: $screen-sm-min) {
+		top: 10px; //No need for extra margin on desktop
+	}
 }
