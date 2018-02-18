@@ -129,6 +129,18 @@ gulp.task('update-translation', function() {
         _: function(str) {
           if (str !== '__langCode__') allStrings[str] = str;
         },
+        getAssetsRoot: function() {
+          return '';
+        },
+        getStylesRoot: function() {
+          return '';
+        },
+        getJsRoot: function() {
+          return '';
+        },
+        getBowerComponentsRoot: function() {
+          return '';
+        },
       }).on('error', gutil.log)
     );
 });
