@@ -632,9 +632,12 @@ footer {
 
 .language-dropdown {
   position: fixed;
-  top: 10px;
+  top: 30px;
   right: 10px;
   z-index: 20; }
+  @media (min-width: 992px) {
+    .language-dropdown {
+      top: 10px; } }
 
 body {
   overflow-x: hidden;
