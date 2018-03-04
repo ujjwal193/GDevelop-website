@@ -5,8 +5,7 @@
   "main": "index.js",
   "repository": "git@github.com:4ian/GDevelop-website.git",
   "scripts": {
-    "build": "gulp",
-    "deploy": "node scripts/deploy.js"
+    "build": "gulp"
   },
   "author": "Florian Rival",
   "license": "MIT",

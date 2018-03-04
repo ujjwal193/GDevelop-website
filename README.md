@@ -43,7 +43,7 @@ In .ejs files, make sure that any string to be translated is wrapped inside a ca
 
 ### Deployment
 
-    npm run deploy
+Deployment is done by Netlify (running `gulp` and deploying `public` folder) after any commit on `master`.
 
 ## License
 
