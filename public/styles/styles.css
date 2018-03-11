@@ -203,6 +203,9 @@ hr {
   margin-bottom: 5px;
   margin-left: 5px; }
 
+.section-download .deprecated-download-row {
+  opacity: 0.85; }
+
 .section-download .download-divider {
   text-align: center;
   margin-left: auto;

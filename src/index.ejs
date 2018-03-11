@@ -591,7 +591,7 @@
       <div class="row title-row">
         <div class="col-md-12">
           <h4><%= _('Try GDevelop 5') %><span class="badge">Beta</span></h4>
-          <p class="text-muted text-center small"><%- _('The new GDevelop version, still in <b>Beta</b>.') %></p>
+          <p class="text-muted text-center small"><%= _('You\'ll soon be creating your own games without programming!') %></p>
         </div>
       </div>
       <div class="row">
@@ -641,13 +641,13 @@
         <div class="line"></div>
       </div>
       <!-- Download v4 section -->
-      <div class="row title-row">
+      <div class="row title-row deprecated-download-row">
         <div class="col-md-12">
           <h4><%= _('Download GDevelop 4') %></h4>
-          <p class="text-muted text-center small"><%= _('You\'ll soon be creating your own games without programming!') %></p>
+          <p class="text-muted text-center small"><%- _('GDevelop 4 is being replaced by GDevelop 5. If you\'re new, <b>download GDevelop 5 to get started</b>.') %></p>
         </div>
       </div>
-      <div class="row">
+      <div class="row deprecated-download-row">
         <div class="col-md-12">
           <div role="tabpanel">
             <!-- Nav tabs -->
@@ -677,6 +677,7 @@
               <div role="tabpanel" class="tab-pane fade" id="ubuntu-dl">
                 <div class="row">
                   <div class="col-md-offset-2 col-md-8 text-center">
+                    <p><b><%- _('This is an old version: try <b>GDevelop 5</b> instead for a better experience.') %></b></p>
                     <p><b><%- _('GDevelop is available for <a href="http://www.ubuntu.com/download/desktop">Ubuntu 64bits</a> only!') %></b></p>
                     <p><%= _('Open a terminal by pressing') %> <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>T</kbd>.</p>
                     <p><%= _('Then type (and press enter after each line):') %></p>
@@ -692,7 +693,7 @@
               <div role="tabpanel" class="tab-pane fade" id="linux-dl">
                 <div class="row">
                   <div class="col-md-offset-2 col-md-8 text-center">
-                    <p><%= _('You can get GDevelop for:') %></p>
+                    <p><b><%- _('These are old versions: try <b>GDevelop 5</b> instead for a better experience.') %></b></p>
                     <div class="row">
                       <div class="col-md-6">
                         <a href="http://software.opensuse.org/download.html?project=home%3Avictorlevasseur&amp;package=gdevelop" class="btn btn-default btn-primary btn-lg" onclick="onLinuxDl('obs')">Fedora, Arch, OpenSuse</a>
@@ -709,7 +710,7 @@
               <div role="tabpanel" class="tab-pane fade" id="osx-dl">
                 <div class="row">
                   <div class="col-md-offset-2 col-md-8 text-center">
-                    <p><%- _('A <i>Beta</i> version of GDevelop for Mac OS X:') %></p>
+                    <p><b><%- _('This is an old version: try <b>GDevelop 5</b> instead for a better experience.') %></b></p>
                     <div class="row">
                       <div class="col-md-12">
                         <a href="https://github.com/4ian/GD/releases/download/4.0.94/GDevelop.pkg" class="btn btn-default btn-primary btn-lg" target="_blank" onclick="onOSXDl()"><%= _('Download for OS X') %></a>
@@ -786,7 +787,7 @@
     <footer class="text-center">
       <div class="row">
         <div class="col-md-offset-2 col-md-8 text-center">
-          <p class="text-muted">2008-2017 - <a href="https://www.linkedin.com/in/florianrival/" target="_blank">Florian Rival</a></p>
+          <p class="text-muted">2008-2018 - <a href="https://www.linkedin.com/in/florianrival/" target="_blank">Florian Rival</a></p>
           <p class="text-muted"><%- _('GDevelop was created with <span class="glyphicon glyphicon-heart"></span> by') %> <a href="http://florianrival.com" target="_blank">Florian Rival</a><%- _(', with contributors adding features, fixing bugs, sending new examples, improving the wiki, and helping each other on <a href="http://forum.compilgames.net" target="_blank">the forum</a>.') %></p>
         </div>
       </div>
