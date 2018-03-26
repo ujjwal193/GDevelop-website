@@ -112,6 +112,12 @@ const MenuIcon = styled.a`
   }
 `;
 
+const IconItem = styled(FontAwesomeIcon)`
+  /* For some reason, icons can be huge while loading. Add a maximum size to avoid this. */
+  max-height: 20px;
+  max-width: 32px;
+`;
+
 export const NavBarSpacer = styled.div`
   height: 60px;
 `;
@@ -193,14 +199,14 @@ class Navbar extends React.Component {
                 action="opened"
                 label="icon"
               >
-                <FontAwesomeIcon icon={faGithub} />
+                <IconItem icon={faGithub} />
               </NavLink>
               <NavLink
                 to="/choose-language"
                 noLangPathPrefix
                 title="Choose language"
               >
-                <FontAwesomeIcon icon={faLanguage} />
+                <IconItem icon={faLanguage} />
               </NavLink>
             </RightContainer>
           </ItemsContainer>
