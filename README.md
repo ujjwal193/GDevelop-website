@@ -32,7 +32,7 @@ For development with changes watch and hot reloading, run:
 
 ### Deployment
 
-Deployment is done by Netlify (running `gulp` and deploying `public` folder) after any commit on `master`.
+Deployment is done by Netlify after any commit on `master`.
 
 ## License
 
