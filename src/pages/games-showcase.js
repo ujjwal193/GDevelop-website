@@ -200,6 +200,22 @@ const games = [
     link: 'http://legion-of-doom.wix.com/twistedkitty',
     linkType: 'play',
   },
+  {
+    imageSrc: require('../img/games/big_Rob_Dog_III.png'),
+    title: 'ROB, THE DOG!',
+    author: 'MicosS',
+    link:
+      'http://forum.compilgames.net/viewtopic.php?f=37&t=9704&p=65695#p65239',
+    linkType: 'download',
+  },
+  {
+    imageSrc: require('../img/games/big_picknmine.jpg'),
+    title: 'Antoine SERTLING',
+    author: 'Pick\'n Mine',
+    link:
+      'https://play.google.com/store/apps/details?id=pick.n.mine',
+    linkType: 'download',
+  },
 ];
 
 const groupByNUple = (array, n) => {
@@ -219,6 +235,9 @@ const groupByNUple = (array, n) => {
       result.push(currentNUple);
       nUpleIndex = 0;
     }
+  }
+  if (nUpleIndex !== 0) {
+    result.push(currentNUple);
   }
 
   return result;
