@@ -1,6 +1,5 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import faLightbulb from '@fortawesome/fontawesome-free-solid/faLightbulb';
 import faThList from '@fortawesome/fontawesome-free-solid/faThList';
 import faExternalLinkAlt from '@fortawesome/fontawesome-free-solid/faExternalLinkAlt';
@@ -38,6 +37,7 @@ import MakeGameBanner from '../components/MakeGameBanner';
 import config from '../config';
 import BigGhostButton from '../components/BigGhostButton';
 import BottomCenteredBigImage from '../components/BottomCenteredBigImage';
+import BigTitleIcon from '../components/BigTitleIcon';
 
 export default class IndexPage extends React.Component {
   render() {
@@ -89,7 +89,7 @@ export default class IndexPage extends React.Component {
             </LandingContainer>
             <TransparentContainer>
               <BigTitle>
-                <FontAwesomeIcon icon={faLightbulb} /> {t('Create any game')}
+                <BigTitleIcon icon={faLightbulb} /> {t('Create any game')}
               </BigTitle>
               <Paragraph>
                 {t(
@@ -131,7 +131,7 @@ export default class IndexPage extends React.Component {
             </TransparentContainer>
             <TransparentContainer>
               <BigTitle>
-                <FontAwesomeIcon icon={faThList} />{' '}
+                <BigTitleIcon icon={faThList} />{' '}
                 {t('Events - game creation for everyone')}
               </BigTitle>
               <Paragraph>
@@ -150,7 +150,7 @@ export default class IndexPage extends React.Component {
                 )}
               </ExplanationText>
               <BigTitle>
-                <FontAwesomeIcon icon={faExternalLinkAlt} />{' '}
+                <BigTitleIcon icon={faExternalLinkAlt} />{' '}
                 {t('Export your game in one click')}
               </BigTitle>
               <Paragraph>
@@ -164,7 +164,7 @@ export default class IndexPage extends React.Component {
                 alt={t('Make games for iOS, Android, Windows, macOS and Linux')}
               />
               <BigTitle>
-                <FontAwesomeIcon icon={faFlagCheckered} />{' '}
+                <BigTitleIcon icon={faFlagCheckered} />{' '}
                 {t('Get started with tutorials')}
               </BigTitle>
               <Paragraph>
