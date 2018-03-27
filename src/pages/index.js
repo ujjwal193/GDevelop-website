@@ -51,6 +51,10 @@ export default class IndexPage extends React.Component {
               )}
             >
               <html lang={this.props.pathContext.localeCode} />
+              <meta
+                name="google-site-verification"
+                content="_Z29cn15gPQHT4iCkkAQ3G0ObsFmzc1s7rMTQxdfV84"
+              />
             </Helmet>
             <Navbar t={t} />
             <LandingContainer>
