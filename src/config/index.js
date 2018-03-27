@@ -5,7 +5,7 @@ export default {
   forumUrl: 'http://forum.compilgames.net',
   discordUrl:
     'https://discordapp.com/channels/258623956158906368/377571085643677696',
-  wikiUrl: 'http://wiki.compilgames.net',
+  wikiUrl: 'http://wiki.compilgames.net/doku.php/gdevelop5/start',
   facebookPageUrl: 'https://www.facebook.com/GameDevelop/',
   twitterUrl: 'https://twitter.com/game_develop',
 
