@@ -60,6 +60,8 @@ export default class IndexPage extends React.Component {
               <Row reverse>
                 <CenteredColumn flex={8}>
                   <RightImage
+                    width="1095"
+                    height="734"
                     src={landingScreen}
                     alt="GDevelop game maker software - create video games without coding"
                   />

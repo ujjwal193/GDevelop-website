@@ -2,21 +2,9 @@ import React from 'react';
 import styled, { keyframes } from 'styled-components';
 import { media } from '../lib/media';
 
-const appearFromRight = keyframes`
-  from {
-    transform: translateX(70px);
-    opacity: 0.7;
-  }
-
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
-`;
-
 const fadeIn = keyframes`
   from {
-    opacity: 0.2;
+    opacity: 0;
   }
 
   to {
@@ -34,15 +22,16 @@ const RightImage = styled.img`
 
   margin-bottom: 15px;
   margin-top: 10px;
+  opacity: 0;
 
-  animation: ${appearFromRight} 0.5s ease-out forwards;
+  animation: ${fadeIn} 0.8s ease-out forwards;
 
   ${media.tablet`
     max-width: 100%;
     left: 0;
     margin-top: 10px;
     margin-bottom: 10px;
-    animation: ${fadeIn} 0.6s ease-out forwards;
+    animation: ${fadeIn} 0.8s ease-out forwards;
   `};
 `;
 

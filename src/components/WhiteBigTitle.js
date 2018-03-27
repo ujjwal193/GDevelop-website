@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { media } from '../lib/media';
 
 const WhiteBigTitle = styled.h1`
   font-size: 72px;
@@ -11,6 +12,11 @@ const WhiteBigTitle = styled.h1`
   font-weight: 600;
 
   color: white;
+
+  ${media.tablet`
+    font-size: 55px;
+    line-height: 65px;
+  `};
 `;
 
 export default ({ children }) => (
