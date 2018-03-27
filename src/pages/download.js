@@ -157,9 +157,9 @@ export default class DownloadPage extends React.Component {
                 </BigButton>
               </CenteredRow>
               <ExplanationText>
-                Even if GDevelop 4 supports native games, we recommend switching
-                to GDevelop 5 and HTML5 games, which are better supported.
-                Native games will be added to GDevelop 5 later.
+                {t(
+                  'Even if GDevelop 4 supports native games, we recommend switching to GDevelop 5 and HTML5 games, which are better supported. Native games will be added to GDevelop 5 later.'
+                )}
               </ExplanationText>
             </TransparentDeprecatedContainer>
             <Spacer height="50px" />

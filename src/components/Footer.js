@@ -146,7 +146,7 @@ export default ({ t }) => (
           category="github"
           label="footer-contributors"
         >
-          contributors
+          {t('contributors')}
         </CopyrightLink>{' '}
         {t(
           'who added features, fixed bugs, sent new examples, wrote tutorials, and helped the community.'
