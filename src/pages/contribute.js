@@ -30,7 +30,7 @@ export default class FeaturesPage extends React.Component {
           <React.Fragment>
             <Helmet
               title={t(
-                'GDevelop - Create games without programming - Open source HTML5 and native game creator'
+                'Contribute to GDevelop - Open-source HTML5 game making tool'
               )}
             >
               <html lang={this.props.pathContext.localeCode} />

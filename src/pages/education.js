@@ -19,9 +19,7 @@ export default class EducationPage extends React.Component {
         {t => (
           <React.Fragment>
             <Helmet
-              title={t(
-                'GDevelop - Create games without programming - Open source HTML5 and native game creator'
-              )}
+              title={t('GDevelop for the education - Teach game creation')}
             >
               <html lang={this.props.pathContext.localeCode} />
             </Helmet>

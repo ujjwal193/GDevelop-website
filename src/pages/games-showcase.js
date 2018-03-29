@@ -211,9 +211,8 @@ const games = [
   {
     imageSrc: require('../img/games/big_picknmine.jpg'),
     title: 'Antoine SERTLING',
-    author: 'Pick\'n Mine',
-    link:
-      'https://play.google.com/store/apps/details?id=pick.n.mine',
+    author: "Pick'n Mine",
+    link: 'https://play.google.com/store/apps/details?id=pick.n.mine',
     linkType: 'download',
   },
 ];
@@ -249,11 +248,7 @@ export default class EducationPage extends React.Component {
       <PageContainer {...this.props.pathContext}>
         {t => (
           <React.Fragment>
-            <Helmet
-              title={t(
-                'GDevelop - Create games without programming - Open source HTML5 and native game creator'
-              )}
-            >
+            <Helmet title={t('Showcase of the games created with GDevelop')}>
               <html lang={this.props.pathContext.localeCode} />
             </Helmet>
             <Navbar t={t} />

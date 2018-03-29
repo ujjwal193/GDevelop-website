@@ -33,7 +33,7 @@ export default class DownloadPage extends React.Component {
           <React.Fragment>
             <Helmet
               title={t(
-                'GDevelop - Create games without programming - Open source HTML5 and native game creator'
+                'Download GDevelop or try it online - create games without programming'
               )}
             >
               <html lang={this.props.pathContext.localeCode} />
