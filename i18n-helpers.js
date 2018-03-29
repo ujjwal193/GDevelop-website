@@ -5,15 +5,10 @@ const ISO6391 = require('iso-639-1');
 const i18nPath = path.join(__dirname, 'i18n');
 
 const getShortestCode = langLongCode => {
-  const langParts = langLongCode.split('-');
-  if (
-    langParts[0] &&
-    langParts[1] &&
-    langParts[1].toLowerCase() === langParts[0].toLowerCase()
-  )
-    return langParts[0];
+  if (langLongCode === 'pt-BR') return langLongCode;
 
-  return langLongCode;
+  const langParts = langLongCode.split('-');
+  return langParts[0];
 };
 
 const getLocaleMessages = filename => {
