@@ -71,7 +71,10 @@ export default class IndexPage extends React.Component {
                     width="1095"
                     height="734"
                     src={landingScreen}
-                    alt="GDevelop game maker software - create video games without coding"
+                    alt={t(
+                      'GDevelop game maker software - create video games without coding'
+                    )}
+                    title={t('Make your own games with GDevelop')}
                   />
                 </CenteredColumn>
                 <CenteredColumn flex={5}>
@@ -152,7 +155,10 @@ export default class IndexPage extends React.Component {
               <CenteredBigImage
                 maxWidth="800px"
                 src={events}
-                alt="Events enable easy game creation"
+                alt={t('Events enable easy game creation')}
+                title={t(
+                  'Events being used in GDevelop to create the logic of a game'
+                )}
               />
               <ExplanationText>
                 {t(
@@ -172,6 +178,9 @@ export default class IndexPage extends React.Component {
                 maxWidth="800px"
                 src={gamesOnMobileTabletDesktopWeb}
                 alt={t('Make games for iOS, Android, Windows, macOS and Linux')}
+                title={t(
+                  'Laptop, tablets or phone: games made with GDevelop can run everywhere'
+                )}
               />
               <BigTitle>
                 <BigTitleIcon icon={faFlagCheckered} />{' '}
@@ -202,7 +211,8 @@ export default class IndexPage extends React.Component {
             <BottomCenteredBigImage
               maxWidth="800px"
               src={gdevelopWikiTutorials}
-              alt="Tutorials for GDevelop and documentation on the wiki"
+              alt={t('Tutorials for GDevelop and documentation on the wiki')}
+              title={t('Tutorials for GDevelop and documentation on the wiki')}
             />
             <MakeGameBanner
               title={t('Make your first game')}

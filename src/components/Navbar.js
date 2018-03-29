@@ -205,6 +205,7 @@ class Navbar extends React.Component {
                 to="/choose-language"
                 noLangPathPrefix
                 title="Choose language"
+                alt="Choose language"
               >
                 <IconItem icon={faLanguage} />
               </NavLink>

@@ -4,7 +4,6 @@ import CenteredRow from './Grid/CenteredRow';
 import TransparentContainer from './Containers/TransparentContainer';
 import BigButton from './BigButton';
 import Column from './Grid/Column';
-import CenteredColumn from './Grid/CenteredColumn';
 import Paragraph from './Paragraph';
 import BigGhostButton from './BigGhostButton';
 import FullWidthImage from './FullWidthImage';
@@ -39,7 +38,10 @@ const BubBanner = ({ t, title, text }) => (
           </Paragraph>
         </Column>
         <Column>
-          <img src={bubAnimatedLogo} alt="" />
+          <img
+            src={bubAnimatedLogo}
+            alt="Lil BUB's HELLO EARTH, a game made with GDevelop"
+          />
         </Column>
       </Row>
       <CenteredRow>
