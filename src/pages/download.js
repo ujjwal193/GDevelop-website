@@ -37,6 +37,10 @@ export default class DownloadPage extends React.Component {
               )}
             >
               <html lang={this.props.pathContext.localeCode} />
+              <meta
+                name="description"
+                content="Download GDevelop, an open-source game creator and create your own games! No programming skills are required. Build and share your games on mobile (Android and iOS), desktop and on the web."
+              />
             </Helmet>
             <Navbar t={t} />
             <BannerContainer>

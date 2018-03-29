@@ -115,8 +115,6 @@ const games = [
     imageSrc: require('../img/games/big_bzombies.jpg'),
     title: 'Bloody Zombies',
     author: 'donut_prod',
-    link: 'http://www.fdumortier.com/games/Bloody zombies.exe',
-    linkType: 'download',
   },
   {
     imageSrc: require('../img/games/big_mathepferd.jpg'),
@@ -250,6 +248,10 @@ export default class EducationPage extends React.Component {
           <React.Fragment>
             <Helmet title={t('Showcase of the games created with GDevelop')}>
               <html lang={this.props.pathContext.localeCode} />
+              <meta
+                name="description"
+                content="Showcase of the games created with GDevelop: open-source game creator to build games without programming."
+              />
             </Helmet>
             <Navbar t={t} />
             <BannerContainer>

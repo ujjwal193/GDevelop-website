@@ -55,6 +55,10 @@ export default class IndexPage extends React.Component {
                 name="google-site-verification"
                 content="_Z29cn15gPQHT4iCkkAQ3G0ObsFmzc1s7rMTQxdfV84"
               />
+              <meta
+                name="description"
+                content="Create your own games with GDevelop: an open-source game creator. No programming skills are required! Quickly build and share your games on mobile (Android and iOS), desktop and on the web."
+              />
             </Helmet>
             <Navbar t={t} />
             <LandingContainer>

@@ -22,6 +22,10 @@ export default class EducationPage extends React.Component {
               title={t('GDevelop for the education - Teach game creation')}
             >
               <html lang={this.props.pathContext.localeCode} />
+              <meta
+                name="description"
+                content="GDevelop is a game creator requiring no coding skills. It is perfect to teach game creation to students or children."
+              />
             </Helmet>
             <Navbar t={t} />
             <BannerContainer>

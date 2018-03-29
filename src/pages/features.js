@@ -29,6 +29,10 @@ export default class FeaturesPage extends React.Component {
               )}
             >
               <html lang={this.props.pathContext.localeCode} />
+              <meta
+                name="description"
+                content="GDevelop is a game creator bundled with dozens of features to imagine and create any kind of games. No coding skills are required."
+              />
             </Helmet>
             <Navbar t={t} />
             <BannerContainer>
