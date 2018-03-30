@@ -14,8 +14,8 @@ const WhiteBigTitle = styled.h1`
   color: white;
 
   ${media.tablet`
-    font-size: 55px;
-    line-height: 65px;
+    font-size: 48px;
+    line-height: 58px;
   `};
 `;
 

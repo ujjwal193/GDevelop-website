@@ -98,18 +98,35 @@ const LogoContainer = styled.div`
   `};
 `;
 
-const MenuIcon = styled.a`
+const MenuIconsContainer = styled.div`
   display: none;
-  color: white;
-  font-size: 40px;
 
   ${media.tablet`
-    display: inline-block;
+    display: flex;
+    flex-direction: row;
   `};
+`;
+
+const MenuIcon = styled.a`
+  color: white;
+  font-size: 24px;
+  margin-left: 25px;
 
   &:hover {
     color: white;
   }
+`;
+
+const LogoLink = styled(Link)`
+  line-height: normal;
+`;
+
+const Logo = styled.img`
+  width: 200px;
+
+  ${media.tablet`
+    width: 140px;
+  `};
 `;
 
 const IconItem = styled(FontAwesomeIcon)`
@@ -166,16 +183,19 @@ class Navbar extends React.Component {
       <NavigationBar transparent={transparent && !open && !noTransparency}>
         <Container>
           <LogoContainer>
-            <Link to="/">
-              <img src={logo} alt="GDevelop" style={{ width: '200px' }} />
-            </Link>
-            <MenuIcon onClick={this.toggleOpen}>
-              {open ? (
-                <FontAwesomeIcon icon={faChevronUp} />
-              ) : (
-                <FontAwesomeIcon icon={faBars} />
-              )}
-            </MenuIcon>
+            <LogoLink to="/">
+              <Logo src={logo} alt="GDevelop" />
+            </LogoLink>
+            <MenuIconsContainer>
+              <NavLink to="/download">{t('Download')}</NavLink>
+              <MenuIcon onClick={this.toggleOpen}>
+                {open ? (
+                  <FontAwesomeIcon icon={faChevronUp} />
+                ) : (
+                  <FontAwesomeIcon icon={faBars} />
+                )}
+              </MenuIcon>
+            </MenuIconsContainer>
           </LogoContainer>
           <ItemsContainer open={open}>
             <LeftContainer>
