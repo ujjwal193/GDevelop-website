@@ -11,7 +11,7 @@ export const ListItem = styled.li`
   margin: 0;
   padding: 0;
   margin-left: 45px;
-  font-size: 24px;
+  font-size: 22px;
   font-family: 'Roboto', Arial, sans-serif;
   color: #6a6a6a;
 

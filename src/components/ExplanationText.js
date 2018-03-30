@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const ExplanationText = styled.p`
-  font-size: 18px;
+  font-size: 17px;
   text-align: center;
   font-family: 'Roboto', Arial, sans-serif;
   font-style: italic;

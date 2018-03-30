@@ -35,7 +35,7 @@ const ContentContainer = styled.div`
 
 const FooterText = styled.p`
   text-align: center;
-  font-size: 24px;
+  font-size: 22px;
   font-family: 'Roboto', Arial, sans-serif;
   color: white;
   margin-bottom: 15px;
