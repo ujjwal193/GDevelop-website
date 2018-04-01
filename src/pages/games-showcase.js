@@ -213,6 +213,22 @@ const games = [
     link: 'https://play.google.com/store/apps/details?id=pick.n.mine',
     linkType: 'download',
   },
+  {
+    imageSrc: require('../img/games/big_bishi.jpg'),
+    title: 'Bishi and the Alien Slime Invasion!',
+    author: 'Matt Barker',
+    link:
+      'http://store.steampowered.com/app/834930/Bishi_and_the_Alien_Slime_Invasion/',
+    linkType: 'Steam',
+  },
+  {
+    imageSrc: require('../img/games/big_karambola.png'),
+    title: 'Karambola',
+    author: 'Holy Pangolin',
+    link:
+      'https://holypangolin.itch.io/karambola',
+    linkType: 'play',
+  },
 ];
 
 const groupByNUple = (array, n) => {
