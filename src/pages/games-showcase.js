@@ -225,8 +225,7 @@ const games = [
     imageSrc: require('../img/games/big_karambola.png'),
     title: 'Karambola',
     author: 'Holy Pangolin',
-    link:
-      'https://holypangolin.itch.io/karambola',
+    link: 'https://holypangolin.itch.io/karambola',
     linkType: 'play',
   },
 ];
