@@ -228,6 +228,13 @@ const games = [
     link: 'https://holypangolin.itch.io/karambola',
     linkType: 'play',
   },
+  {
+    imageSrc: require('../img/games/big_castleescape.png'),
+    title: 'Castle Escape',
+    author: 'Bruno Silva Souza',
+    link: 'https://gamejolt.com/games/brunosilvasouza/331393',
+    linkType: 'download',
+  },
 ];
 
 const groupByNUple = (array, n) => {
