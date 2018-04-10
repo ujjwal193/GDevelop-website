@@ -242,6 +242,13 @@ const games = [
     link: 'https://sknarp.itch.io/return-to-meow-keep',
     linkType: 'play',
   },
+  {
+    imageSrc: require('../img/games/big_jeuxsuisfan.jpg'),
+    title: 'Jeux suis fan',
+    author: 'Michael J Hatena',
+    link: 'https://drive.google.com/open?id=18P1MZ6R7FU6pXaqRwEWtBQgIYTO9I1CP',
+    linkType: 'download',
+  },
 ];
 
 const groupByNUple = (array, n) => {
