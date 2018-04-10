@@ -208,8 +208,8 @@ const games = [
   },
   {
     imageSrc: require('../img/games/big_picknmine.jpg'),
-    title: 'Antoine SERTLING',
-    author: "Pick'n Mine",
+    title: "Pick'n Mine",
+    author: 'Antoine Sertling',
     link: 'https://play.google.com/store/apps/details?id=pick.n.mine',
     linkType: 'download',
   },
