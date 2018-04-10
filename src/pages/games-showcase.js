@@ -249,6 +249,13 @@ const games = [
     link: 'https://drive.google.com/open?id=18P1MZ6R7FU6pXaqRwEWtBQgIYTO9I1CP',
     linkType: 'download',
   },
+  {
+    imageSrc: require('../img/games/big_floresia.png'),
+    title: 'Floresia I : Intemporel',
+    author: 'Mister-Slam',
+    link: 'http://store.steampowered.com/app/761000/Floresia_I__Intemporel/',
+    linkType: 'Steam',
+  },
 ];
 
 const groupByNUple = (array, n) => {
