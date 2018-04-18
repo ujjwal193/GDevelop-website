@@ -4,7 +4,7 @@ export default {
   developmentRoadmapUrl: 'https://trello.com/b/qf0lM7k8/gdevelop-roadmap',
   forumUrl: 'http://forum.compilgames.net',
   discordUrl:
-    'https://discordapp.com/channels/258623956158906368/377571085643677696',
+    'https://discord.gg/YnKk8Ev',
   wikiUrl: 'http://wiki.compilgames.net/doku.php/gdevelop5/start',
   facebookPageUrl: 'https://www.facebook.com/GameDevelop/',
   twitterUrl: 'https://twitter.com/game_develop',
