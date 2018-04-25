@@ -38,6 +38,7 @@ import config from '../config';
 import BigGhostButton from '../components/BigGhostButton';
 import BottomCenteredBigImage from '../components/BottomCenteredBigImage';
 import BigTitleIcon from '../components/BigTitleIcon';
+import CenteredYoutubeVideo from '../components/CenteredYoutubeVideo';
 
 export default class IndexPage extends React.Component {
   render() {
@@ -182,6 +183,21 @@ export default class IndexPage extends React.Component {
                   'Laptop, tablets or phone: games made with GDevelop can run everywhere'
                 )}
               />
+              <BigTitle>
+                <BigTitleIcon icon={faFlagCheckered} />{' '}
+                {t('Unlimited possibilities')}
+              </BigTitle>
+              <Paragraph>
+                {t(
+                  'Express your ideas without being blocked: you can prototype new features on your games in minutes, and refine them without limits. Making games as never been as easy as assembling your ideas with the visual editors provided by GDevelop.'
+                )}
+              </Paragraph>
+              <CenteredYoutubeVideo src="https://www.youtube.com/embed/3wwoy1pY6O8?autoplay=1" />
+              <CenteredRow>
+                <BigGhostButton to="/games-showcase">
+                  {t('See some games made with GDevelop')}
+                </BigGhostButton>
+              </CenteredRow>
               <BigTitle>
                 <BigTitleIcon icon={faFlagCheckered} />{' '}
                 {t('Get started with tutorials')}

@@ -107,8 +107,15 @@ export default class FeaturesPage extends React.Component {
                   {t('Create your levels dynamically with external layouts')}
                 </ListItem>
                 <ListItem>
-                  {t('Integrated debugger and performance profilers')} -{' '}
-                  <i>{t('coming soon!')}</i>
+                  {t('Debugger')} -{' '}
+                  <i>
+                    {t(
+                      'Inspect the content of your game and make dynamic changes while previewing your game'
+                    )}
+                  </i>
+                </ListItem>
+                <ListItem>
+                  {t('Performance profiler')} - <i>{t('coming soon!')}</i>
                 </ListItem>
               </List>
               <CenteredRow>
