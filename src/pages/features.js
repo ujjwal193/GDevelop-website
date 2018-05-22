@@ -108,6 +108,10 @@ export default class FeaturesPage extends React.Component {
                   {t('Create your levels dynamically with external layouts')}
                 </ListItem>
                 <ListItem>
+                  {t('Design your assets with Piskel')}-{' '}
+                  <i>{t('a powerful pixel art and sprite editor')}</i>
+                </ListItem>
+                <ListItem>
                   {t('Debugger')} -{' '}
                   <i>
                     {t(
