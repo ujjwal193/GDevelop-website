@@ -4,6 +4,7 @@ import faLightbulb from '@fortawesome/fontawesome-free-solid/faLightbulb';
 import faThList from '@fortawesome/fontawesome-free-solid/faThList';
 import faExternalLinkAlt from '@fortawesome/fontawesome-free-solid/faExternalLinkAlt';
 import faFlagCheckered from '@fortawesome/fontawesome-free-solid/faFlagCheckered';
+import faRocket from '@fortawesome/fontawesome-free-solid/faRocket';
 
 import Navbar, { NavBarSpacer } from '../components/Navbar';
 import Footer from '../components/Footer';
@@ -184,7 +185,7 @@ export default class IndexPage extends React.Component {
                 )}
               />
               <BigTitle>
-                <BigTitleIcon icon={faFlagCheckered} />{' '}
+                <BigTitleIcon icon={faRocket} />{' '}
                 {t('Unlimited possibilities')}
               </BigTitle>
               <Paragraph>
