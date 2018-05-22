@@ -15,6 +15,7 @@ import { List, ListItem } from '../components/List';
 import MakeGameBanner from '../components/MakeGameBanner';
 import BottomCenteredBigImage from '../components/BottomCenteredBigImage';
 import BigGhostButton from '../components/BigGhostButton';
+import BigButton from '../components/BigButton';
 import CenteredRow from '../components/Grid/CenteredRow';
 
 export default class FeaturesPage extends React.Component {
@@ -122,6 +123,9 @@ export default class FeaturesPage extends React.Component {
                 <BigGhostButton to="http://wiki.compilgames.net/doku.php/gdevelop5/interface">
                   {t('Read the documentation for editors')}
                 </BigGhostButton>
+                <BigButton to="/games-editor">
+                  {t('Discover GDevelop editors')}
+                </BigButton>
               </CenteredRow>
               <BigTitle>{t('Make desktop & mobile-ready games')}</BigTitle>
               <List>
@@ -129,7 +133,7 @@ export default class FeaturesPage extends React.Component {
                   {t('Save player data in browser/local storage')}
                 </ListItem>
                 <ListItem>
-                  {t('Full support for sound effects and music')}
+                  {t('Full support for sound effects and musics')}
                 </ListItem>
                 <ListItem>
                   {t('Support for touchscreens & multi-touch')}

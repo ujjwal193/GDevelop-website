@@ -192,10 +192,18 @@ export default class IndexPage extends React.Component {
                   'Express your ideas without being blocked: you can prototype new features on your games in minutes, and refine them without limits. Making games as never been as easy as assembling your ideas with the visual editors provided by GDevelop.'
                 )}
               </Paragraph>
-              <CenteredYoutubeVideo src="https://www.youtube.com/embed/3wwoy1pY6O8?autoplay=1" />
+              <CenteredYoutubeVideo src="https://www.youtube.com/embed/3wwoy1pY6O8" />
+              <ExplanationText>
+                {t(
+                  'See how to add a trigger button to your platformer game in 90 seconds'
+                )}
+              </ExplanationText>
               <CenteredRow>
                 <BigGhostButton to="/games-showcase">
-                  {t('See some games made with GDevelop')}
+                  {t('See games made with GDevelop')}
+                </BigGhostButton>
+                <BigGhostButton to="/game-editors">
+                  {t('Discover the editors to make your game')}
                 </BigGhostButton>
               </CenteredRow>
               <BigTitle>

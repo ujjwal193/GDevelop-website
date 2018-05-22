@@ -111,6 +111,7 @@ export default ({ t }) => (
         </Column>
         <Column>
           <FooterLink to="/education/">{t('Education')}</FooterLink>
+          <FooterLink to="/game-editors/">{t('Game editors')}</FooterLink>
           <FooterLink to="/games-showcase/">{t('Games showcase')}</FooterLink>
           <FooterLink to="/contribute/">{t('Contribute')}</FooterLink>
           <FooterLink
