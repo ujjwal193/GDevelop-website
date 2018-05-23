@@ -127,7 +127,7 @@ export default class FeaturesPage extends React.Component {
                 <BigGhostButton to="http://wiki.compilgames.net/doku.php/gdevelop5/interface">
                   {t('Read the documentation for editors')}
                 </BigGhostButton>
-                <BigButton to="/games-editor">
+                <BigButton to="/game-editors">
                   {t('Discover GDevelop editors')}
                 </BigButton>
               </CenteredRow>
