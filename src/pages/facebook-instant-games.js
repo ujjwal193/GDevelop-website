@@ -22,6 +22,7 @@ import exportFacebookInstantGames from '../img/export-facebook-instant-games.png
 import gamesMessenger from '../img/games-messenger.png';
 import facebookDevelopersApp from '../img/facebook-developers-app.png';
 import CenteredBigImage from '../components/CenteredBigImage';
+import MarkdownText from '../components/MarkdownText';
 
 export default class FeaturesPage extends React.Component {
   render() {
@@ -61,15 +62,17 @@ export default class FeaturesPage extends React.Component {
                 {t('1) Create your app on Facebook Developers')}
               </BigTitle>
               <Paragraph>
-                {t(
-                  'First thing, make sure to have an account on Facebook Developers. Create an app and configure it to choose "Games" as its category and enables Instant Games in Products:'
-                )}
-              </Paragraph>
-                <CenteredBigImage
-                  maxWidth="800px"
-                  src={facebookDevelopersApp}
-                  alt="Create your app on Facebook Developers and set the category to Games"
+                <MarkdownText
+                  source={t(
+                    'First thing, make sure to have an account on **Facebook Developers**. Create an app and configure it to choose "Games" as its category and enables Instant Games in Products:'
+                  )}
                 />
+              </Paragraph>
+              <CenteredBigImage
+                maxWidth="800px"
+                src={facebookDevelopersApp}
+                alt="Create your app on Facebook Developers and set the category to Games"
+              />
               <CenteredRow>
                 <BigButton
                   to="https://developers.facebook.com/apps"
@@ -90,9 +93,11 @@ export default class FeaturesPage extends React.Component {
                 {t('2) Open GDevelop and export for Facebook Instant Games')}
               </BigTitle>
               <Paragraph>
-                {t(
-                  'In GDevelop, open your game and then the Export window. Choose Facebook Instant Games, click on Export and waiting a few seconds.'
-                )}
+                <MarkdownText
+                  source={t(
+                    'In GDevelop, open your game and then the Export window. Choose **Facebook Instant Games**, click on Export and waiting a few seconds.'
+                  )}
+                />
               </Paragraph>
               <CenteredBigImage
                 maxWidth="800px"
@@ -111,9 +116,11 @@ export default class FeaturesPage extends React.Component {
               </CenteredRow>
               <BigTitle>{t('3) Upload your game')}</BigTitle>
               <Paragraph>
-                {t(
-                  'Go back to your game page on Facebook Developers, choose Web Hosting in the menu and upload the file that was exported by GDevelop.'
-                )}
+                <MarkdownText
+                  source={t(
+                    'Go back to your game page on Facebook Developers, choose Web Hosting in the menu and **upload the file** that was exported by GDevelop.'
+                  )}
+                />
               </Paragraph>
               <Paragraph>
                 {t(
@@ -131,9 +138,11 @@ export default class FeaturesPage extends React.Component {
               </CenteredRow>
               <BigTitle>{t('4) Try your game on Messenger')}</BigTitle>
               <Paragraph>
-                {t(
-                  'Now, get your phone and open messenger. Open a conversation, choose Games and click on the icon of your game to start playing to it!'
-                )}
+                <MarkdownText
+                  source={t(
+                    'Now, get your phone and **open messenger**. Open a conversation, choose Games and click on the icon of your game to start playing to it!'
+                  )}
+                />
               </Paragraph>
               <BottomCenteredBigImage
                 maxWidth="300px"
@@ -149,9 +158,11 @@ export default class FeaturesPage extends React.Component {
                 )}
               </Paragraph>
               <Paragraph>
-                {t(
-                  'When your game is ready, submit it for review by Facebook so that it becames available worldwide!'
-                )}
+                <MarkdownText
+                  source={t(
+                    'When your game is ready, submit it for review by Facebook so that it becomes **available worldwide**!'
+                  )}
+                />
               </Paragraph>
               <CenteredRow>
                 <BigButton

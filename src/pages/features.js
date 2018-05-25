@@ -17,6 +17,7 @@ import BottomCenteredBigImage from '../components/BottomCenteredBigImage';
 import BigGhostButton from '../components/BigGhostButton';
 import BigButton from '../components/BigButton';
 import CenteredRow from '../components/Grid/CenteredRow';
+import MarkdownText from '../components/MarkdownText';
 
 export default class FeaturesPage extends React.Component {
   render() {
@@ -46,6 +47,53 @@ export default class FeaturesPage extends React.Component {
               </WhiteParagraph>
             </BannerContainer>
             <TransparentContainer>
+              <BigTitle>{t('Deploy your game everywhere')}</BigTitle>
+              <List>
+                <ListItem>
+                  <MarkdownText
+                    source={t(
+                      'One click export for [Android](http://wiki.compilgames.net/doku.php/gdevelop5/publishing/android_and_ios)'
+                    )}
+                  />
+                </ListItem>
+                <ListItem>
+                  <MarkdownText
+                    source={t(
+                      'One click export to [Facebook Instant Games](/facebook-instant-games), to play on Messenger.'
+                    )}
+                  />
+                </ListItem>
+                <ListItem>
+                  <MarkdownText
+                    source={t(
+                      'Export your game [for the web](http://wiki.compilgames.net/doku.php/gdevelop5/publishing/web) in one click'
+                    )}
+                  />
+                </ListItem>
+                <ListItem>
+                  <MarkdownText
+                    source={t(
+                      'Export your game to iOS (with [PhoneGap Build or Cordova](http://wiki.compilgames.net/doku.php/gdevelop5/publishing/android_and_ios_with_cordova))'
+                    )}
+                  />
+                </ListItem>
+                <ListItem>
+                  {t(
+                    'Publish your game on Kongregate, Itch.io and other gaming website!'
+                  )}
+                </ListItem>
+                <ListItem>
+                  {t(
+                    'Export as a stand-alone executable game for Windows, macOS and Linux'
+                  )}{' '}
+                  - <i>{t('Coming Soon!')}</i>
+                </ListItem>
+              </List>
+              <CenteredRow>
+                <BigGhostButton to="http://wiki.compilgames.net/doku.php/gdevelop5/publishing">
+                  {t('Learn how to publish your game')}
+                </BigGhostButton>
+              </CenteredRow>
               <BigTitle>{t('Objects for your games')}</BigTitle>
               <List>
                 <ListItem>
@@ -167,38 +215,6 @@ export default class FeaturesPage extends React.Component {
               <CenteredRow>
                 <BigGhostButton to="http://wiki.compilgames.net/doku.php/gdevelop5/events">
                   {t('Read the documentation about events')}
-                </BigGhostButton>
-              </CenteredRow>
-              <BigTitle>{t('Deploy your game everywhere')}</BigTitle>
-              <List>
-                <ListItem>
-                  <b>{t('One click export for Android')}</b>
-                </ListItem>
-                <ListItem>
-                  <b>{t('Export your game for the web in one click')}</b>
-                </ListItem>
-                <ListItem>
-                  <b>
-                    {t(
-                      'Export your game to iOS (with PhoneGap Build or Cordova)'
-                    )}
-                  </b>
-                </ListItem>
-                <ListItem>
-                  {t(
-                    'Publish your game on Kongregate, Itch.io and other gaming website!'
-                  )}
-                </ListItem>
-                <ListItem>
-                  {t(
-                    'Export as a stand-alone executable game for Windows, macOS and Linux'
-                  )}{' '}
-                  - <i>{t('Coming Soon!')}</i>
-                </ListItem>
-              </List>
-              <CenteredRow>
-                <BigGhostButton to="http://wiki.compilgames.net/doku.php/gdevelop5/publishing">
-                  {t('Learn how to publish your game')}
                 </BigGhostButton>
               </CenteredRow>
             </TransparentContainer>

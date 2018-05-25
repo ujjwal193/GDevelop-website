@@ -40,6 +40,7 @@ import BigGhostButton from '../components/BigGhostButton';
 import BottomCenteredBigImage from '../components/BottomCenteredBigImage';
 import BigTitleIcon from '../components/BigTitleIcon';
 import CenteredYoutubeVideo from '../components/CenteredYoutubeVideo';
+import MarkdownText from '../components/MarkdownText';
 
 export default class IndexPage extends React.Component {
   render() {
@@ -172,9 +173,11 @@ export default class IndexPage extends React.Component {
                 {t('Export your game in one click')}
               </BigTitle>
               <Paragraph>
-                {t(
-                  'Publish your games to the web, iOS, Android, Windows, Mac, Linux. Games created with GDevelop run anywhere and you can even do a one-click export to Android from the app.'
-                )}
+                <MarkdownText
+                  source={t(
+                    'Publish your games to the web, iOS, Android, Windows, Mac, Linux and even [Facebook Messenger](/facebook-instant-games). Games created with GDevelop run anywhere and you can even do a one-click export to Android from the app.'
+                  )}
+                />
               </Paragraph>
               <CenteredBigImage
                 maxWidth="800px"
@@ -185,8 +188,7 @@ export default class IndexPage extends React.Component {
                 )}
               />
               <BigTitle>
-                <BigTitleIcon icon={faRocket} />{' '}
-                {t('Unlimited possibilities')}
+                <BigTitleIcon icon={faRocket} /> {t('Unlimited possibilities')}
               </BigTitle>
               <Paragraph>
                 {t(
