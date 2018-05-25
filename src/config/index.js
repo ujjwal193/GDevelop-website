@@ -3,8 +3,7 @@ export default {
   crowdinUrl: 'https://crowdin.com/project/gdevelop',
   developmentRoadmapUrl: 'https://trello.com/b/qf0lM7k8/gdevelop-roadmap',
   forumUrl: 'http://forum.compilgames.net',
-  discordUrl:
-    'https://discord.gg/YnKk8Ev',
+  discordUrl: 'https://discord.gg/YnKk8Ev',
   wikiUrl: 'http://wiki.compilgames.net/doku.php/gdevelop5/start',
   facebookPageUrl: 'https://www.facebook.com/GameDevelop/',
   twitterUrl: 'https://twitter.com/game_develop',
@@ -15,9 +14,9 @@ export default {
   onlineEditorUrl: 'https://editor.gdevelop-app.com',
 
   gdevelopWindowsUrl:
-    'https://github.com/4ian/GD/releases/download/v5.0.0-beta34/gdevelop-setup-5.0.0-beta34.exe',
+    'https://github.com/4ian/GD/releases/download/v5.0.0-beta37/gdevelop-setup-5.0.0-beta37.exe',
   gdevelopMacOSUrl:
-    'https://github.com/4ian/GD/releases/download/v5.0.0-beta34/gdevelop-5.0.0-beta34.dmg',
+    'https://github.com/4ian/GD/releases/download/v5.0.0-beta37/gdevelop-5.0.0-beta37.dmg',
   gdevelopLinuxUrl:
-    'https://github.com/4ian/GD/releases/download/v5.0.0-beta34/gdevelop-5.0.0-beta34.tar.gz',
+    'https://github.com/4ian/GD/releases/download/v5.0.0-beta37/gdevelop-5.0.0-beta37.tar.gz',
 };
