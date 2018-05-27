@@ -1,13 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
 import { media } from '../lib/media';
+import { defaultBoxShadow } from './styles/shadows';
 
 const CenteredBigImage = styled.img`
   max-width: ${props => props.maxWidth};
   margin-top: 20px;
   margin-bottom: 0;
 
-  ${media.tablet`
+  ${props => props.shadow && defaultBoxShadow} ${media.tablet`
     max-width: 90%;
   `};
 `;

@@ -1,15 +1,18 @@
-import React from 'react';
 import styled from 'styled-components';
 
 export const List = styled.ul`
-  margin: 0;
   padding: 0;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  margin-left: 0;
+  margin-right: 0;
   list-style: none;
 `;
 
 export const ListItem = styled.li`
   margin: 0;
   padding: 0;
+  margin-top: 5px;
   margin-left: 45px;
   font-size: 22px;
   font-family: 'Roboto', Arial, sans-serif;
