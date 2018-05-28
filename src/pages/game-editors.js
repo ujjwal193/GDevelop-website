@@ -20,6 +20,12 @@ import config from '../config';
 import chromeWithGame from '../img/chrome-with-game.png';
 import MakeGameBanner from '../components/MakeGameBanner';
 import BottomCenteredImage from '../components/BottomCenteredImage';
+import platformerSceneEditor from '../img/platformer-scene-editor.png';
+import platformer2SceneEditor from '../img/platformer2-scene-editor.png';
+import spaceShooterSceneEditor from '../img/space-shooter-scene-editor.png';
+import pathfindingTankSceneEditor from '../img/pathfinding-tank-scene-editor.png';
+import Carousel from '../components/Carousel';
+import CarouselImage from '../components/CarouselImage';
 
 export default class FeaturesPage extends React.Component {
   render() {
@@ -82,6 +88,39 @@ export default class FeaturesPage extends React.Component {
                   {t('Learn more about events in the tutorials')}
                 </BigGhostButton>
               </CenteredRow>
+              <Carousel
+                buttonsDisabled
+                dotsDisabled
+                keysControlDisabled
+                stopAutoPlayOnHover={false}
+                autoPlay
+                autoPlayInterval={2500}
+                responsive={{
+                  0: {
+                    items: 1,
+                  },
+                  600: {
+                    items: 2,
+                  },
+                }}
+              >
+                <CarouselImage
+                  src={platformerSceneEditor}
+                  alt={t('Create platformer games with GDevelop')}
+                />
+                <CarouselImage
+                  src={platformer2SceneEditor}
+                  alt={t('Develop space shooter games with GDevelop')}
+                />
+                <CarouselImage
+                  src={spaceShooterSceneEditor}
+                  alt={t('Create mario-like games with GDevelop')}
+                />
+                <CarouselImage
+                  src={pathfindingTankSceneEditor}
+                  alt={t('Make strategy games with GDevelop')}
+                />
+              </Carousel>
               <BigTitle>{t('Objects editors')}</BigTitle>
               <Paragraph>
                 {t(

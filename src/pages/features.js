@@ -18,6 +18,9 @@ import BigGhostButton from '../components/BigGhostButton';
 import BigButton from '../components/BigButton';
 import CenteredRow from '../components/Grid/CenteredRow';
 import MarkdownText from '../components/MarkdownText';
+import CenteredImage from '../components/CenteredImage';
+import lilBubPlatformer from '../img/games/lil-bub-hello-earth/lil-bub-platformer.png';
+import ExplanationText from '../components/ExplanationText';
 
 export default class FeaturesPage extends React.Component {
   render() {
@@ -111,6 +114,15 @@ export default class FeaturesPage extends React.Component {
                   {t('Read the documentation for all objects')}
                 </BigGhostButton>
               </CenteredRow>
+              <CenteredImage
+                maxWidth="800px"
+                src={lilBubPlatformer}
+                alt="Screenshot of Lil BUB's HELLO EARTH, a game made with GDevelop, the open-source game making app"
+                shadow
+              />
+              <ExplanationText>
+                <MarkdownText source="[Lil BUB's HELLO EARTH](/games/lil-bub-hello-earth), a game made with GDevelop" />
+              </ExplanationText>
               <BigTitle>{t('Add behaviors to your game objects')}</BigTitle>
               <List>
                 <ListItem>

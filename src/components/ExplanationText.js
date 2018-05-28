@@ -1,5 +1,5 @@
-import React from 'react';
 import styled from 'styled-components';
+import { defaultLink } from './styles/link';
 
 const ExplanationText = styled.p`
   font-size: 17px;
@@ -7,6 +7,8 @@ const ExplanationText = styled.p`
   font-family: 'Roboto', Arial, sans-serif;
   font-style: italic;
   color: #B2B2B2;
+  
+  ${defaultLink};
 `;
 
 export default ExplanationText;

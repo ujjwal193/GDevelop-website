@@ -60,7 +60,9 @@ const BubBanner = ({ t, title, text }) => (
         <BigButton to="http://compilgames.net/bub-landing-page">
           Windows/Mac/Linux
         </BigButton>
-        <BigGhostButton to="http://lilbub.com/game">Kickstarter</BigGhostButton>
+        <BigGhostButton to="/games/lil-bub-hello-earth">
+          Read more...
+        </BigGhostButton>
       </CenteredRow>
       <Spacer height="50px" />
     </TransparentContainer>
