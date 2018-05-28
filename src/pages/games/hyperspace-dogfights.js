@@ -23,7 +23,6 @@ import CenteredImage from '../../components/CenteredImage';
 import MarkdownText from '../../components/MarkdownText';
 import { List, ListItem } from '../../components/List';
 import CenteredYoutubeVideo from '../../components/CenteredYoutubeVideo';
-import BottomCenteredImage from '../../components/BottomCenteredImage';
 import Spacer from '../../components/Grid/Spacer';
 
 export default class FeaturesPage extends React.Component {
