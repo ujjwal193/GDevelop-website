@@ -6,6 +6,8 @@ const Paragraph = styled.p`
   color: #6a6a6a;
   margin-bottom: 25px;
   margin-top: 15px;
+  margin-left: 5px;
+  margin-right: 5px;
   text-align: ${props => props.textAlign || 'left'};
 
   /* This is duplicated in List */

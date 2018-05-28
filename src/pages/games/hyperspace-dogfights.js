@@ -19,11 +19,11 @@ import hdogScreenshotMaw from '../../img/games/hyperspace-dogfights/hdog_screens
 import hdogPromoHeaderHeader from '../../img/games/hyperspace-dogfights/hdog_promo_header_header.png';
 import hdogScreenshotGroundCombat from '../../img/games/hyperspace-dogfights/hdog_screenshot_ground_combat.png';
 import hdogScreenshotDodge from '../../img/games/hyperspace-dogfights/hdog_screenshot_dodge.png';
-import CenteredBigImage from '../../components/CenteredBigImage';
+import CenteredImage from '../../components/CenteredImage';
 import MarkdownText from '../../components/MarkdownText';
 import { List, ListItem } from '../../components/List';
 import CenteredYoutubeVideo from '../../components/CenteredYoutubeVideo';
-import BottomCenteredBigImage from '../../components/BottomCenteredBigImage';
+import BottomCenteredImage from '../../components/BottomCenteredImage';
 import Spacer from '../../components/Grid/Spacer';
 
 export default class FeaturesPage extends React.Component {
@@ -58,7 +58,7 @@ export default class FeaturesPage extends React.Component {
                   )}
                 />
               </Paragraph>
-              <CenteredBigImage
+              <CenteredImage
                 maxWidth="800px"
                 src={hdogScreenshotGroundCombat}
                 alt="Screenshot of Hyperspace Dogfights, a game made with GDevelop, the open-source game making app"
@@ -72,7 +72,7 @@ export default class FeaturesPage extends React.Component {
                   )}
                 />
               </Paragraph>
-              <CenteredBigImage
+              <CenteredImage
                 maxWidth="800px"
                 src={hdogScreenshotMaw}
                 alt="Screenshot of Hyperspace Dogfights, a game made with GDevelop, the open-source game making app"
@@ -116,7 +116,7 @@ export default class FeaturesPage extends React.Component {
                   target="_blank"
                   rel="noopener"
                 >
-                  {t('Buy it on Steam')}
+                  {t('Buy on Steam')}
                 </BigButton>
                 <BigGhostButton
                   to="http://hyperspacedogfights.com/"
@@ -126,7 +126,7 @@ export default class FeaturesPage extends React.Component {
                   {t('Official website')}
                 </BigGhostButton>
               </CenteredRow>
-              <CenteredBigImage
+              <CenteredImage
                 maxWidth="800px"
                 src={hdogScreenshotDodge}
                 alt="Screenshot of Hyperspace Dogfights, a game made with GDevelop, the open-source game making app"

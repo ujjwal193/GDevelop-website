@@ -19,7 +19,7 @@ import ExplanationText from '../components/ExplanationText';
 import config from '../config';
 import chromeWithGame from '../img/chrome-with-game.png';
 import MakeGameBanner from '../components/MakeGameBanner';
-import BottomCenteredBigImage from '../components/BottomCenteredBigImage';
+import BottomCenteredImage from '../components/BottomCenteredImage';
 
 export default class FeaturesPage extends React.Component {
   render() {
@@ -115,7 +115,7 @@ export default class FeaturesPage extends React.Component {
                 </BigGhostButton>
               </CenteredRow>
             </TransparentContainer>
-            <BottomCenteredBigImage
+            <BottomCenteredImage
               src={chromeWithGame}
               alt="Make HTML5 games for Chrome, Firefox, Safari, iOS, Android, Edge and other modern browsers"
             />

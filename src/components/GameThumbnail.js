@@ -1,6 +1,6 @@
-import React from 'react';
 import styled from 'styled-components';
 import { media } from '../lib/media';
+import { defaultBoxShadow } from './styles/shadows';
 
 const GameThumbnail = styled.div`
   max-width: 100%;
@@ -14,7 +14,7 @@ const GameThumbnail = styled.div`
   margin-right: 15px;
   margin-bottom: 5px;
 
-  ${media.tablet`
+  ${defaultBoxShadow} ${media.tablet`
     height: 40vh;
   `};
 `;

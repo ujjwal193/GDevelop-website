@@ -13,7 +13,7 @@ import WhiteParagraph from '../components/WhiteParagraph';
 import chromeWithGame from '../img/chrome-with-game.png';
 import { List, ListItem } from '../components/List';
 import MakeGameBanner from '../components/MakeGameBanner';
-import BottomCenteredBigImage from '../components/BottomCenteredBigImage';
+import BottomCenteredImage from '../components/BottomCenteredImage';
 import BigGhostButton from '../components/BigGhostButton';
 import BigButton from '../components/BigButton';
 import CenteredRow from '../components/Grid/CenteredRow';
@@ -218,7 +218,7 @@ export default class FeaturesPage extends React.Component {
                 </BigGhostButton>
               </CenteredRow>
             </TransparentContainer>
-            <BottomCenteredBigImage
+            <BottomCenteredImage
               src={chromeWithGame}
               alt="Make HTML5 games for Chrome, Firefox, Safari, iOS, Android, Edge and other modern browsers"
             />

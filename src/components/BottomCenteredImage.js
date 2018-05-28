@@ -3,10 +3,10 @@ import styled from 'styled-components';
 import { media } from '../lib/media';
 import { defaultBoxShadow } from './styles/shadows';
 
-const CenteredBigImage = styled.img`
+const CenteredImage = styled.img`
   max-width: ${props => props.maxWidth};
   margin-top: 20px;
-  margin-bottom: 10px;
+  margin-bottom: 0;
 
   ${props => props.shadow && defaultBoxShadow} ${media.tablet`
     max-width: 90%;
@@ -14,11 +14,13 @@ const CenteredBigImage = styled.img`
 `;
 
 const Container = styled.div`
+  margin: 0;
+  margin-bottom: -6px;
   text-align: center;
 `;
 
 export default props => (
   <Container>
-    <CenteredBigImage {...props} />
+    <CenteredImage {...props} />
   </Container>
 );

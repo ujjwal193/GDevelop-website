@@ -1,17 +1,20 @@
 import React from 'react';
 import { translate } from 'react-i18next';
-import CenteredRow from './Grid/CenteredRow';
-import TransparentContainer from './Containers/TransparentContainer';
-import BigButton from './BigButton';
-import Column from './Grid/Column';
-import Paragraph from './Paragraph';
-import BigGhostButton from './BigGhostButton';
-import FullWidthImage from './FullWidthImage';
-import bubGameBanner from '../img/bub-game-banner.jpg';
-import bubAnimatedLogo from '../img/bub-animated-logo.gif';
-import GameTitle from './GameTitle';
-import Row from './Grid/Row';
-import Spacer from './Grid/Spacer';
+import CenteredRow from '../../components/Grid/CenteredRow';
+import CenteredColumn from '../../components/Grid/CenteredColumn';
+import TransparentContainer from '../../components/Containers/TransparentContainer';
+import BigButton from '../../components/BigButton';
+import Column from '../../components/Grid/Column';
+import Paragraph from '../../components/Paragraph';
+import BigGhostButton from '../../components/BigGhostButton';
+import FullWidthImage from '../../components/FullWidthImage';
+import bubGameBanner from '../../img/bub-game-banner.jpg';
+import bubAnimatedLogo from '../../img/bub-animated-logo.gif';
+import BigTitle from '../../components/BigTitle';
+import Row from '../../components/Grid/Row';
+import Spacer from '../../components/Grid/Spacer';
+import MarkdownText from '../../components/MarkdownText';
+import CenteredImage from '../../components/CenteredImage';
 
 const BubBanner = ({ t, title, text }) => (
   <React.Fragment>
@@ -20,16 +23,18 @@ const BubBanner = ({ t, title, text }) => (
       alt="Lil BUB's game: a retro 8 bit game made with GDevelop"
     />
     <TransparentContainer>
-      <GameTitle>
-        <b>Lil BUB's HELLO EARTH</b> by Lil BUB's Team
-      </GameTitle>
+      <BigTitle>
+        <b>Lil BUB's HELLO EARTH</b> {t('by')} Lil BUB's Team
+      </BigTitle>
       <Spacer height="30px" />
       <Row>
         <Column flex={3}>
           <Paragraph>
-            {t(
-              'BUB is a very special, one of a kind critter. More specifically, she is the most amazing cat on the planet... and her game is made with GDevelop!'
-            )}
+            <MarkdownText
+              source={t(
+                'BUB is a very special, one of a kind critter. More specifically, she is the [most amazing cat on the planet](http://lilbub.com)... and her game is made with GDevelop!'
+              )}
+            />
           </Paragraph>
           <Paragraph>
             {t(
@@ -37,12 +42,13 @@ const BubBanner = ({ t, title, text }) => (
             )}
           </Paragraph>
         </Column>
-        <Column>
-          <img
+        <CenteredColumn>
+          <CenteredImage
             src={bubAnimatedLogo}
             alt="Lil BUB's HELLO EARTH, a game made with GDevelop"
+            shadow
           />
-        </Column>
+        </CenteredColumn>
       </Row>
       <CenteredRow>
         <BigButton to="https://itunes.apple.com/us/app/lil-bubs-hello-earth/id1123383033?mt=8">

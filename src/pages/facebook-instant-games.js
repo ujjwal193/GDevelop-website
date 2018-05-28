@@ -13,7 +13,7 @@ import Paragraph from '../components/Paragraph';
 
 import bottomPlatformer from '../img/bottom-gdevelop-platformer-game.png';
 import MakeGameBanner from '../components/MakeGameBanner';
-import BottomCenteredBigImage from '../components/BottomCenteredBigImage';
+import BottomCenteredImage from '../components/BottomCenteredImage';
 import BigGhostButton from '../components/BigGhostButton';
 import BigButton from '../components/BigButton';
 import CenteredRow from '../components/Grid/CenteredRow';
@@ -21,7 +21,7 @@ import facebookMessengerLogo from '../img/Facebook_Messenger_logo.svg';
 import exportFacebookInstantGames from '../img/export-facebook-instant-games.png';
 import gamesMessenger from '../img/games-messenger.png';
 import facebookDevelopersApp from '../img/facebook-developers-app.png';
-import CenteredBigImage from '../components/CenteredBigImage';
+import CenteredImage from '../components/CenteredImage';
 import MarkdownText from '../components/MarkdownText';
 
 export default class FeaturesPage extends React.Component {
@@ -47,7 +47,7 @@ export default class FeaturesPage extends React.Component {
               <WhiteBigTitle>
                 {t('Make games for Facebook Messenger')}
               </WhiteBigTitle>
-              <CenteredBigImage
+              <CenteredImage
                 src={facebookMessengerLogo}
                 alt="Facebook Messenger logo"
               />
@@ -68,7 +68,7 @@ export default class FeaturesPage extends React.Component {
                   )}
                 />
               </Paragraph>
-              <CenteredBigImage
+              <CenteredImage
                 maxWidth="800px"
                 src={facebookDevelopersApp}
                 alt="Create your app on Facebook Developers and set the category to Games"
@@ -99,7 +99,7 @@ export default class FeaturesPage extends React.Component {
                   )}
                 />
               </Paragraph>
-              <CenteredBigImage
+              <CenteredImage
                 maxWidth="800px"
                 src={exportFacebookInstantGames}
                 alt="Export your game for Facebook Messenger in 2 clicks"
@@ -144,7 +144,7 @@ export default class FeaturesPage extends React.Component {
                   )}
                 />
               </Paragraph>
-              <BottomCenteredBigImage
+              <BottomCenteredImage
                 maxWidth="300px"
                 src={gamesMessenger}
                 alt="GDevelop is a game maker software that can be used by anyone to create video games"
@@ -174,7 +174,7 @@ export default class FeaturesPage extends React.Component {
                 </BigButton>
               </CenteredRow>
             </TransparentContainer>
-            <BottomCenteredBigImage
+            <BottomCenteredImage
               maxWidth="800px"
               src={bottomPlatformer}
               alt="GDevelop is a game maker software that can be used by anyone to create video games"

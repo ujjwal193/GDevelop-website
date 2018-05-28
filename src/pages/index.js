@@ -17,7 +17,7 @@ import LandingContainer from '../components/Containers/LandingContainer';
 import WhiteBigTitle from '../components/WhiteBigTitle';
 import WhiteParagraph from '../components/WhiteParagraph';
 import WhiteBigButton from '../components/WhiteBigButton';
-import CenteredBigImage from '../components/CenteredBigImage';
+import CenteredImage from '../components/CenteredImage';
 import RightImage from '../components/RightImage';
 import ExplanationText from '../components/ExplanationText';
 
@@ -37,7 +37,7 @@ import Carousel from '../components/Carousel';
 import MakeGameBanner from '../components/MakeGameBanner';
 import config from '../config';
 import BigGhostButton from '../components/BigGhostButton';
-import BottomCenteredBigImage from '../components/BottomCenteredBigImage';
+import BottomCenteredImage from '../components/BottomCenteredImage';
 import BigTitleIcon from '../components/BigTitleIcon';
 import CenteredYoutubeVideo from '../components/CenteredYoutubeVideo';
 import MarkdownText from '../components/MarkdownText';
@@ -155,7 +155,7 @@ export default class IndexPage extends React.Component {
                   'What makes GDevelop unique and so easy to use are the events. Events are a powerful way to express the logic of your game, without having to learn a programming language.'
                 )}
               </Paragraph>
-              <CenteredBigImage
+              <CenteredImage
                 maxWidth="800px"
                 src={events}
                 alt={t('Events enable easy game creation')}
@@ -179,7 +179,7 @@ export default class IndexPage extends React.Component {
                   )}
                 />
               </Paragraph>
-              <CenteredBigImage
+              <CenteredImage
                 maxWidth="800px"
                 src={gamesOnMobileTabletDesktopWeb}
                 alt={t('Make games for iOS, Android, Windows, macOS and Linux')}
@@ -235,7 +235,7 @@ export default class IndexPage extends React.Component {
                 </BigGhostButton>
               </CenteredRow>
             </TransparentContainer>
-            <BottomCenteredBigImage
+            <BottomCenteredImage
               maxWidth="800px"
               src={gdevelopWikiTutorials}
               alt={t('Tutorials for GDevelop and documentation on the wiki')}
