@@ -8,6 +8,10 @@ const Container = styled.div`
 
   margin: auto;
 
+  .alice-carousel {
+    padding: 30px;
+  }
+
   .alice-carousel__wrapper {
     border: none;
   }

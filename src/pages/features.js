@@ -100,12 +100,21 @@ export default class FeaturesPage extends React.Component {
               <BigTitle>{t('Objects for your games')}</BigTitle>
               <List>
                 <ListItem>
-                  <b>{t('Sprites')}</b> {t('with multiple animations')}
+                  <MarkdownText
+                    source={t('**Sprites** with multiple animations')}
+                  />
+                </ListItem>
+                <ListItem>
+                  <MarkdownText
+                    source={t(
+                      'Create explosions, fire and impressive effects with **Particle Emitters**'
+                    )}
+                  />
                 </ListItem>
                 <ListItem>{t('"9 patch" and tiled sprites')}</ListItem>
                 <ListItem>{t('Text objects')}</ListItem>
                 <ListItem>
-                  {t('Draw custom shapes on screen with the Shape Painter')}
+                  {t('Draw custom shapes on screen with Shape Painters')}
                 </ListItem>
                 <ListItem>{t('Support for custom collision masks')}</ListItem>
               </List>
@@ -184,9 +193,6 @@ export default class FeaturesPage extends React.Component {
                 </ListItem>
               </List>
               <CenteredRow>
-                <BigGhostButton to="http://wiki.compilgames.net/doku.php/gdevelop5/interface">
-                  {t('Read the documentation for editors')}
-                </BigGhostButton>
                 <BigButton to="/game-editors">
                   {t('Discover GDevelop editors')}
                 </BigButton>

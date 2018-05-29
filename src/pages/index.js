@@ -113,6 +113,13 @@ export default class IndexPage extends React.Component {
                   "Unleash your creativity with GDevelop and create any kind of game: platformers, puzzles, shoot 'em up, strategy... Go through the examples or start a new project from scratch."
                 )}
               </Paragraph>
+              <Paragraph>
+                <MarkdownText
+                  source={t(
+                    "With GDevelop, you can make simple projects for fun or create ambitious indie games like [Lil BUB's HELLO EARTH](/games/lil-bub-hello-earth), [Hyperspace Dogfights](/games/hyperspace-dogfights) and [tons of other games](/games-showcase)!"
+                  )}
+                />
+              </Paragraph>
             </TransparentContainer>
             <TransparentContainer noPadding>
               <Carousel
