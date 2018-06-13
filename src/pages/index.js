@@ -109,9 +109,11 @@ export default class IndexPage extends React.Component {
                 <BigTitleIcon icon={faLightbulb} /> {t('Create any game')}
               </BigTitle>
               <Paragraph>
-                {t(
-                  "Unleash your creativity with GDevelop and create any kind of game: platformers, puzzles, shoot 'em up, strategy... Go through the examples or start a new project from scratch."
-                )}
+                <MarkdownText
+                  source={t(
+                    "Unleash your creativity with GDevelop and create any kind of game: platformers, puzzles, shoot 'em up, strategy, [8-bit games](/make-8bit-pixelart-games)... Go through the examples or start a new project from scratch."
+                  )}
+                />
               </Paragraph>
               <Paragraph>
                 <MarkdownText
