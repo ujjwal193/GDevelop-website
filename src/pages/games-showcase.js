@@ -250,6 +250,13 @@ const games = [
     link: 'http://store.steampowered.com/app/761000/Floresia_I__Intemporel/',
     linkType: 'Steam',
   },
+  {
+    imageSrc: require('../img/games/big_gaston.jpg'),
+    title: 'Gaston : Nuits de cauchemar',
+    author: 'Hysteria Games',
+    link: 'https://hysteria-games.com/index.htm',
+    linkType: 'play',
+  },
 ];
 
 const groupByNUple = (array, n) => {
