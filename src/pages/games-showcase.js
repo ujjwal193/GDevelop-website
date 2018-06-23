@@ -257,6 +257,13 @@ const games = [
     link: 'https://hysteria-games.com/index.htm',
     linkType: 'play',
   },
+  {
+    imageSrc: require('../img/games/big_tundmatu.png'),
+    title: 'Tundmatu',
+    author: 'Jukka Rapa',
+    link: 'https://gamejolt.com/games/tundmatu/192044',
+    linkType: 'download',
+  },
 ];
 
 const groupByNUple = (array, n) => {
