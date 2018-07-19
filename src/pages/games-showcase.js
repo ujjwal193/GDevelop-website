@@ -264,6 +264,22 @@ const games = [
     link: 'https://gamejolt.com/games/tundmatu/192044',
     linkType: 'download',
   },
+  {
+    imageSrc: require('../img/games/big_nikocuriouscat.jpg'),
+    title: 'NIKO the Curious Cat',
+    author: 'Jogador W',
+    link:
+      'https://play.google.com/store/apps/details?id=com.wNikoThecuriousCat_7302564',
+    linkType: 'download',
+  },
+  {
+    imageSrc: require('../img/games/big_brickdrop.png'),
+    title: 'Brick Drop',
+    author: 'Jak Inventions',
+    link:
+      'https://play.google.com/store/apps/details?id=com.inventions.jak.brickdrop',
+    linkType: 'download',
+  },
 ];
 
 const groupByNUple = (array, n) => {
