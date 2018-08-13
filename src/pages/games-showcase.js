@@ -280,6 +280,18 @@ const games = [
       'https://play.google.com/store/apps/details?id=com.inventions.jak.brickdrop',
     linkType: 'download',
   },
+  {
+    imageSrc: require('../img/games/big_sakawochi.png'),
+    title: 'Sakawochi',
+    author: 'Matthias Meike (Wend1go)',
+    link: 'https://wend1go.itch.io/sakawochi',
+    linkType: 'play',
+  },
+  {
+    imageSrc: require('../img/games/big_bursky-1a.jpg'),
+    title: 'Brusky',
+    author: 'Robert Popper',
+  },
 ];
 
 const groupByNUple = (array, n) => {
