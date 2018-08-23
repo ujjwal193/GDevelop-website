@@ -179,6 +179,37 @@ export default class EducationPage extends React.Component {
                   </a>
                 </blockquote>
               </TweetContainer>
+              <TweetContainer>
+                <blockquote class="twitter-tweet" data-partner="tweetdeck">
+                  <p lang="fr" dir="ltr">
+                    Créer un jeu vidéo en{' '}
+                    <a href="https://twitter.com/hashtag/Histoire?src=hash&amp;ref_src=twsrc%5Etfw">
+                      #Histoire
+                    </a>{' '}
+                    au collège ou au lycée : quel outil utiliser ?<br />➡️{' '}
+                    <a href="https://twitter.com/hashtag/GDevelop?src=hash&amp;ref_src=twsrc%5Etfw">
+                      #GDevelop
+                    </a>{' '}
+                    : moteur de jeu{' '}
+                    <a href="https://twitter.com/hashtag/LogicielLibre?src=hash&amp;ref_src=twsrc%5Etfw">
+                      #LogicielLibre
+                    </a>{' '}
+                    et multiplateforme{' '}
+                    <a href="https://t.co/dRwcV4hpFX">
+                      https://t.co/dRwcV4hpFX
+                    </a>{' '}
+                    <a href="https://twitter.com/hashtag/Ludovia15?src=hash&amp;ref_src=twsrc%5Etfw">
+                      #Ludovia15
+                    </a>{' '}
+                    <a href="https://t.co/5Ylj6FjjGl">
+                      pic.twitter.com/5Ylj6FjjGl
+                    </a>
+                  </p>&mdash; Canopé Aude (@canope_11){' '}
+                  <a href="https://twitter.com/canope_11/status/1032277504164331520?ref_src=twsrc%5Etfw">
+                    August 22, 2018
+                  </a>
+                </blockquote>
+              </TweetContainer>
               <Paragraph>
                 {t(
                   "Please send us your photos and tweets if you're using GDevelop for a course!"
