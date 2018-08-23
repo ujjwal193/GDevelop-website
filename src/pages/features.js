@@ -13,9 +13,14 @@ import WhiteParagraph from '../components/WhiteParagraph';
 import chromeWithGame from '../img/chrome-with-game.png';
 import { List, ListItem } from '../components/List';
 import MakeGameBanner from '../components/MakeGameBanner';
-import BottomCenteredBigImage from '../components/BottomCenteredBigImage';
+import BottomCenteredImage from '../components/BottomCenteredImage';
 import BigGhostButton from '../components/BigGhostButton';
+import BigButton from '../components/BigButton';
 import CenteredRow from '../components/Grid/CenteredRow';
+import MarkdownText from '../components/MarkdownText';
+import CenteredImage from '../components/CenteredImage';
+import lilBubPlatformer from '../img/games/lil-bub-hello-earth/lil-bub-platformer.png';
+import ExplanationText from '../components/ExplanationText';
 
 export default class FeaturesPage extends React.Component {
   render() {
@@ -45,15 +50,71 @@ export default class FeaturesPage extends React.Component {
               </WhiteParagraph>
             </BannerContainer>
             <TransparentContainer>
+              <BigTitle>{t('Deploy your game everywhere')}</BigTitle>
+              <List>
+                <ListItem>
+                  <MarkdownText
+                    source={t(
+                      'One click export for [Android](http://wiki.compilgames.net/doku.php/gdevelop5/publishing/android_and_ios)'
+                    )}
+                  />
+                </ListItem>
+                <ListItem>
+                  <MarkdownText
+                    source={t(
+                      'One click export to [Facebook Instant Games](/facebook-instant-games), to play on Messenger.'
+                    )}
+                  />
+                </ListItem>
+                <ListItem>
+                  <MarkdownText
+                    source={t(
+                      'Export your game [for the web](http://wiki.compilgames.net/doku.php/gdevelop5/publishing/web) in one click'
+                    )}
+                  />
+                </ListItem>
+                <ListItem>
+                  <MarkdownText
+                    source={t(
+                      'Export your game to iOS (with [PhoneGap Build or Cordova](http://wiki.compilgames.net/doku.php/gdevelop5/publishing/android_and_ios_with_cordova))'
+                    )}
+                  />
+                </ListItem>
+                <ListItem>
+                  {t(
+                    'Publish your game on Kongregate, Itch.io and other gaming website!'
+                  )}
+                </ListItem>
+                <ListItem>
+                  {t(
+                    'Export as a stand-alone executable game for Windows, macOS and Linux'
+                  )}{' '}
+                  - <i>{t('Coming Soon!')}</i>
+                </ListItem>
+              </List>
+              <CenteredRow>
+                <BigGhostButton to="http://wiki.compilgames.net/doku.php/gdevelop5/publishing">
+                  {t('Learn how to publish your game')}
+                </BigGhostButton>
+              </CenteredRow>
               <BigTitle>{t('Objects for your games')}</BigTitle>
               <List>
                 <ListItem>
-                  <b>{t('Sprites')}</b> {t('with multiple animations')}
+                  <MarkdownText
+                    source={t('**Sprites** with multiple animations')}
+                  />
+                </ListItem>
+                <ListItem>
+                  <MarkdownText
+                    source={t(
+                      'Create explosions, fire and impressive effects with **Particle Emitters**'
+                    )}
+                  />
                 </ListItem>
                 <ListItem>{t('"9 patch" and tiled sprites')}</ListItem>
                 <ListItem>{t('Text objects')}</ListItem>
                 <ListItem>
-                  {t('Draw custom shapes on screen with the Shape Painter')}
+                  {t('Draw custom shapes on screen with Shape Painters')}
                 </ListItem>
                 <ListItem>{t('Support for custom collision masks')}</ListItem>
               </List>
@@ -62,6 +123,15 @@ export default class FeaturesPage extends React.Component {
                   {t('Read the documentation for all objects')}
                 </BigGhostButton>
               </CenteredRow>
+              <CenteredImage
+                maxWidth="800px"
+                src={lilBubPlatformer}
+                alt="Screenshot of Lil BUB's HELLO EARTH, a game made with GDevelop, the open-source game making app"
+                shadow
+              />
+              <ExplanationText>
+                <MarkdownText source="[Lil BUB's HELLO EARTH](/games/lil-bub-hello-earth), a game made with GDevelop" />
+              </ExplanationText>
               <BigTitle>{t('Add behaviors to your game objects')}</BigTitle>
               <List>
                 <ListItem>
@@ -107,14 +177,25 @@ export default class FeaturesPage extends React.Component {
                   {t('Create your levels dynamically with external layouts')}
                 </ListItem>
                 <ListItem>
-                  {t('Integrated debugger and performance profilers')} -{' '}
-                  <i>{t('coming soon!')}</i>
+                  {t('Design your assets with Piskel')}-{' '}
+                  <i>{t('a powerful pixel art and sprite editor')}</i>
+                </ListItem>
+                <ListItem>
+                  {t('Debugger')} -{' '}
+                  <i>
+                    {t(
+                      'Inspect the content of your game and make dynamic changes while previewing your game'
+                    )}
+                  </i>
+                </ListItem>
+                <ListItem>
+                  {t('Performance profiler')} - <i>{t('coming soon!')}</i>
                 </ListItem>
               </List>
               <CenteredRow>
-                <BigGhostButton to="http://wiki.compilgames.net/doku.php/gdevelop5/interface">
-                  {t('Read the documentation for editors')}
-                </BigGhostButton>
+                <BigButton to="/game-editors">
+                  {t('Discover GDevelop editors')}
+                </BigButton>
               </CenteredRow>
               <BigTitle>{t('Make desktop & mobile-ready games')}</BigTitle>
               <List>
@@ -122,7 +203,7 @@ export default class FeaturesPage extends React.Component {
                   {t('Save player data in browser/local storage')}
                 </ListItem>
                 <ListItem>
-                  {t('Full support for sound effects and music')}
+                  {t('Full support for sound effects and musics')}
                 </ListItem>
                 <ListItem>
                   {t('Support for touchscreens & multi-touch')}
@@ -154,40 +235,8 @@ export default class FeaturesPage extends React.Component {
                   {t('Read the documentation about events')}
                 </BigGhostButton>
               </CenteredRow>
-              <BigTitle>{t('Deploy your game everywhere')}</BigTitle>
-              <List>
-                <ListItem>
-                  <b>{t('One click export for Android')}</b>
-                </ListItem>
-                <ListItem>
-                  <b>{t('Export your game for the web in one click')}</b>
-                </ListItem>
-                <ListItem>
-                  <b>
-                    {t(
-                      'Export your game to iOS (with PhoneGap Build or Cordova)'
-                    )}
-                  </b>
-                </ListItem>
-                <ListItem>
-                  {t(
-                    'Publish your game on Kongregate, Itch.io and other gaming website!'
-                  )}
-                </ListItem>
-                <ListItem>
-                  {t(
-                    'Export as a stand-alone executable game for Windows, macOS and Linux'
-                  )}{' '}
-                  - <i>{t('Coming Soon!')}</i>
-                </ListItem>
-              </List>
-              <CenteredRow>
-                <BigGhostButton to="http://wiki.compilgames.net/doku.php/gdevelop5/publishing">
-                  {t('Learn how to publish your game')}
-                </BigGhostButton>
-              </CenteredRow>
             </TransparentContainer>
-            <BottomCenteredBigImage
+            <BottomCenteredImage
               src={chromeWithGame}
               alt="Make HTML5 games for Chrome, Firefox, Safari, iOS, Android, Edge and other modern browsers"
             />

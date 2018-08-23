@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const GameTitle = styled.p`
-  font-size: 22px;
+  font-size: 25px;
   font-family: 'Roboto', Arial, sans-serif;
   color: #6a6a6a;
   margin-top: 10px;

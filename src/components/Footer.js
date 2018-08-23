@@ -2,14 +2,12 @@ import React from 'react';
 import styled from 'styled-components';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import faLanguage from '@fortawesome/fontawesome-free-solid/faLanguage';
-import { Trans } from 'react-i18next';
 import Link from './Link';
 import { media } from '../lib/media';
 import Row from './Grid/Row';
 import Column from './Grid/Column';
 import footerBackground from '../img/footer-background.jpg';
 import config from '../config';
-import CenteredRow from './Grid/CenteredRow';
 
 const FooterContainer = styled.div`
   background-color: #423352;
@@ -108,9 +106,16 @@ export default ({ t }) => (
             {t('Documentation & tutorials')}
           </FooterLink>
           <FooterLink to="/features/">{t('Features')}</FooterLink>
+          <FooterLink to="/facebook-instant-games/">
+            {t('Facebook Instant Games')}
+          </FooterLink>
         </Column>
         <Column>
+          <FooterLink to="/make-8bit-pixelart-games/">
+            {t('Make 8-bit games')}
+          </FooterLink>
           <FooterLink to="/education/">{t('Education')}</FooterLink>
+          <FooterLink to="/game-editors/">{t('Game editors')}</FooterLink>
           <FooterLink to="/games-showcase/">{t('Games showcase')}</FooterLink>
           <FooterLink to="/contribute/">{t('Contribute')}</FooterLink>
           <FooterLink

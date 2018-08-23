@@ -16,11 +16,12 @@ import CenteredRow from '../components/Grid/CenteredRow';
 import Column from '../components/Grid/Column';
 import GameThumbnail from '../components/GameThumbnail';
 import GameTitle from '../components/GameTitle';
-import BubBanner from '../components/BubBanner';
 import Paragraph from '../components/Paragraph';
 import BigGhostButton from '../components/BigGhostButton';
 import BigTitle from '../components/BigTitle';
 import Spacer from '../components/Grid/Spacer';
+import BubBanner from '../components/GameBanners/BubBanner';
+import HyperspaceDogfightsBanner from '../components/GameBanners/HyperspaceDogfightsBanner';
 
 const submitGameBody = `
 Hi all!
@@ -51,13 +52,6 @@ const games = [
     author: 'NanoSoft',
     link: 'http://gamejolt.com/games/arcade/mega-panic-pixel-alpha-wip/42664/',
     linkType: 'download',
-  },
-  {
-    imageSrc: require('../img/games/big_hyperspace.jpg'),
-    title: 'Hyperspace Dogfights',
-    author: ' Sleeper_Games',
-    link: 'http://steamcommunity.com/sharedfiles/filedetails/?id=892686140',
-    linkType: 'Steam Greenlight',
   },
   {
     imageSrc: require('../img/games/big_iletait.png'),
@@ -256,6 +250,48 @@ const games = [
     link: 'http://store.steampowered.com/app/761000/Floresia_I__Intemporel/',
     linkType: 'Steam',
   },
+  {
+    imageSrc: require('../img/games/big_gaston.jpg'),
+    title: 'Gaston : Nuits de cauchemar',
+    author: 'Hysteria Games',
+    link: 'https://hysteria-games.com/index.htm',
+    linkType: 'play',
+  },
+  {
+    imageSrc: require('../img/games/big_tundmatu.png'),
+    title: 'Tundmatu',
+    author: 'Jukka Rapa',
+    link: 'https://gamejolt.com/games/tundmatu/192044',
+    linkType: 'download',
+  },
+  {
+    imageSrc: require('../img/games/big_nikocuriouscat.jpg'),
+    title: 'NIKO the Curious Cat',
+    author: 'Jogador W',
+    link:
+      'https://play.google.com/store/apps/details?id=com.wNikoThecuriousCat_7302564',
+    linkType: 'download',
+  },
+  {
+    imageSrc: require('../img/games/big_brickdrop.png'),
+    title: 'Brick Drop',
+    author: 'Jak Inventions',
+    link:
+      'https://play.google.com/store/apps/details?id=com.inventions.jak.brickdrop',
+    linkType: 'download',
+  },
+  {
+    imageSrc: require('../img/games/big_sakawochi.png'),
+    title: 'Sakawochi',
+    author: 'Matthias Meike (Wend1go)',
+    link: 'https://wend1go.itch.io/sakawochi',
+    linkType: 'play',
+  },
+  {
+    imageSrc: require('../img/games/big_bursky-1a.jpg'),
+    title: 'Brusky',
+    author: 'Robert Popper',
+  },
 ];
 
 const groupByNUple = (array, n) => {
@@ -307,16 +343,22 @@ export default class EducationPage extends React.Component {
               </WhiteParagraph>
             </BannerContainer>
             <BubBanner />
+            <HyperspaceDogfightsBanner />
             <TransparentContainer>
+              <BigTitle>And tons of other games!</BigTitle>
+              <Spacer height="30px" />
               {groupByNUple(games, 2).map((groupedGames, index) => (
                 <Row key={index}>
                   {groupedGames.map((game, index) => (
                     <Column key={`${game.title}-${game.author}`}>
                       <GameThumbnail src={game.imageSrc} />
                       <GameTitle textAlign="center">
-                        <b>{game.title}</b> {t('by')} {game.author}
+                        {game.title}{' '}
+                        <i>
+                          {t('by')} {game.author}
+                        </i>
                       </GameTitle>
-                      {!!game.link && (
+                      {game.link ? (
                         <CenteredRow>
                           <BigButton to={game.link}>
                             {game.linkType === 'play'
@@ -326,6 +368,8 @@ export default class EducationPage extends React.Component {
                                 : game.linkType}
                           </BigButton>
                         </CenteredRow>
+                      ) : (
+                        <Spacer height="75px" />
                       )}
                     </Column>
                   ))}

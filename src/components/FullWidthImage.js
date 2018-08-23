@@ -12,12 +12,17 @@ const fadeIn = keyframes`
   }
 `;
 
-const FullWidthImage = styled.img`
+const FullWidthImage = styled.div`
   width: 100%;
+  height: 400px;
+  background: url(${props => props.src});
+  background-size: cover;
+  background-position: center center;
 
   animation: ${fadeIn} 0.5s ease-out forwards;
 
   ${media.tablet`
+    height: 300px;
   `};
 `;
 

@@ -144,21 +144,29 @@ export default class DownloadPage extends React.Component {
               </Paragraph>
               <CenteredRow>
                 <BigButton
-                  to="https://github.com/4ian/GD/releases/download/4.0.96/gd4096.exe"
+                  to="https://github.com/4ian/GD/releases/download/4.0.97/gd4097.exe"
                   target="_blank"
                   category="download"
                   label="win-installer"
                 >
-                  {t('Windows')}
+                  {t('Windows (4.0.97)')}
                 </BigButton>
-                <BigButton
+                <BigGhostButton
+                  to="https://launchpad.net/~florian-rival/+archive/ubuntu/gdevelop"
+                  target="_blank"
+                  category="download"
+                  label="ubuntu"
+                >
+                  {t('Ubuntu (4.0.92 ⚠️)')}
+                </BigGhostButton>
+                <BigGhostButton
                   to="http://software.opensuse.org/download.html?project=home%3Avictorlevasseur&amp;package=gdevelop"
                   target="_blank"
                   category="download"
                   label="linux-obs"
                 >
-                  {t('OpenSUSE/Fedora/Arch')}
-                </BigButton>
+                  {t('OpenSUSE/Fedora/Arch (4.0.92 ⚠️)')}
+                </BigGhostButton>
               </CenteredRow>
               <ExplanationText>
                 {t(

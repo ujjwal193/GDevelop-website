@@ -4,6 +4,7 @@ import faLightbulb from '@fortawesome/fontawesome-free-solid/faLightbulb';
 import faThList from '@fortawesome/fontawesome-free-solid/faThList';
 import faExternalLinkAlt from '@fortawesome/fontawesome-free-solid/faExternalLinkAlt';
 import faFlagCheckered from '@fortawesome/fontawesome-free-solid/faFlagCheckered';
+import faRocket from '@fortawesome/fontawesome-free-solid/faRocket';
 
 import Navbar, { NavBarSpacer } from '../components/Navbar';
 import Footer from '../components/Footer';
@@ -16,7 +17,8 @@ import LandingContainer from '../components/Containers/LandingContainer';
 import WhiteBigTitle from '../components/WhiteBigTitle';
 import WhiteParagraph from '../components/WhiteParagraph';
 import WhiteBigButton from '../components/WhiteBigButton';
-import CenteredBigImage from '../components/CenteredBigImage';
+import CenteredImage from '../components/CenteredImage';
+import CarouselImage from '../components/CarouselImage';
 import RightImage from '../components/RightImage';
 import ExplanationText from '../components/ExplanationText';
 
@@ -24,10 +26,6 @@ import events from '../img/events.png';
 import gdevelopWikiTutorials from '../img/gdevelop-wiki-tutorials.png';
 import gamesOnMobileTabletDesktopWeb from '../img/games-on-mobile-tablet-desktop-web.png';
 import landingScreen from '../img/landing-screen.jpg';
-import platformerSceneEditor from '../img/platformer-scene-editor.png';
-import platformer2SceneEditor from '../img/platformer2-scene-editor.png';
-import spaceShooterSceneEditor from '../img/space-shooter-scene-editor.png';
-import pathfindingTankSceneEditor from '../img/pathfinding-tank-scene-editor.png';
 import Row from '../components/Grid/Row';
 import CenteredRow from '../components/Grid/CenteredRow';
 import Spacer from '../components/Grid/Spacer';
@@ -36,8 +34,14 @@ import Carousel from '../components/Carousel';
 import MakeGameBanner from '../components/MakeGameBanner';
 import config from '../config';
 import BigGhostButton from '../components/BigGhostButton';
-import BottomCenteredBigImage from '../components/BottomCenteredBigImage';
+import BottomCenteredImage from '../components/BottomCenteredImage';
 import BigTitleIcon from '../components/BigTitleIcon';
+import CenteredYoutubeVideo from '../components/CenteredYoutubeVideo';
+import MarkdownText from '../components/MarkdownText';
+import lilBubPlatformer from '../img/games/lil-bub-hello-earth/lil-bub-platformer.png';
+import hdogScreenshotGroundCombat from '../img/games/hyperspace-dogfights/hdog_screenshot_ground_combat.png';
+import bigRobDogIii from '../img/games/big_Rob_Dog_III.png';
+import bigModelo from '../img/games/big_modelo.png';
 
 export default class IndexPage extends React.Component {
   render() {
@@ -105,14 +109,26 @@ export default class IndexPage extends React.Component {
                 <BigTitleIcon icon={faLightbulb} /> {t('Create any game')}
               </BigTitle>
               <Paragraph>
-                {t(
-                  "Unleash your creativity with GDevelop and create any kind of game: platformers, puzzles, shoot 'em up, strategy... Go through the examples or start a new project from scratch."
-                )}
+                <MarkdownText
+                  source={t(
+                    "Unleash your creativity with GDevelop and create any kind of game: platformers, puzzles, shoot 'em up, strategy, [8-bit games](/make-8bit-pixelart-games)... Go through the examples or start a new project from scratch."
+                  )}
+                />
+              </Paragraph>
+              <Paragraph>
+                <MarkdownText
+                  source={t(
+                    "With GDevelop, you can make simple projects for fun or create ambitious indie games like [Lil BUB's HELLO EARTH](/games/lil-bub-hello-earth), [Hyperspace Dogfights](/games/hyperspace-dogfights) and [tons of other games](/games-showcase)!"
+                  )}
+                />
               </Paragraph>
             </TransparentContainer>
             <TransparentContainer noPadding>
               <Carousel
                 buttonsDisabled
+                dotsDisabled
+                keysControlDisabled
+                stopAutoPlayOnHover={false}
                 autoPlay
                 autoPlayInterval={2500}
                 responsive={{
@@ -124,21 +140,25 @@ export default class IndexPage extends React.Component {
                   },
                 }}
               >
-                <img
-                  src={platformerSceneEditor}
+                <CarouselImage
+                  src={lilBubPlatformer}
                   alt={t('Create platformer games with GDevelop')}
+                  shadow
                 />
-                <img
-                  src={spaceShooterSceneEditor}
-                  alt={t('Create space shooter games with GDevelop')}
+                <CarouselImage
+                  src={hdogScreenshotGroundCombat}
+                  alt={t('Develop space shooter games with GDevelop')}
+                  shadow
                 />
-                <img
-                  src={pathfindingTankSceneEditor}
-                  alt={t('Create strategy games with GDevelop')}
+                <CarouselImage
+                  src={bigRobDogIii}
+                  alt={t('Create mario-like games with GDevelop')}
+                  shadow
                 />
-                <img
-                  src={platformer2SceneEditor}
-                  alt={t('Create games with GDevelop')}
+                <CarouselImage
+                  src={bigModelo}
+                  alt={t('Make strategy games with GDevelop')}
+                  shadow
                 />
               </Carousel>
             </TransparentContainer>
@@ -152,7 +172,7 @@ export default class IndexPage extends React.Component {
                   'What makes GDevelop unique and so easy to use are the events. Events are a powerful way to express the logic of your game, without having to learn a programming language.'
                 )}
               </Paragraph>
-              <CenteredBigImage
+              <CenteredImage
                 maxWidth="800px"
                 src={events}
                 alt={t('Events enable easy game creation')}
@@ -170,11 +190,13 @@ export default class IndexPage extends React.Component {
                 {t('Export your game in one click')}
               </BigTitle>
               <Paragraph>
-                {t(
-                  'Publish your games to the web, iOS, Android, Windows, Mac, Linux. Games created with GDevelop run anywhere and you can even do a one-click export to Android from the app.'
-                )}
+                <MarkdownText
+                  source={t(
+                    'Publish your games to the web, iOS, Android, Windows, Mac, Linux and even [Facebook Messenger](/facebook-instant-games). Games created with GDevelop run anywhere and you can even do a one-click export to Android from the app.'
+                  )}
+                />
               </Paragraph>
-              <CenteredBigImage
+              <CenteredImage
                 maxWidth="800px"
                 src={gamesOnMobileTabletDesktopWeb}
                 alt={t('Make games for iOS, Android, Windows, macOS and Linux')}
@@ -182,6 +204,22 @@ export default class IndexPage extends React.Component {
                   'Laptop, tablets or phone: games made with GDevelop can run everywhere'
                 )}
               />
+              <BigTitle>
+                <BigTitleIcon icon={faRocket} /> {t('Unlimited possibilities')}
+              </BigTitle>
+              <Paragraph>
+                <MarkdownText
+                  source={t(
+                    'Express your ideas without being blocked: you can prototype new features on your games in minutes, and refine them without limits. [Making games](/games-showcase) as never been as easy as assembling your ideas with [the visual editors](/game-editors) provided by GDevelop.'
+                  )}
+                />
+              </Paragraph>
+              <CenteredYoutubeVideo src="https://www.youtube.com/embed/3wwoy1pY6O8" />
+              <ExplanationText>
+                {t(
+                  'See how to add a trigger button to your platformer game in 90 seconds'
+                )}
+              </ExplanationText>
               <BigTitle>
                 <BigTitleIcon icon={faFlagCheckered} />{' '}
                 {t('Get started with tutorials')}
@@ -208,7 +246,7 @@ export default class IndexPage extends React.Component {
                 </BigGhostButton>
               </CenteredRow>
             </TransparentContainer>
-            <BottomCenteredBigImage
+            <BottomCenteredImage
               maxWidth="800px"
               src={gdevelopWikiTutorials}
               alt={t('Tutorials for GDevelop and documentation on the wiki')}

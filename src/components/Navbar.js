@@ -19,7 +19,11 @@ const NavigationBar = styled.nav`
   z-index: 100;
 
   background-image: ${props =>
-    props.transparent ? 'none' : `url(${background})`};
+      props.dimmed && !props.transparent
+        ? 'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), '
+        : ''}
+    ${props =>
+      props.transparent ? 'none' : `url(${props.background || background})`};
   background-size: cover;
 
   ${media.tablet`
@@ -176,11 +180,15 @@ class Navbar extends React.Component {
   };
 
   render() {
-    const { t, noTransparency } = this.props;
+    const { t, noTransparency, background, dimmed } = this.props;
     const { transparent, open } = this.state;
 
     return (
-      <NavigationBar transparent={transparent && !open && !noTransparency}>
+      <NavigationBar
+        transparent={transparent && !open && !noTransparency}
+        background={background}
+        dimmed={dimmed}
+      >
         <Container>
           <LogoContainer>
             <LogoLink to="/">

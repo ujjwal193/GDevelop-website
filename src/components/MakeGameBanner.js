@@ -7,8 +7,8 @@ import WhiteBigButton from './WhiteBigButton';
 import CenteredRow from './Grid/CenteredRow';
 import config from '../config';
 
-const MakeGameBanner = ({ t, title, text }) => (
-  <BannerContainer>
+const MakeGameBanner = ({ t, title, text, background, dimmed }) => (
+  <BannerContainer background={background} dimmed={dimmed}>
     <WhiteBigTitle>{title || t('Make your first game')}</WhiteBigTitle>
     <WhiteParagraph>
       {text ||
