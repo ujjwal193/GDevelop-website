@@ -3,7 +3,7 @@ export default {
   crowdinUrl: 'https://crowdin.com/project/gdevelop',
   developmentRoadmapUrl: 'https://trello.com/b/qf0lM7k8/gdevelop-roadmap',
   forumUrl: 'http://forum.compilgames.net',
-  discordUrl: 'https://discord.gg/YnKk8Ev',
+  discordUrl: 'https://discord.gg/JWcfHEB',
   wikiUrl: 'http://wiki.compilgames.net/doku.php/gdevelop5/start',
   facebookPageUrl: 'https://www.facebook.com/GameDevelop/',
   twitterUrl: 'https://twitter.com/game_develop',
