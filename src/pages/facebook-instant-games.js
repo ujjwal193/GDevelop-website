@@ -95,7 +95,7 @@ export default class FeaturesPage extends React.Component {
               <Paragraph>
                 <MarkdownText
                   source={t(
-                    'In GDevelop, open your game and then the Export window. Choose **Facebook Instant Games**, click on Export and waiting a few seconds.'
+                    'In GDevelop, open your game and then the Export window. Choose **Facebook Instant Games**, click on Export and wait a few seconds.'
                   )}
                 />
               </Paragraph>
