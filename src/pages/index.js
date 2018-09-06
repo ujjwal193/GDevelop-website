@@ -227,7 +227,12 @@ export default class IndexPage extends React.Component {
               <Paragraph>
                 {t(
                   'Learn step-by-step how to use GDevelop or get help about a specific feature: the wiki has tutorials for beginners and a complete documentation for the software.'
-                )}
+                )}{' '}
+                <MarkdownText
+                  source={t(
+                    '[Tons of examples](/examples) are also available and ready to be tried in one click.'
+                  )}
+                />
               </Paragraph>
               <CenteredRow>
                 <BigGhostButton
