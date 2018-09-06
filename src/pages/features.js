@@ -89,7 +89,12 @@ export default class FeaturesPage extends React.Component {
                   {t(
                     'Export as a stand-alone executable game for Windows, macOS and Linux'
                   )}{' '}
-                  - <i>{t('Coming Soon!')}</i>
+                  -{' '}
+                  <i>
+                    {t(
+                      '[in one click!](http://wiki.compilgames.net/doku.php/gdevelop5/publishing/windows-macos-linux))'
+                    )}
+                  </i>
                 </ListItem>
               </List>
               <CenteredRow>
@@ -189,7 +194,12 @@ export default class FeaturesPage extends React.Component {
                   </i>
                 </ListItem>
                 <ListItem>
-                  {t('Performance profiler')} - <i>{t('coming soon!')}</i>
+                  {t('Performance profiler')} -{' '}
+                  <i>
+                    {t(
+                      '[monitor the resource expensive spots](http://wiki.compilgames.net/doku.php/gdevelop5/interface/debugger/profile-your-game)) in your game'
+                    )}
+                  </i>
                 </ListItem>
               </List>
               <CenteredRow>
