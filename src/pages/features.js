@@ -91,9 +91,11 @@ export default class FeaturesPage extends React.Component {
                   )}{' '}
                   -{' '}
                   <i>
-                    {t(
-                      '[in one click!](http://wiki.compilgames.net/doku.php/gdevelop5/publishing/windows-macos-linux))'
-                    )}
+                    <MarkdownText
+                      source={t(
+                        '[in one click!](http://wiki.compilgames.net/doku.php/gdevelop5/publishing/windows-macos-linux))'
+                      )}
+                    />
                   </i>
                 </ListItem>
               </List>
@@ -196,9 +198,11 @@ export default class FeaturesPage extends React.Component {
                 <ListItem>
                   {t('Performance profiler')} -{' '}
                   <i>
-                    {t(
-                      '[monitor the resource expensive spots](http://wiki.compilgames.net/doku.php/gdevelop5/interface/debugger/profile-your-game)) in your game'
-                    )}
+                    <MarkdownText
+                      source={t(
+                        '[monitor the resource expensive spots](http://wiki.compilgames.net/doku.php/gdevelop5/interface/debugger/profile-your-game)) in your game'
+                      )}
+                    />
                   </i>
                 </ListItem>
               </List>
