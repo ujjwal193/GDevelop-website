@@ -93,7 +93,7 @@ export default class FeaturesPage extends React.Component {
                   <i>
                     <MarkdownText
                       source={t(
-                        '[in one click!](http://wiki.compilgames.net/doku.php/gdevelop5/publishing/windows-macos-linux))'
+                        '[in one click!](http://wiki.compilgames.net/doku.php/gdevelop5/publishing/windows-macos-linux)'
                       )}
                     />
                   </i>
@@ -200,7 +200,7 @@ export default class FeaturesPage extends React.Component {
                   <i>
                     <MarkdownText
                       source={t(
-                        '[monitor the resource expensive spots](http://wiki.compilgames.net/doku.php/gdevelop5/interface/debugger/profile-your-game)) in your game'
+                        '[monitor the resource expensive spots](http://wiki.compilgames.net/doku.php/gdevelop5/interface/debugger/profile-your-game) in your game'
                       )}
                     />
                   </i>
