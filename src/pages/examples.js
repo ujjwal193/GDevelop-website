@@ -38,15 +38,15 @@ const Example = ({ t, name, exampleInformation }) => (
       </Column>
       <Column flex="0">
         <CenteredRow>
-        <BigButton
-          rel="noopener"
-          target="_blank"
-          category="open-webapp-example"
-          label={name}
-          to={`${config.onlineEditorUrl}/?project=example://${name}`}
-        >
-          {t('Open in GDevelop')}
-        </BigButton>
+          <BigButton
+            rel="noopener"
+            target="_blank"
+            category="open-webapp-example"
+            label={name}
+            to={`${config.onlineEditorUrl}/?project=example://${name}`}
+          >
+            {t('Open in GDevelop')}
+          </BigButton>
         </CenteredRow>
       </Column>
     </Row>
