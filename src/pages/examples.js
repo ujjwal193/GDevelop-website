@@ -19,6 +19,9 @@ import MakeGameBanner from '../components/MakeGameBanner';
 import BottomCenteredImage from '../components/BottomCenteredImage';
 import ExamplesInformation from '../lib/ExamplesInformation';
 import BigButton from '../components/BigButton';
+import Title from '../components/Title';
+import Row from '../components/Grid/Row';
+import Column from '../components/Grid/Column';
 
 const formatExampleName = name => {
   if (!name.length) return '';
@@ -28,19 +31,25 @@ const formatExampleName = name => {
 
 const Example = ({ t, name, exampleInformation }) => (
   <React.Fragment>
-    <BigTitle>{formatExampleName(name)}</BigTitle>
-    <Paragraph>{exampleInformation.description}</Paragraph>
-    <CenteredRow>
-      <BigGhostButton
-        rel="noopener"
-        target="_blank"
-        category="open-webapp-example"
-        label={name}
-        to={`${config.onlineEditorUrl}/?project=example://${name}`}
-      >
-        {t('Open in GDevelop')}
-      </BigGhostButton>
-    </CenteredRow>
+    <Row>
+      <Column>
+        <Title>{formatExampleName(name)}</Title>
+        <Paragraph>{exampleInformation.description}</Paragraph>
+      </Column>
+      <Column flex="0">
+        <CenteredRow>
+        <BigButton
+          rel="noopener"
+          target="_blank"
+          category="open-webapp-example"
+          label={name}
+          to={`${config.onlineEditorUrl}/?project=example://${name}`}
+        >
+          {t('Open in GDevelop')}
+        </BigButton>
+        </CenteredRow>
+      </Column>
+    </Row>
   </React.Fragment>
 );
 
