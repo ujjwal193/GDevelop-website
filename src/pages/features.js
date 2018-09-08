@@ -129,7 +129,7 @@ export default class FeaturesPage extends React.Component {
                 <BigGhostButton to="http://wiki.compilgames.net/doku.php/gdevelop5/objects">
                   {t('Read the documentation for all objects')}
                 </BigGhostButton>
-                <BigButton to="/examples">
+                <BigButton to="/game-examples-starters">
                   {t('Try the online examples')}
                 </BigButton>
               </CenteredRow>
@@ -251,7 +251,7 @@ export default class FeaturesPage extends React.Component {
                 <BigGhostButton to="http://wiki.compilgames.net/doku.php/gdevelop5/events">
                   {t('Read the documentation about events')}
                 </BigGhostButton>
-                <BigButton to="/examples">
+                <BigButton to="/game-examples-starters">
                   {t('Try the online examples')}
                 </BigButton>
               </CenteredRow>

@@ -109,7 +109,7 @@ export default ({ t }) => (
           <FooterLink to="/facebook-instant-games/">
             {t('Facebook Instant Games')}
           </FooterLink>
-          <FooterLink to="/examples/">{t('Game examples/starters')}</FooterLink>
+          <FooterLink to="/game-examples-starters/">{t('Game examples/starters')}</FooterLink>
         </Column>
         <Column>
           <FooterLink to="/make-8bit-pixelart-games/">

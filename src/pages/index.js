@@ -230,7 +230,7 @@ export default class IndexPage extends React.Component {
                 )}{' '}
                 <MarkdownText
                   source={t(
-                    '[Tons of examples](/examples) are also available and ready to be tried in one click.'
+                    '[Tons of examples](/game-examples-starters) are also available and ready to be tried in one click.'
                   )}
                 />
               </Paragraph>
