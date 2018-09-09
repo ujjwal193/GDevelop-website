@@ -213,6 +213,11 @@ export default class IndexPage extends React.Component {
                     'Express your ideas without being blocked: you can prototype new features on your games in minutes, and refine them without limits. [Making games](/games-showcase) as never been as easy as assembling your ideas with [the visual editors](/game-editors) provided by GDevelop.'
                   )}
                 />
+                <MarkdownText
+                  source={t(
+                    'Want to go even further? You can extend the [game engine with Javascript](/javascript-game-engine).'
+                  )}
+                />
               </Paragraph>
               <CenteredYoutubeVideo src="https://www.youtube.com/embed/3wwoy1pY6O8" />
               <ExplanationText>
