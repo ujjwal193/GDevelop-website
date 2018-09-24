@@ -24,8 +24,14 @@ import Spacer from '../components/Grid/Spacer';
 import BigGhostButton from '../components/BigGhostButton';
 import BigTitle from '../components/BigTitle';
 import ExplanationText from '../components/ExplanationText';
+import MarkdownText from '../components/MarkdownText';
 
 export default class DownloadPage extends React.Component {
+  state = {
+    showLinuxInstallationExplanations: false,
+    alwaysShowLinuxInstallationExplanations: false,
+  };
+
   render() {
     return (
       <PageContainer {...this.props.pathContext}>
@@ -78,6 +84,21 @@ export default class DownloadPage extends React.Component {
                   to={config.gdevelopLinuxUrl}
                   category="download"
                   label="gd5-linux"
+                  onClick={() =>
+                    this.setState({
+                      alwaysShowLinuxInstallationExplanations: true,
+                    })
+                  }
+                  onMouseOver={() =>
+                    this.setState({
+                      showLinuxInstallationExplanations: true,
+                    })
+                  }
+                  onMouseLeave={() =>
+                    this.setState({
+                      showLinuxInstallationExplanations: false,
+                    })
+                  }
                 >
                   <FontAwesomeIcon icon={faLinux} /> Linux
                 </BigButton>
@@ -91,6 +112,21 @@ export default class DownloadPage extends React.Component {
                   <FontAwesomeIcon icon={faChrome} /> {t('Try it online')}
                 </BigGhostButton>
               </CenteredRow>
+              {this.state.showLinuxInstallationExplanations ||
+              this.state.alwaysShowLinuxInstallationExplanations ? (
+                <CenteredRow>
+                  <ExplanationText>
+                    ℹ️{' '}
+                    <MarkdownText
+                      source={t(
+                        'You need **libgconf-2-4** on your system. Type `sudo apt-get install libgconf-2-4` in a terminal or install it from your package manager.'
+                      )}
+                    />
+                  </ExplanationText>
+                </CenteredRow>
+              ) : (
+                <Spacer height="30px" />
+              )}
               <Paragraph>
                 {t('To create your first game, start by reading a tutorial:')}
               </Paragraph>
