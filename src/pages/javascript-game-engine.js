@@ -88,7 +88,7 @@ export default class FeaturesPage extends React.Component {
               <Paragraph>
                 <MarkdownText
                   source={t(
-                    'GDevelop is modular and can be extended to suit your needs. In particular, all features available to games (objects, behaviors, events) are based on a extension system. You can quickly create new extensions for your game or contribute to existing ones as GDevelop is [open-source](https://github.com/4ian/GD).'
+                    'GDevelop is modular and can be extended to suit your needs. In particular, all features available to games (objects, behaviors, events) are based on the extension system. You can quickly create new extensions for your game or contribute to existing ones as GDevelop is [open-source](https://github.com/4ian/GD).'
                   )}
                 />
               </Paragraph>
