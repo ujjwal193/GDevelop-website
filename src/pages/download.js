@@ -185,7 +185,7 @@ export default class DownloadPage extends React.Component {
                   category="download"
                   label="win-installer"
                 >
-                  {t('Windows (4.0.97)')}
+                  {'Windows (4.0.97)'}
                 </BigButton>
                 <BigGhostButton
                   to="https://launchpad.net/~florian-rival/+archive/ubuntu/gdevelop"
@@ -193,7 +193,7 @@ export default class DownloadPage extends React.Component {
                   category="download"
                   label="ubuntu"
                 >
-                  {t('Ubuntu (4.0.92 ⚠️)')}
+                  {'Ubuntu (4.0.92 ⚠️)'}
                 </BigGhostButton>
                 <BigGhostButton
                   to="http://software.opensuse.org/download.html?project=home%3Avictorlevasseur&amp;package=gdevelop"
@@ -201,7 +201,7 @@ export default class DownloadPage extends React.Component {
                   category="download"
                   label="linux-obs"
                 >
-                  {t('OpenSUSE/Fedora/Arch (4.0.92 ⚠️)')}
+                  {'OpenSUSE/Fedora/Arch (4.0.92 ⚠️)'}
                 </BigGhostButton>
               </CenteredRow>
               <ExplanationText>

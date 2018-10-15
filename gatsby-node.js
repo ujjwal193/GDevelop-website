@@ -2,6 +2,7 @@ const chalk = require('chalk');
 const { createFilePath } = require('gatsby-source-filesystem');
 const { getAllLocales } = require('./i18n-helpers');
 
+const supportedLocales = ['en', 'es', 'fr', 'ja', 'ms', 'pl', 'pt', 'tr', 'zh'];
 const locales = [
   {
     name: 'English',
@@ -13,7 +14,10 @@ const locales = [
   },
   ...getAllLocales(),
 ].filter(locale => {
-  if (locale.translationRatio < 0.7) {
+  if (
+    locale.translationRatio < 0.7 &&
+    !supportedLocales.includes(locale.langCode)
+  ) {
     return false;
   }
 
@@ -59,7 +63,7 @@ const makeLocalizedPages = page => {
       path,
       context: {
         localeCode: locale.langCode,
-        localeMessages: {
+        stringifiedLocaleMessages: JSON.stringify({
           [locale.langCode]: {
             translation: {
               ...locale.messages,
@@ -67,7 +71,7 @@ const makeLocalizedPages = page => {
               LANG_CODE: locale.langCode,
             },
           },
-        },
+        }),
       },
     });
   });
@@ -80,14 +84,14 @@ const makeChooseLanguagePage = page => {
     ...page,
     context: {
       localeCode: 'en',
-      localeMessages: {
+      stringifiedLocaleMessages: JSON.stringify({
         en: {
           translation: {
             LANG_PATH_PREFIX: '',
             LANG_CODE: 'en',
           },
         },
-      },
+      }),
       localeNamesAndPaths: locales.map(locale => ({
         name: locale.name,
         path: locale.path,
