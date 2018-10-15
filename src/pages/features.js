@@ -242,9 +242,11 @@ export default class FeaturesPage extends React.Component {
                   )}
                 </ListItem>
                 <ListItem>
-                  {t(
-                    'You can even use JavaScript to code some parts of your game!'
-                  )}
+                  <MarkdownText
+                    source={t(
+                      'You can even [use JavaScript to code](/javascript-game-engine) some parts of your game!'
+                    )}
+                  />
                 </ListItem>
               </List>
               <CenteredRow>
