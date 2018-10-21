@@ -187,8 +187,14 @@ export default class FeaturesPage extends React.Component {
                   {t('Create your levels dynamically with external layouts')}
                 </ListItem>
                 <ListItem>
-                  {t('Design your assets with Piskel')}-{' '}
+                  {t('Design your assets with Piskel')} -{' '}
                   <i>{t('a powerful pixel art and sprite editor')}</i>
+                </ListItem>
+                <ListItem>
+                  {t('Generate sound effects with Jsfx')} -{' '}
+                  <i>
+                    {t('create effects and customize them in a few clicks')}
+                  </i>
                 </ListItem>
                 <ListItem>
                   {t('Debugger')} -{' '}
@@ -231,14 +237,29 @@ export default class FeaturesPage extends React.Component {
               </BigTitle>
               <List>
                 <ListItem>
-                  {t('Communicate with external websites using HTTP requests')}
+                  {t(
+                    'Communicate with external websites or services using HTTP requests.'
+                  )}
                 </ListItem>
                 <ListItem>
-                  {t('Use advanced events: loops, for-each and even functions')}
+                  {t('Use advanced events: loops, for-each...')}
+                </ListItem>
+                <ListItem>
+                  <MarkdownText
+                    source={t(
+                      'Create reusable **functions** using events, that can be used as actions, conditions or expressions in your game'
+                    )}
+                  />{' '}
+                  -{' '}
+                  <i>
+                    {t(
+                      'a powerful feature never seen in other game creation tools.'
+                    )}
+                  </i>
                 </ListItem>
                 <ListItem>
                   {t(
-                    'Manipulate variables with arbitrary complex structures and even JSON support'
+                    'Manipulate variables with arbitrary complex structures and even JSON support.'
                   )}
                 </ListItem>
                 <ListItem>

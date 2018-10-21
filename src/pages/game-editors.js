@@ -26,6 +26,7 @@ import spaceShooterSceneEditor from '../img/space-shooter-scene-editor.png';
 import pathfindingTankSceneEditor from '../img/pathfinding-tank-scene-editor.png';
 import Carousel from '../components/Carousel';
 import CarouselImage from '../components/CarouselImage';
+import MarkdownText from '../components/MarkdownText';
 
 export default class FeaturesPage extends React.Component {
   render() {
@@ -75,7 +76,7 @@ export default class FeaturesPage extends React.Component {
               <BigTitle>{t('Events editor')}</BigTitle>
               <Paragraph>
                 {t(
-                  "Imagining and creating the rule of your game does not imply to learn the syntax of a complex programming language. The events editor displays a sheet of events: each events is composed of conditions and actions. When conditions are fulfilled, actions are run. It's that simple."
+                  "Imagining and creating the rules of your game do not imply to learn the syntax of a complex programming language. The events editor displays a sheet of events: each events is composed of conditions and actions. When conditions are fulfilled, actions are run. It's that simple."
                 )}
               </Paragraph>
               <Paragraph>
@@ -137,16 +138,22 @@ export default class FeaturesPage extends React.Component {
                   {t('Discover all the objects available in GDevelop')}
                 </BigGhostButton>
               </CenteredRow>
-              <BigTitle>{t('Resources editor')}</BigTitle>
+              <BigTitle>
+                {t(
+                  'Resources editor, sprite editor and sound effect generator'
+                )}
+              </BigTitle>
               <Paragraph>
                 {t(
                   "All the images and audio files used in your game are listed in the Resources Editor. It's a simple way to manage your game assets."
                 )}
               </Paragraph>
               <Paragraph>
-                {t(
-                  'GDevelop comes bundled with free assets to get you started! To quickly prototype and create your own assets, GDevelop is also bundled with a powerful pixel art editor called Piskel.'
-                )}
+                <MarkdownText
+                  source={t(
+                    "GDevelop comes bundled with free assets to get you started! To quickly prototype and create your own assets, GDevelop is also bundled with a powerful pixel art editor called Piskel. You can also create sound effect in a single click using the integrated sound generator. It's perfect for [game jams](/game-jams/)!"
+                  )}
+                />
               </Paragraph>
               <CenteredRow>
                 <BigGhostButton to="http://wiki.compilgames.net/doku.php/gdevelop5/interface">

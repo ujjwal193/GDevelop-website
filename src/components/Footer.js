@@ -112,6 +112,9 @@ export default ({ t }) => (
           <FooterLink to="/game-examples-starters/">
             {t('Game examples/starters')}
           </FooterLink>
+          <FooterLink to="/game-jams/">
+            {t('GDevelop for Game jams')}
+          </FooterLink>
         </Column>
         <Column>
           <FooterLink to="/javascript-game-engine/">
