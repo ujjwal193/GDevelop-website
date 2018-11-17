@@ -123,6 +123,9 @@ export default ({ t }) => (
           <FooterLink to="/make-8bit-pixelart-games/">
             {t('Make 8-bit games')}
           </FooterLink>
+          <FooterLink to="/ads-in-your-game-with-admob/">
+            {t('Ads with AdMob')}
+          </FooterLink>
           <FooterLink to="/education/">{t('Education')}</FooterLink>
           <FooterLink to="/game-editors/">{t('Game editors')}</FooterLink>
           <FooterLink to="/games-showcase/">{t('Games showcase')}</FooterLink>

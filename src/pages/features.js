@@ -98,6 +98,13 @@ export default class FeaturesPage extends React.Component {
                     />
                   </i>
                 </ListItem>
+                <ListItem>
+                  <MarkdownText
+                    source={t(
+                      'Display [ads and reward videos](/ads-in-your-game-with-admob) to your players using [AdMob](/ads-in-your-game-with-admob)'
+                    )}
+                  />
+                </ListItem>
               </List>
               <CenteredRow>
                 <BigGhostButton to="http://wiki.compilgames.net/doku.php/gdevelop5/publishing">
@@ -187,11 +194,18 @@ export default class FeaturesPage extends React.Component {
                   {t('Create your levels dynamically with external layouts')}
                 </ListItem>
                 <ListItem>
-                  {t('Design your assets with Piskel')} -{' '}
-                  <i>{t('a powerful pixel art and sprite editor')}</i>
+                  <MarkdownText
+                    source={t(
+                      'Design your assets with [Piskel](/make-8bit-pixelart-games)'
+                    )}
+                  />{' '}
+                  - <i>{t('a powerful pixel art and sprite editor')}</i>
                 </ListItem>
                 <ListItem>
-                  {t('Generate sound effects with Jsfx')} -{' '}
+                  <MarkdownText
+                    source={t('Generate [sound effects with Jfxr](/game-jams)')}
+                  />{' '}
+                  -{' '}
                   <i>
                     {t('create effects and customize them in a few clicks')}
                   </i>
@@ -266,6 +280,13 @@ export default class FeaturesPage extends React.Component {
                   <MarkdownText
                     source={t(
                       'You can even [use JavaScript to code](/javascript-game-engine) some parts of your game!'
+                    )}
+                  />
+                </ListItem>
+                <ListItem>
+                  <MarkdownText
+                    source={t(
+                      'Display ads in your game with [AdMob](/ads-in-your-game-with-admob) or link to products from your [Shopify shop](http://wiki.compilgames.net/doku.php/gdevelop5/all-features/shopify).'
                     )}
                   />
                 </ListItem>

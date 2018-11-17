@@ -62,7 +62,7 @@ export default class FeaturesPage extends React.Component {
               <Paragraph>
                 <MarkdownText
                   source={t(
-                    'GDevelop has an integrated sound effect generator, **jsfx**. You can create sounds effects like explosions, jump, coins, power ups in a single click and customize them as you wish.'
+                    'GDevelop has an integrated sound effect generator, **Jfxr**. You can create sounds effects like explosions, jump, coins, power ups in a single click and customize them as you wish.'
                   )}
                 />
               </Paragraph>

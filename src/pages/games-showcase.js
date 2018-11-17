@@ -392,7 +392,7 @@ export default class EducationPage extends React.Component {
               </CenteredRow>
             </TransparentContainer>
             <Spacer height="50px" />
-            <MakeGameBanner />
+            <MakeGameBanner title="Make ambitious games" />
             <Footer t={t} />
           </React.Fragment>
         )}

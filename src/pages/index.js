@@ -263,7 +263,7 @@ export default class IndexPage extends React.Component {
               title={t('Tutorials for GDevelop and documentation on the wiki')}
             />
             <MakeGameBanner
-              title={t('Make your first game')}
+              title={t('Start making games')}
               text={t(
                 'Imagine and publish your games with GDevelop. Bundled with tutorials and examples.'
               )}
