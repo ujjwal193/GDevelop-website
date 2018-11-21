@@ -15,7 +15,8 @@ const fadeIn = keyframes`
 const RightImage = styled.img`
   max-height: 70vh;
   position: relative;
-  left: 60px;
+  margin-left: 15px;
+  margin-right: 15px;
 
   box-shadow: 0 2px 3px 0 #51509C;
   border-radius: 4px;
@@ -29,6 +30,8 @@ const RightImage = styled.img`
   ${media.tablet`
     max-width: 100%;
     left: 0;
+    margin-left: 0px;
+    margin-right: 0px;
     margin-top: 10px;
     margin-bottom: 10px;
     animation: ${fadeIn} 0.8s ease-out forwards;

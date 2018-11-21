@@ -25,7 +25,7 @@ import ExplanationText from '../components/ExplanationText';
 import events from '../img/events.png';
 import gdevelopWikiTutorials from '../img/gdevelop-wiki-tutorials.png';
 import gamesOnMobileTabletDesktopWeb from '../img/games-on-mobile-tablet-desktop-web.png';
-import landingScreen from '../img/landing-screen.jpg';
+import landingScreen from '../img/landing-screen.png';
 import Row from '../components/Grid/Row';
 import CenteredRow from '../components/Grid/CenteredRow';
 import Spacer from '../components/Grid/Spacer';
@@ -72,8 +72,8 @@ export default class IndexPage extends React.Component {
               <Row reverse>
                 <CenteredColumn flex={8}>
                   <RightImage
-                    width="1095"
-                    height="734"
+                    width="1204"
+                    height="805"
                     src={landingScreen}
                     alt={t(
                       'GDevelop game maker software - create video games without coding'
