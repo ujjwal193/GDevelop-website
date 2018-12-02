@@ -54,6 +54,13 @@ const games = [
     linkType: 'download',
   },
   {
+    imageSrc: require('../img/games/big_yellow_bus.png'),
+    title: 'YELLOW BUS',
+    author: 'Aydin Yildiz & Akin Yildiz',
+    link: 'https://northstarstudio.itch.io/yellow-bus',
+    linkType: 'download',
+  },
+  {
     imageSrc: require('../img/games/big_iletait.png'),
     title: 'Il etait...',
     author: 'Vivet, Bravo & Corbel',
