@@ -210,7 +210,7 @@ export default class IndexPage extends React.Component {
               <Paragraph>
                 <MarkdownText
                   source={t(
-                    'Express your ideas without being blocked: you can prototype new features on your games in minutes, and refine them without limits. [Making games](/games-showcase) as never been as easy as assembling your ideas with [the visual editors](/game-editors) provided by GDevelop.'
+                    'Express your ideas without being blocked: you can prototype new features on your games in minutes, and refine them without limits. [Making games](/games-showcase) has never been as easy as assembling your ideas with [the visual editors](/game-editors) provided by GDevelop.'
                   )}
                 />{' '}
                 <MarkdownText
