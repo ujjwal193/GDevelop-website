@@ -14,14 +14,14 @@ import MakeGameBanner from '../components/MakeGameBanner';
 import Row from '../components/Grid/Row';
 import CenteredRow from '../components/Grid/CenteredRow';
 import Column from '../components/Grid/Column';
-import GameThumbnail from '../components/GameThumbnail';
-import GameTitle from '../components/GameTitle';
 import Paragraph from '../components/Paragraph';
 import BigGhostButton from '../components/BigGhostButton';
 import BigTitle from '../components/BigTitle';
 import Spacer from '../components/Grid/Spacer';
 import BubBanner from '../components/GameBanners/BubBanner';
 import HyperspaceDogfightsBanner from '../components/GameBanners/HyperspaceDogfightsBanner';
+import GenericGameBanner from '../components/GameBanners/GenericGameBanner';
+import GenericGameCard from '../components/GameBanners/GenericGameCard';
 
 const submitGameBody = `
 Hi all!
@@ -223,13 +223,6 @@ const games = [
     linkType: 'Steam',
   },
   {
-    imageSrc: require('../img/games/big_karambola.png'),
-    title: 'Karambola',
-    author: 'Holy Pangolin',
-    link: 'https://holypangolin.itch.io/karambola',
-    linkType: 'play',
-  },
-  {
     imageSrc: require('../img/games/big_castleescape.png'),
     title: 'Castle Escape',
     author: 'Bruno Silva Souza',
@@ -265,13 +258,6 @@ const games = [
     linkType: 'play',
   },
   {
-    imageSrc: require('../img/games/big_tundmatu.png'),
-    title: 'Tundmatu',
-    author: 'Jukka Rapa',
-    link: 'https://gamejolt.com/games/tundmatu/192044',
-    linkType: 'download',
-  },
-  {
     imageSrc: require('../img/games/big_nikocuriouscat.jpg'),
     title: 'NIKO the Curious Cat',
     author: 'Jogador W',
@@ -299,7 +285,59 @@ const games = [
     title: 'Brusky',
     author: 'Robert Popper',
   },
+  {
+    imageSrc: require('../img/games/big_tundmatu.png'),
+    title: 'Tundmatu',
+    author: 'Jukka Rapa',
+    link: 'https://gamejolt.com/games/tundmatu/192044',
+    linkType: 'download',
+  },
 ];
+
+const bannerGames = {
+  karambola: {
+    imageSrc: require('../img/games/karambola-banner.png'),
+    secondaryImageSrc: require('../img/games/karambola-rewards480.png'),
+    title: 'Karambola',
+    author: 'Holy Pangolin',
+    descriptionParagraphs: [
+      `In the middle of the summer, a pack of evil bird-thoughts attacked a peaceful village of emotional fruit people. They have been separated, each sent into a different season, focused on their own loneliness and internal landscape of troubles. If you wish, help Karambola on his quest to rescue his friends from the power of evil thoughts.`,
+
+      '*Karambola* is a surreal story for adventure lovers and gentle souls, contains logical puzzles, handmade graphics, original music, and is altogether a rather contemplative experience.',
+
+      'The game was nominated for **AMAZE Berlin 2017 awards**, shown at NowPlayThis 2017 festival in London, PGA 2017 in Poznań, Pixel Heaven 2017 in Warsaw.',
+    ],
+    links: [
+      {
+        link: 'https://holypangolin.itch.io/karambola',
+        linkType: 'play',
+      },
+      {
+        link:
+          'https://play.google.com/store/apps/details?id=com.agatanawrot.karambola',
+        linkType: 'Play Store',
+      },
+    ],
+  },
+  eggventure: {
+    imageSrc: require('../img/games/eggventure.png'),
+    secondaryImageSrc: require('../img/games/eggventure2.png'),
+    title: 'Eggventure: Savior of Galaxy',
+    author: 'Rebel Valley Inc.',
+    descriptionParagraphs: [
+      'Eggventure is a challenging and funny adventure game where player gets to experience and survive endless trap surprises.',
+      'The goal is to defeat the big bad boss that is invading planet Rattarium and become the Savior of the Galaxy. Calm mind, fast reflexes, and mood stability will be the key of the success.',
+      "Now that the whole planet's hope is on you, are you up for the challenge?",
+    ],
+    links: [
+      {
+        linkType: 'Play Store',
+        link:
+          'https://play.google.com/store/apps/details?id=rebelvalleyinc.first.eggventure&hl=en',
+      },
+    ],
+  },
+};
 
 const groupByNUple = (array, n) => {
   if (n < 1) return array;
@@ -351,33 +389,16 @@ export default class EducationPage extends React.Component {
             </BannerContainer>
             <BubBanner />
             <HyperspaceDogfightsBanner />
+            <GenericGameBanner t={t} game={bannerGames.karambola} />
+            <GenericGameBanner t={t} game={bannerGames.eggventure} />
             <TransparentContainer>
               <BigTitle>And tons of other games!</BigTitle>
               <Spacer height="30px" />
               {groupByNUple(games, 2).map((groupedGames, index) => (
                 <Row key={index}>
-                  {groupedGames.map((game, index) => (
+                  {groupedGames.map(game => (
                     <Column key={`${game.title}-${game.author}`}>
-                      <GameThumbnail src={game.imageSrc} />
-                      <GameTitle textAlign="center">
-                        {game.title}{' '}
-                        <i>
-                          {t('by')} {game.author}
-                        </i>
-                      </GameTitle>
-                      {game.link ? (
-                        <CenteredRow>
-                          <BigButton to={game.link}>
-                            {game.linkType === 'play'
-                              ? t('Play')
-                              : game.linkType === 'download'
-                                ? t('Download')
-                                : game.linkType}
-                          </BigButton>
-                        </CenteredRow>
-                      ) : (
-                        <Spacer height="75px" />
-                      )}
+                      <GenericGameCard t={t} game={game} />
                     </Column>
                   ))}
                 </Row>

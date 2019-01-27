@@ -16,7 +16,7 @@ import Spacer from '../../components/Grid/Spacer';
 import MarkdownText from '../../components/MarkdownText';
 import CenteredImage from '../../components/CenteredImage';
 
-const HyperspaceDogfightsBanner = ({ t, title, text }) => (
+const HyperspaceDogfightsBanner = ({ t }) => (
   <React.Fragment>
     <FullWidthImage
       src={hdogScreenshotDodge}
