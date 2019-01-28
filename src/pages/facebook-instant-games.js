@@ -32,7 +32,7 @@ export default class FeaturesPage extends React.Component {
           <React.Fragment>
             <Helmet
               title={t(
-                'Make your own Facebook Instant Games with GDevelop - publish your games on Messenger'
+                'Make Facebook Instant Games with GDevelop - publish your games on Messenger'
               )}
             >
               <html lang={this.props.pathContext.localeCode} />
@@ -181,7 +181,7 @@ export default class FeaturesPage extends React.Component {
             />
             <MakeGameBanner
               title="Ready to make games for Messenger?"
-              text="GDevelop is a game creator app that let you imagine your own games."
+              text="GDevelop is an efficient game development tool for building Instant Games."
             />
             <Footer t={t} />
           </React.Fragment>
