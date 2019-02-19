@@ -39,6 +39,13 @@ I made/know a game made with GDevelop and I think it would be great to have it o
 
 const games = [
   {
+    imageSrc: require('../img/games/mikos_adventures.jpg'),
+    title: 'Miko’s Adventures',
+    author: 'Coriander Games',
+    link: 'https://coriandergames.itch.io/mikos-adventures',
+    linkType: 'download',
+  },
+  {
     imageSrc: require('../img/games/big_kungfu.png'),
     title: 'Endless Kung-Fu',
     author: 'NetDancer Games',
