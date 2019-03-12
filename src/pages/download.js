@@ -170,6 +170,22 @@ export default class DownloadPage extends React.Component {
                   {t('Learn how to contribute')}
                 </BigButton>
               </CenteredRow>
+              <Paragraph>
+                <MarkdownText
+                  source={t(
+                    'Want to support collaboration in the open-source world? Take a look at the Crowfunding of **Utopian Colony**, an initiative to build an inclusive open-source collaboration platform.'
+                  )}
+                />
+              </Paragraph>
+              <CenteredRow>
+                <BigButton
+                  to={
+                    'https://www.indiegogo.com/projects/utopian-empowering-open-source-innovation#/'
+                  }
+                >
+                  {t('Utopian: Empowering Open Source Innovation')}
+                </BigButton>
+              </CenteredRow>
             </TransparentContainer>
             <TransparentDeprecatedContainer>
               <BigTitle>{t('GDevelop 4 (old version)')}</BigTitle>

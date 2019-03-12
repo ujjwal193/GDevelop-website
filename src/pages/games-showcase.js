@@ -75,6 +75,8 @@ const games = [
     imageSrc: require('../img/games/LIMO.png'),
     title: 'LIMO',
     author: 'Marichalazo',
+    link: 'https://play.google.com/store/apps/details?id=com.apsindie.LIMO.apk',
+    linkType: 'Play Store',
   },
   {
     imageSrc: require('../img/games/big_bishi.jpg'),
