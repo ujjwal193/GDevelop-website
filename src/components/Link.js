@@ -12,7 +12,7 @@ const Link = ({
   label,
   ...otherProps
 }) =>
-  /^https?:\/\//.test(to) ? (
+  to === undefined || to === null || /^https?:\/\//.test(to) ? (
     <a
       href={to}
       onClick={() => {

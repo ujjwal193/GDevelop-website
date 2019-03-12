@@ -22,6 +22,8 @@ import BubBanner from '../components/GameBanners/BubBanner';
 import HyperspaceDogfightsBanner from '../components/GameBanners/HyperspaceDogfightsBanner';
 import GenericGameBanner from '../components/GameBanners/GenericGameBanner';
 import GenericGameCard from '../components/GameBanners/GenericGameCard';
+import ReachBottomSpy from '../components/ReachBottomSpy';
+import CenteredColumn from '../components/Grid/CenteredColumn';
 
 const submitGameBody = `
 Hi all!
@@ -54,6 +56,49 @@ const games = [
     linkType: 'download',
   },
   {
+    imageSrc: require('../img/games/big_Rob_Dog_III.png'),
+    title: 'ROB, THE DOG!',
+    author: 'MicosS',
+    link:
+      'http://forum.compilgames.net/viewtopic.php?f=37&t=9704&p=65695#p65239',
+    linkType: 'download',
+  },
+  {
+    imageSrc: require('../img/games/inky_boy.jpg'),
+    title: 'Inky Boy',
+    author: 'Games By Jack',
+    link:
+      'https://play.google.com/store/apps/details?id=com.jackmj.notepadninja',
+    linkType: 'Play Store',
+  },
+  {
+    imageSrc: require('../img/games/LIMO.png'),
+    title: 'LIMO',
+    author: 'Marichalazo',
+  },
+  {
+    imageSrc: require('../img/games/big_bishi.jpg'),
+    title: 'Bishi and the Alien Slime Invasion!',
+    author: 'Matt Barker',
+    link:
+      'http://store.steampowered.com/app/834930/Bishi_and_the_Alien_Slime_Invasion/',
+    linkType: 'Steam',
+  },
+  {
+    imageSrc: require('../img/games/big_tundmatu.png'),
+    title: 'Tundmatu',
+    author: 'Jukka Rapa',
+    link: 'https://gamejolt.com/games/tundmatu/192044',
+    linkType: 'download',
+  },
+  {
+    imageSrc: require('../img/games/big_castleescape.png'),
+    title: 'Castle Escape',
+    author: 'Bruno Silva Souza',
+    link: 'https://gamejolt.com/games/brunosilvasouza/331393',
+    linkType: 'download',
+  },
+  {
     imageSrc: require('../img/games/big_megapanicpixel.jpg'),
     title: 'Mega Panic Pixel',
     author: 'NanoSoft',
@@ -73,6 +118,14 @@ const games = [
     author: 'Vivet, Bravo & Corbel',
     link: 'http://www.witly.fr/portfolio/html5gamejam/',
     linkType: 'play',
+  },
+  {
+    imageSrc: require('../img/games/fandi_adventures.png'),
+    title: "Fandi's Adventure",
+    author: 'Deeveigames',
+    link:
+      'https://play.google.com/store/apps/details?id=com.deevei.fireandicee',
+    linkType: 'Play Store',
   },
   {
     imageSrc: require('../img/games/big_lotus.png'),
@@ -207,33 +260,10 @@ const games = [
     linkType: 'play',
   },
   {
-    imageSrc: require('../img/games/big_Rob_Dog_III.png'),
-    title: 'ROB, THE DOG!',
-    author: 'MicosS',
-    link:
-      'http://forum.compilgames.net/viewtopic.php?f=37&t=9704&p=65695#p65239',
-    linkType: 'download',
-  },
-  {
     imageSrc: require('../img/games/big_picknmine.jpg'),
     title: "Pick'n Mine",
     author: 'Antoine Sertling',
     link: 'https://play.google.com/store/apps/details?id=pick.n.mine',
-    linkType: 'download',
-  },
-  {
-    imageSrc: require('../img/games/big_bishi.jpg'),
-    title: 'Bishi and the Alien Slime Invasion!',
-    author: 'Matt Barker',
-    link:
-      'http://store.steampowered.com/app/834930/Bishi_and_the_Alien_Slime_Invasion/',
-    linkType: 'Steam',
-  },
-  {
-    imageSrc: require('../img/games/big_castleescape.png'),
-    title: 'Castle Escape',
-    author: 'Bruno Silva Souza',
-    link: 'https://gamejolt.com/games/brunosilvasouza/331393',
     linkType: 'download',
   },
   {
@@ -291,13 +321,6 @@ const games = [
     imageSrc: require('../img/games/big_bursky-1a.jpg'),
     title: 'Brusky',
     author: 'Robert Popper',
-  },
-  {
-    imageSrc: require('../img/games/big_tundmatu.png'),
-    title: 'Tundmatu',
-    author: 'Jukka Rapa',
-    link: 'https://gamejolt.com/games/tundmatu/192044',
-    linkType: 'download',
   },
 ];
 
@@ -371,8 +394,30 @@ const groupByNUple = (array, n) => {
   return result;
 };
 
+const defaultGamesToShow = 8;
+
 export default class EducationPage extends React.Component {
+  state = {
+    showingMore: defaultGamesToShow > 12,
+    gamesToShow: defaultGamesToShow,
+  };
+
+  _showMoreGames = () => {
+    this.setState(state => ({
+      showingMore: true,
+      gamesToShow: state.gamesToShow + 12,
+    }));
+  };
+
+  _onEndReached = () => {
+    if (this.state.showingMore) {
+      this._showMoreGames();
+    }
+  };
+
   render() {
+    const displayedGames = games.slice(0, this.state.gamesToShow);
+    const areAllGamesDisplayed = this.state.gamesToShow >= games.length;
     return (
       <PageContainer {...this.props.pathContext}>
         {t => (
@@ -401,7 +446,7 @@ export default class EducationPage extends React.Component {
             <TransparentContainer>
               <BigTitle>And tons of other games!</BigTitle>
               <Spacer height="30px" />
-              {groupByNUple(games, 2).map((groupedGames, index) => (
+              {groupByNUple(displayedGames, 2).map((groupedGames, index) => (
                 <Row key={index}>
                   {groupedGames.map(game => (
                     <Column key={`${game.title}-${game.author}`}>
@@ -410,6 +455,21 @@ export default class EducationPage extends React.Component {
                   ))}
                 </Row>
               ))}
+              {!areAllGamesDisplayed && (
+                <React.Fragment>
+                  <CenteredColumn>
+                    <BigButton onClick={this._showMoreGames}>
+                      {t('Show me more!')}
+                    </BigButton>
+                  </CenteredColumn>
+                  <ReachBottomSpy
+                    onReachEnd={this._onEndReached}
+                    threshold={
+                      1300 /* Footer is quite large. Show more game as we approach it */
+                    }
+                  />
+                </React.Fragment>
+              )}
               <BigTitle>{t('Made a nice game with GDevelop?')}</BigTitle>
               <Paragraph>
                 {t(
