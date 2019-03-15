@@ -6,6 +6,7 @@ const i18nPath = path.join(__dirname, 'i18n');
 
 const getShortestCode = langLongCode => {
   if (langLongCode === 'pt-BR') return langLongCode;
+  if (langLongCode === 'zh-TW') return langLongCode;
 
   const langParts = langLongCode.split('-');
   return langParts[0];
@@ -19,7 +20,19 @@ const getLocaleMessages = filename => {
   }
 };
 
-const getLocaleName = langCode => ISO6391.getName(langCode);
+const getLocaleName = langCode => {
+  if (langCode === 'pt-BR') {
+    return 'Brazilian Portuguese';
+  } else if (langCode === 'zh') {
+    return 'Chinese Simplified';
+  } else if (langCode === 'zh-TW') {
+    return 'Chinese Traditional';
+  } else if (langCode === 'fil') {
+    return 'Filipino';
+  }
+
+  return ISO6391.getName(langCode);
+};
 
 const computeTranslationRatio = locale => {
   const allMessages = Object.keys(locale.messages);

@@ -26,7 +26,7 @@ const NotFoundPage = props => (
           <Paragraph>GDevelop website is available in:</Paragraph>
           <CenteredRow>
             {props.pathContext.localeNamesAndPaths.map(({ name, path }) => (
-              <BigGhostButton to={path} noLangPathPrefix>
+              <BigGhostButton to={'/' + path} noLangPathPrefix>
                 {name}
               </BigGhostButton>
             ))}
