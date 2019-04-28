@@ -130,6 +130,13 @@ const games = [
     linkType: 'Play Store',
   },
   {
+    imageSrc: require('../img/games/super-billard.png'),
+    title: 'Super Billard',
+    author: 'Antoine Sertling',
+    link: 'https://antoine-sertling.itch.io/super-billard',
+    linkType: 'download',
+  },
+  {
     imageSrc: require('../img/games/big_lotus.png'),
     title: 'Lotus Meditation',
     author: 'YogaPlay',
@@ -172,6 +179,14 @@ const games = [
     title: 'Ecce Deus',
     author: '4ian',
     link: 'http://www.compilgames.net/eccedeus',
+    linkType: 'download',
+  },
+  {
+    imageSrc: require('../img/games/smash-the-eggs.png'),
+    title: 'Smash The Eggs',
+    author: 'Francisco Nacher',
+    link:
+      'https://play.google.com/store/apps/details?id=com.xiscosoft.CrackEgg',
     linkType: 'download',
   },
   {
@@ -267,6 +282,14 @@ const games = [
     author: 'Antoine Sertling',
     link: 'https://play.google.com/store/apps/details?id=pick.n.mine',
     linkType: 'download',
+  },
+  {
+    imageSrc: require('../img/games/evasion-free.png'),
+    title: 'Evasion',
+    author: 'Gatuzz',
+    link:
+      'https://play.google.com/store/apps/details?id=com.evasion.space.free',
+    linkType: 'Play Store',
   },
   {
     imageSrc: require('../img/games/big_returntomeow.png'),
