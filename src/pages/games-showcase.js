@@ -72,6 +72,22 @@ const games = [
     linkType: 'Play Store',
   },
   {
+    imageSrc: require('../img/games/baby-idol-boy.jpeg'),
+    title: 'Baby Idol Boy',
+    author: 'TeaTime Studios',
+    link:
+      'https://play.google.com/store/apps/details?id=com.teatime.babyidolboy',
+    linkType: 'Play Store',
+  },
+  {
+    imageSrc: require('../img/games/baby-idol-girl.jpeg'),
+    title: 'Baby Idol Girl',
+    author: 'TeaTime Studios',
+    link:
+      'https://play.google.com/store/apps/details?id=com.teatime.babyidolgirl',
+    linkType: 'Play Store',
+  },
+  {
     imageSrc: require('../img/games/LIMO.png'),
     title: 'LIMO',
     author: 'Marichalazo',
