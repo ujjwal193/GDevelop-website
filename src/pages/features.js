@@ -55,7 +55,7 @@ export default class FeaturesPage extends React.Component {
                 <ListItem>
                   <MarkdownText
                     source={t(
-                      'One click export for [Android](http://wiki.compilgames.net/doku.php/gdevelop5/publishing/android_and_ios)'
+                      'One click export for [Android](http://wiki.compilgames.net/doku.php/gdevelop5/publishing/android_and_ios).'
                     )}
                   />
                 </ListItem>
@@ -76,7 +76,7 @@ export default class FeaturesPage extends React.Component {
                 <ListItem>
                   <MarkdownText
                     source={t(
-                      'Export your game to iOS (with [PhoneGap Build or Cordova](http://wiki.compilgames.net/doku.php/gdevelop5/publishing/android_and_ios_with_cordova))'
+                      'Export your game to iOS (with [PhoneGap Build or Cordova](http://wiki.compilgames.net/doku.php/gdevelop5/publishing/android_and_ios_with_cordova)).'
                     )}
                   />
                 </ListItem>
@@ -101,7 +101,7 @@ export default class FeaturesPage extends React.Component {
                 <ListItem>
                   <MarkdownText
                     source={t(
-                      'Display [ads and reward videos](/ads-in-your-game-with-admob) to your players using [AdMob](/ads-in-your-game-with-admob)'
+                      'Display [ads and reward videos](/ads-in-your-game-with-admob) to your players using [AdMob](/ads-in-your-game-with-admob).'
                     )}
                   />
                 </ListItem>
@@ -125,10 +125,32 @@ export default class FeaturesPage extends React.Component {
                     )}
                   />
                 </ListItem>
-                <ListItem>{t('"9 patch" and tiled sprites')}</ListItem>
-                <ListItem>{t('Text objects')}</ListItem>
                 <ListItem>
-                  {t('Draw custom shapes on screen with Shape Painters')}
+                  <MarkdownText
+                    source={t('**"9 patch"** sprites, perfect for platforms')}
+                  />
+                </ListItem>
+                <ListItem>
+                  <MarkdownText
+                    source={t(
+                      '**Tiled sprites**, to create mosaics, floors and repeating patterns'
+                    )}
+                  />
+                </ListItem>
+                <ListItem>
+                  <MarkdownText source={t('**Text** objects')} />
+                </ListItem>
+                <ListItem>
+                  <MarkdownText
+                    source={t('Embed videos with **Video** objects')}
+                  />
+                </ListItem>
+                <ListItem>
+                  <MarkdownText
+                    source={t(
+                      'Draw custom shapes on screen with **Shape Painters**'
+                    )}
+                  />
                 </ListItem>
                 <ListItem>{t('Support for custom collision masks')}</ListItem>
               </List>
@@ -171,15 +193,35 @@ export default class FeaturesPage extends React.Component {
                   </i>
                 </ListItem>
                 <ListItem>
+                  {t('Anchor')} -{' '}
+                  <i>
+                    {t(
+                      'support multiple screen sizes by ensuring controls stay at the right position'
+                    )}
+                  </i>
+                </ListItem>
+                <ListItem>
+                  <b>{t('Tweens')}</b> -{' '}
+                  <i>
+                    {t(
+                      'smoothly animate object positions, sizes, opacity and colors'
+                    )}
+                  </i>
+                </ListItem>
+                <ListItem>
                   {t(
                     'And more, to automate current tasks and behaviors in a few clicks!'
                   )}
                 </ListItem>
+                {/* TODO: Mention to custom behavior */}
               </List>
               <CenteredRow>
                 <BigGhostButton to="http://wiki.compilgames.net/doku.php/gdevelop5/behaviors">
                   {t('Read the documentation for all behaviors')}
                 </BigGhostButton>
+                <BigButton to="/custom-behaviors">
+                  {t('Create your own custom behaviors')}
+                </BigButton>
               </CenteredRow>
               <BigTitle>{t('Design advanced levels and interfaces')}</BigTitle>
               <List>
@@ -237,7 +279,9 @@ export default class FeaturesPage extends React.Component {
               <BigTitle>{t('Make desktop & mobile-ready games')}</BigTitle>
               <List>
                 <ListItem>
-                  {t('Save player data in browser/local storage')}
+                  {t(
+                    'Save player data in the browser storage or on their devices'
+                  )}
                 </ListItem>
                 <ListItem>
                   {t('Full support for sound effects and musics')}
@@ -273,15 +317,21 @@ export default class FeaturesPage extends React.Component {
                 </ListItem>
                 <ListItem>
                   {t(
-                    'Manipulate variables with arbitrary complex structures and even JSON support.'
+                    'Manipulate variables with arbitrary complex structures, with support for reading/writing JSON.'
                   )}
                 </ListItem>
                 <ListItem>
                   <MarkdownText
                     source={t(
-                      'You can even [use JavaScript to code](/javascript-game-engine) some parts of your game!'
+                      'You can [use JavaScript to code](/javascript-game-engine) parts of your game'
                     )}
-                  />
+                  />{' '}
+                  -{' '}
+                  <i>
+                    {t(
+                      'use it for a few functions, to write extensions or the majority of your game.'
+                    )}
+                  </i>
                 </ListItem>
                 <ListItem>
                   <MarkdownText
@@ -289,6 +339,19 @@ export default class FeaturesPage extends React.Component {
                       'Display ads in your game with [AdMob](/ads-in-your-game-with-admob) or link to products from your [Shopify shop](http://wiki.compilgames.net/doku.php/gdevelop5/all-features/shopify).'
                     )}
                   />
+                </ListItem>
+                <ListItem>
+                  <MarkdownText
+                    source={t(
+                      'Search and [install new features with extensions](/extensions-and-sharing), built by the community'
+                    )}
+                  />{' '}
+                  -{' '}
+                  <i>
+                    {t(
+                      'get new, ready to use features for your game in a few clicks'
+                    )}
+                  </i>
                 </ListItem>
               </List>
               <CenteredRow>

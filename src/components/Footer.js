@@ -51,6 +51,14 @@ const FooterLink = styled(Link)`
   }
 `;
 
+const FooterTitle = styled(Link)`
+  font-size: 20px;
+  opacity: 0.8;
+  color: white
+  font-weight: 600;
+  display: block;
+`;
+
 const CopyrightText = styled.p`
   font-size: 16px;
   font-family: 'Roboto', Arial, sans-serif;
@@ -72,15 +80,12 @@ export default ({ t }) => (
     <ContentContainer>
       <FooterText>
         {t(
-          'GDevelop is an open-source game creator. It can be used by anyone to create any kind of 2D games.'
+          'GDevelop is an open-source game creator, tailored for fast and intuitive game making.'
         )}
       </FooterText>
       <Row>
         <Column>
-          <FooterLink to="/choose-language" noLangPathPrefix>
-            <FontAwesomeIcon icon={faLanguage} />{' '}
-            {t('This website in your language')}
-          </FooterLink>
+          <FooterTitle>Get GDevelop</FooterTitle>
           <FooterLink to="/download/">{t('Download the editor')}</FooterLink>
           <FooterLink
             to={config.onlineEditorUrl}
@@ -91,6 +96,25 @@ export default ({ t }) => (
           >
             {t('Online game editor')}
           </FooterLink>
+          <FooterTitle>Learn</FooterTitle>
+          <FooterLink to="/game-examples-starters">
+            {t('Game examples/starters')}
+          </FooterLink>
+          <FooterLink
+            to={config.wikiUrl}
+            category="wiki"
+            label="footer-documentation"
+          >
+            {t('Documentation')}
+          </FooterLink>
+          <FooterLink
+            to="http://wiki.compilgames.net/doku.php/gdevelop5/tutorials"
+            category="wiki"
+            label="footer-tutorials"
+          >
+            {t('Tutorials')}
+          </FooterLink>
+          <FooterTitle>Community</FooterTitle>
           <FooterLink
             to={config.forumUrl}
             category="forum"
@@ -98,38 +122,7 @@ export default ({ t }) => (
           >
             {t('Community forums')}
           </FooterLink>
-          <FooterLink
-            to={config.wikiUrl}
-            category="wiki"
-            label="footer-documentation-tutorials"
-          >
-            {t('Documentation & tutorials')}
-          </FooterLink>
-          <FooterLink to="/features/">{t('Features')}</FooterLink>
-          <FooterLink to="/facebook-instant-games/">
-            {t('Facebook Instant Games')}
-          </FooterLink>
-          <FooterLink to="/game-examples-starters/">
-            {t('Game examples/starters')}
-          </FooterLink>
-          <FooterLink to="/game-jams/">
-            {t('GDevelop for Game jams')}
-          </FooterLink>
-        </Column>
-        <Column>
-          <FooterLink to="/javascript-game-engine/">
-            {t('Use JavaScript with the game engine')}
-          </FooterLink>
-          <FooterLink to="/make-8bit-pixelart-games/">
-            {t('Make 8-bit games')}
-          </FooterLink>
-          <FooterLink to="/ads-in-your-game-with-admob/">
-            {t('Ads with AdMob')}
-          </FooterLink>
-          <FooterLink to="/education/">{t('Education')}</FooterLink>
-          <FooterLink to="/game-editors/">{t('Game editors')}</FooterLink>
-          <FooterLink to="/games-showcase/">{t('Games showcase')}</FooterLink>
-          <FooterLink to="/contribute/">{t('Contribute')}</FooterLink>
+          <FooterLink to="/contribute">{t('Contribute')}</FooterLink>
           <FooterLink
             to={config.facebookPageUrl}
             category="facebook"
@@ -143,6 +136,37 @@ export default ({ t }) => (
             label="footer-twitter-page"
           >
             {t('Twitter')}
+          </FooterLink>
+          <FooterLink to="/choose-language" noLangPathPrefix>
+            <FontAwesomeIcon icon={faLanguage} />{' '}
+            {t('This website in your language')}
+          </FooterLink>
+        </Column>
+        <Column>
+          <FooterTitle>Features</FooterTitle>
+          <FooterLink to="/features">{t('All GDevelop Features')}</FooterLink>
+          <FooterLink to="/extensions-and-sharing">
+            {t('Install new features with extensions')}
+          </FooterLink>
+          <FooterLink to="/facebook-instant-games">
+            {t('Facebook Instant Games')}
+          </FooterLink>
+          <FooterLink to="/javascript-game-engine">
+            {t('Use JavaScript with the game engine')}
+          </FooterLink>
+          <FooterLink to="/ads-in-your-game-with-admob">
+            {t('Ads with AdMob')}
+          </FooterLink>
+          <FooterLink to="/custom-behaviors">
+            {t('Create custom behaviors')}
+          </FooterLink>
+          <FooterLink to="/game-editors">{t('Game editors')}</FooterLink>
+          <FooterTitle>Use Cases</FooterTitle>
+          <FooterLink to="/games-showcase">{t('Games showcase')}</FooterLink>
+          <FooterLink to="/game-jams">{t('GDevelop for Game jams')}</FooterLink>
+          <FooterLink to="/education">{t('GDevelop for Education')}</FooterLink>
+          <FooterLink to="/make-8bit-pixelart-games">
+            {t('Make 8-bit games')}
           </FooterLink>
         </Column>
       </Row>

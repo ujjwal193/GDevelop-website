@@ -17,19 +17,19 @@ import Paragraph from '../components/Paragraph';
 import ExplanationText from '../components/ExplanationText';
 import MakeGameBanner from '../components/MakeGameBanner';
 import MarkdownText from '../components/MarkdownText';
-import javascriptEditor from '../img/javascript-editor.png';
-import javascriptEditorDark from '../img/javascript-editor-dark.png';
+import searchNewExtensionsDialog from '../img/search-new-extensions-dialog.png';
+import installedAndSearchBehaviorsTabs from '../img/installed-and-search-behaviors-tabs.png';
 import CenteredImage from '../components/CenteredImage';
 import Spacer from '../components/Grid/Spacer';
 
-export default class JavascriptGameEnginePage extends React.Component {
+export default class ExtensionsAndSharingPage extends React.Component {
   render() {
     return (
       <PageContainer {...this.props.pathContext}>
         {t => (
           <React.Fragment>
             <Helmet
-              title={t('Using JavaScript to make your games with GDevelop')}
+              title={t('Install new extensions in GDevelop and share yours')}
             >
               <html lang={this.props.pathContext.localeCode} />
               <meta
@@ -41,73 +41,82 @@ export default class JavascriptGameEnginePage extends React.Component {
             <BannerContainer>
               <NavBarSpacer />
               <WhiteBigTitle>
-                {t('Using JavaScript with GDevelop')}
+                {t('Install new extensions and share them')}
               </WhiteBigTitle>
               <WhiteParagraph>
-                {t(
-                  'GDevelop supports JavaScript to create your game or extend the game engine.'
-                )}
+                {t('Search and add new features to your game in a few clicks.')}
               </WhiteParagraph>
             </BannerContainer>
             <TransparentContainer>
               <CenteredImage
                 maxWidth="800px"
-                src={javascriptEditor}
-                alt="JavaScript being used to write part of a game along with events"
+                src={searchNewExtensionsDialog}
+                alt="Search in the library of extensions, ready to be installed in one click"
               />
               <ExplanationText>
                 {t(
-                  'JavaScript can be used to write part of a game, alongside with events'
+                  'Search in the library of extensions, ready to be installed in one click'
                 )}
               </ExplanationText>
-              <BigTitle>
-                {t('Add JavaScript code blocks inside your game')}
-              </BigTitle>
+              <BigTitle>{t('Install new features with extensions')}</BigTitle>
               <Paragraph>
                 <MarkdownText
                   source={t(
-                    "GDevelop supports adding JavaScript code blocks at any point in the events of your game. It's a good way to implement a complex algorithm or reuse functions from open-source libraries. Events and code blocks can seamlessly be mixed together - so you can implement parts or even the totality of your game with JavaScript!"
+                    'Directly from the editor, you can explore the **online library of extensions** (also called a "package manager" or an "extension store"). Extensions can bring *new behaviors* for your game objects, or *actions, conditions* or expressions that are ready to use in events.'
                   )}
                 />
               </Paragraph>
               <Paragraph>
                 <MarkdownText
                   source={t(
-                    'The JavaScript editor is based on the super powerful Monaco Editor, extracted from [Visual Studio Code](https://code.visualstudio.com/). Intellisense autocompletions are provided and the editor supports advanced features like multi-selection for faster coding.'
+                    '**Featured extensions** are peer reviewed. They are ideal to add new features at a fast pace to your game, making both prototyping of new games a very quick process and allowing larger games to be constructed by assembling extensions.'
                   )}
                 />
               </Paragraph>
               <CenteredRow>
-                <BigButton to="http://wiki.compilgames.net/doku.php/gdevelop5/events/js-code">
-                  {t('Learn more about using JavaScript')}
+                <BigGhostButton to="http://wiki.compilgames.net/doku.php/gdevelop5/extensions/search">
+                  {t('Read how to install extensions')}
+                </BigGhostButton>
+                <BigButton to="/custom-behaviors">
+                  {t('Learn about creating custom behaviors')}
                 </BigButton>
               </CenteredRow>
               <BigTitle>
-                {t('Extend GDevelop with JavaScript extensions')}
+                {t('Export your own extensions and share them')}
               </BigTitle>
               <Paragraph>
                 <MarkdownText
                   source={t(
-                    'GDevelop is modular and can be extended to suit your needs. In particular, all features available to games (objects, behaviors, events) are based on the extension system. You can quickly create new extensions for your game or contribute to existing ones as GDevelop is [open-source](https://github.com/4ian/GD).'
+                    'All extensions can be exported to a file. They can easily be shared and integrated to another project. Better, if you have created a useful extension, you can submit it to be integrated to the library of [open-source, community extensions](https://github.com/4ian/GDevelop-extensions).'
+                  )}
+                />
+              </Paragraph>
+              <Paragraph>
+                <MarkdownText
+                  source={t(
+                    'As extensions are constructed using the intuitive GDevelop events sheets, they can be composed of events, [JavaScript or a mix of both](/javascript-game-engine).'
                   )}
                 />
               </Paragraph>
               <CenteredRow>
-                <BigButton to="https://github.com/4ian/GD/blob/master/newIDE/README-extensions.md">
-                  {t('How to write extensions')}
-                </BigButton>
-                <BigGhostButton to="http://4ian.github.io/GD-Documentation/GDJS%20Runtime%20Documentation/index.html">
-                  {t('Game engine JavaScript documentation')}
+                <BigGhostButton to="http://wiki.compilgames.net/doku.php/gdevelop5/extensions/create">
+                  {t('How to start a new extension')}
+                </BigGhostButton>
+                <BigGhostButton to="http://wiki.compilgames.net/doku.php/gdevelop5/extensions/share">
+                  {t('How to share your extension')}
                 </BigGhostButton>
               </CenteredRow>
               <CenteredImage
                 maxWidth="800px"
-                src={javascriptEditorDark}
-                alt="JavaScript code blocks being used in GDevleop with the Dark theme"
+                src={installedAndSearchBehaviorsTabs}
+                shadow
+                alt={t(
+                  'Extensions can provide new behaviors that can be added to your game objects.'
+                )}
               />
               <ExplanationText>
                 {t(
-                  'The Dark theme being used in GDevelop. The code editor also comes bundled with several beautiful themes!'
+                  'Extensions can provide new behaviors that can be added to your game objects.'
                 )}
               </ExplanationText>
             </TransparentContainer>

@@ -165,12 +165,19 @@ export default class IndexPage extends React.Component {
             <TransparentContainer>
               <BigTitle>
                 <BigTitleIcon icon={faThList} />{' '}
-                {t('Events - game creation for everyone')}
+                {t('Events: game creation, intuitive for everyone')}
               </BigTitle>
               <Paragraph>
                 {t(
                   'What makes GDevelop unique and so easy to use are the events. Events are a powerful way to express the logic of your game, without having to learn a programming language.'
                 )}
+              </Paragraph>
+              <Paragraph>
+                <MarkdownText
+                  source={t(
+                    'GDevelop takes visual programming to the next step, allowing you to add [ready-made behaviors](/features) to your game objects and [make new behaviors](/custom-behaviors) using these intuitive, easy to learn events.'
+                  )}
+                />
               </Paragraph>
               <CenteredImage
                 maxWidth="800px"
@@ -187,7 +194,7 @@ export default class IndexPage extends React.Component {
               </ExplanationText>
               <BigTitle>
                 <BigTitleIcon icon={faExternalLinkAlt} />{' '}
-                {t('Export your game in one click')}
+                {t('Export your game anywhere, in one click')}
               </BigTitle>
               <Paragraph>
                 <MarkdownText
