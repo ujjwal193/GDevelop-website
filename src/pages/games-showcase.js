@@ -48,6 +48,13 @@ const games = [
     linkType: 'download',
   },
   {
+    imageSrc: require('../img/games/durrburger.jpeg'),
+    title: 'Durr Burger',
+    author: 'Sparckman',
+    link: 'https://sparckman.itch.io/durr-burger',
+    linkType: 'download',
+  },
+  {
     imageSrc: require('../img/games/big_kungfu.png'),
     title: 'Endless Kung-Fu',
     author: 'NetDancer Games',
@@ -359,13 +366,52 @@ const games = [
     linkType: 'play',
   },
   {
+    imageSrc: require('../img/games/jukade.png'),
+    title: 'Jukade',
+    author: 'Fruk',
+    link: 'https://play.google.com/store/apps/details?id=com.gruk.jukade',
+    linkType: 'Play Store',
+  },
+  {
+    imageSrc: require('../img/games/spider-adventures.png'),
+    title: 'Spider Adventures',
+    author: 'AgusDev',
+    link:
+      'https://play.google.com/store/apps/details?id=com.agusagus.spideradventure',
+    linkType: 'Play Store',
+  },
+  {
     imageSrc: require('../img/games/big_bursky-1a.jpg'),
     title: 'Brusky',
     author: 'Robert Popper',
   },
+  {
+    imageSrc: require('../img/games/the-woods.jpg'),
+    title: 'The Woods',
+    author: 'Roy Matipa',
+    link: 'https://rdevelop.itch.io/the-woods',
+    linkType: 'download',
+  },
 ];
 
 const bannerGames = {
+  swamp: {
+    imageSrc: require('../img/games/swamp/swamp-banner.jpg'),
+    secondaryImageSrc: require('../img/games/swamp/swamp.jpg'),
+    title: 'Swamp',
+    author: 'After Apocalypse',
+    descriptionParagraphs: [
+      `Your journey begins when you awaken in a back of a van with a dying man and a dead bug. Just before that, you and your soon dead yet-to-be friend were on the run for a better future across post apocalyptic wastelands of a region once called “France”. Attacked by a horde of bugs the van ended up stuck in the mud in the middle of a swamp with you as the only survivor.      `,
+
+      'The adventure will be full of deadly and treacherous twists as the danger lurks in the shadows along the path.',
+    ],
+    links: [
+      {
+        link: 'https://afterapocalypse.itch.io/swamp',
+        linkType: 'download',
+      },
+    ],
+  },
   karambola: {
     imageSrc: require('../img/games/karambola-banner.png'),
     secondaryImageSrc: require('../img/games/karambola-rewards480.png'),
@@ -482,6 +528,7 @@ export default class EducationPage extends React.Component {
             </BannerContainer>
             <BubBanner />
             <HyperspaceDogfightsBanner />
+            <GenericGameBanner t={t} game={bannerGames.swamp} />
             <GenericGameBanner t={t} game={bannerGames.karambola} />
             <GenericGameBanner t={t} game={bannerGames.eggventure} />
             <TransparentContainer>
