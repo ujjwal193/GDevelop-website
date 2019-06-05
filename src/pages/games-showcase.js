@@ -528,7 +528,11 @@ export default class EducationPage extends React.Component {
             </BannerContainer>
             <BubBanner />
             <HyperspaceDogfightsBanner />
-            <GenericGameBanner t={t} game={bannerGames.swamp} />
+            <GenericGameBanner
+              t={t}
+              game={bannerGames.swamp}
+              bannerBackgroundPosition={'left top'}
+            />
             <GenericGameBanner t={t} game={bannerGames.karambola} />
             <GenericGameBanner t={t} game={bannerGames.eggventure} />
             <TransparentContainer>

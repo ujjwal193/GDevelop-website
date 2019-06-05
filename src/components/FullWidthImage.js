@@ -17,7 +17,7 @@ const FullWidthImage = styled.div`
   height: 400px;
   background: url(${props => props.src});
   background-size: cover;
-  background-position: center center;
+  background-position: ${props => props.backgroundPosition || 'center center'};
 
   animation: ${fadeIn} 0.5s ease-out forwards;
 

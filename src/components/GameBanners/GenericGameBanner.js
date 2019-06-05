@@ -13,9 +13,13 @@ import MarkdownText from '../../components/MarkdownText';
 import CenteredImage from '../../components/CenteredImage';
 import TryGameButton from '../TryGameButton';
 
-const GenericGameBanner = ({ t, game }) => (
+const GenericGameBanner = ({ t, game, bannerBackgroundPosition }) => (
   <React.Fragment>
-    <FullWidthImage src={game.imageSrc} alt={game.title} />
+    <FullWidthImage
+      src={game.imageSrc}
+      alt={game.title}
+      backgroundPosition={bannerBackgroundPosition}
+    />
     <TransparentContainer>
       <BigTitle>
         <b>{game.title}</b> {t('by')} {game.author}
