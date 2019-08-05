@@ -7,7 +7,7 @@ import PageContainer from '../lib/PageContainer';
 import BigButton from '../components/BigButton';
 import BannerContainer from '../components/Containers/BannerContainer';
 import TransparentContainer from '../components/Containers/TransparentContainer';
-import WhiteBigTitle from '../components/WhiteBigTitle';
+import WhiteHugeTitle from '../components/WhiteHugeTitle';
 import WhiteParagraph from '../components/WhiteParagraph';
 import MakeGameBanner from '../components/MakeGameBanner';
 
@@ -519,7 +519,7 @@ export default class EducationPage extends React.Component {
             <Navbar t={t} />
             <BannerContainer>
               <NavBarSpacer />
-              <WhiteBigTitle>{t('Games showcase')}</WhiteBigTitle>
+              <WhiteHugeTitle>{t('Games showcase')}</WhiteHugeTitle>
               <WhiteParagraph>
                 {t(
                   'Here are a few games created with GDevelop. The next one should be yours!'

@@ -7,7 +7,7 @@ import PageContainer from '../lib/PageContainer';
 import BigTitle from '../components/BigTitle';
 import BannerContainer from '../components/Containers/BannerContainer';
 import TransparentContainer from '../components/Containers/TransparentContainer';
-import WhiteBigTitle from '../components/WhiteBigTitle';
+import WhiteHugeTitle from '../components/WhiteHugeTitle';
 import WhiteParagraph from '../components/WhiteParagraph';
 
 import BigGhostButton from '../components/BigGhostButton';
@@ -73,7 +73,7 @@ export default class FeaturesPage extends React.Component {
             <Navbar t={t} />
             <BannerContainer>
               <NavBarSpacer />
-              <WhiteBigTitle>{t('Examples and Starters')}</WhiteBigTitle>
+              <WhiteHugeTitle>{t('Examples and Starters')}</WhiteHugeTitle>
               <WhiteParagraph>
                 {t(
                   'GDevelop is bundled with 80+ examples and starters to get you quickly started, learn or try a specific feature.'

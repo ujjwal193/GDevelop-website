@@ -11,7 +11,7 @@ import PageContainer from '../lib/PageContainer';
 import BigTitle from '../components/BigTitle';
 import BannerContainer from '../components/Containers/BannerContainer';
 import TransparentContainer from '../components/Containers/TransparentContainer';
-import WhiteBigTitle from '../components/WhiteBigTitle';
+import WhiteHugeTitle from '../components/WhiteHugeTitle';
 import WhiteParagraph from '../components/WhiteParagraph';
 
 import Spacer from '../components/Grid/Spacer';
@@ -42,7 +42,7 @@ export default class FeaturesPage extends React.Component {
             <Navbar t={t} />
             <BannerContainer>
               <NavBarSpacer />
-              <WhiteBigTitle>{t('Contribute to GDevelop')}</WhiteBigTitle>
+              <WhiteHugeTitle>{t('Contribute to GDevelop')}</WhiteHugeTitle>
               <WhiteParagraph>
                 {t(
                   'GDevelop is an open-source project (even this website): anyone can contribute and improve the software!'

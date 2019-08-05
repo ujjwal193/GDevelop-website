@@ -7,7 +7,7 @@ import PageContainer from '../lib/PageContainer';
 import BigTitle from '../components/BigTitle';
 import BannerContainer from '../components/Containers/BannerContainer';
 import TransparentContainer from '../components/Containers/TransparentContainer';
-import WhiteBigTitle from '../components/WhiteBigTitle';
+import WhiteHugeTitle from '../components/WhiteHugeTitle';
 import WhiteParagraph from '../components/WhiteParagraph';
 
 import CenteredYoutubeVideo from '../components/CenteredYoutubeVideo';
@@ -39,9 +39,9 @@ export default class FeaturesPage extends React.Component {
             <Navbar t={t} />
             <BannerContainer>
               <NavBarSpacer />
-              <WhiteBigTitle>
+              <WhiteHugeTitle>
                 {t('Make 8-bit and pixelart games')}
-              </WhiteBigTitle>
+              </WhiteHugeTitle>
               <WhiteParagraph>
                 {t(
                   'Sprite editor and tools to make your own 8bit games with GDevelop'

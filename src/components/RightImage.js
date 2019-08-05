@@ -13,12 +13,12 @@ const fadeIn = keyframes`
 `;
 
 const RightImage = styled.img`
-  max-height: 70vh;
+  width: 100%;
   position: relative;
   margin-left: 15px;
   margin-right: 15px;
 
-  box-shadow: 0 2px 3px 0 #51509C;
+  box-shadow: 2px 2px 6px 0 #000000aa;
   border-radius: 4px;
 
   margin-bottom: 15px;
@@ -29,11 +29,13 @@ const RightImage = styled.img`
 
   ${media.tablet`
     max-width: 100%;
-    left: 0;
     margin-left: 0px;
     margin-right: 0px;
     margin-top: 10px;
     margin-bottom: 10px;
+
+    box-shadow: 0px 3px 6px 0 #000000aa;
+
     animation: ${fadeIn} 0.8s ease-out forwards;
   `};
 `;

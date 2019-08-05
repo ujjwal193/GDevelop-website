@@ -14,7 +14,7 @@ import BigTitle from '../components/BigTitle';
 import Paragraph from '../components/Paragraph';
 import TransparentContainer from '../components/Containers/TransparentContainer';
 import LandingContainer from '../components/Containers/LandingContainer';
-import WhiteBigTitle from '../components/WhiteBigTitle';
+import WhiteHugeTitle from '../components/WhiteHugeTitle';
 import WhiteParagraph from '../components/WhiteParagraph';
 import WhiteBigButton from '../components/WhiteBigButton';
 import CenteredImage from '../components/CenteredImage';
@@ -35,13 +35,14 @@ import MakeGameBanner from '../components/MakeGameBanner';
 import config from '../config';
 import BigGhostButton from '../components/BigGhostButton';
 import BottomCenteredImage from '../components/BottomCenteredImage';
-import BigTitleIcon from '../components/BigTitleIcon';
 import CenteredYoutubeVideo from '../components/CenteredYoutubeVideo';
 import MarkdownText from '../components/MarkdownText';
 import lilBubPlatformer from '../img/games/lil-bub-hello-earth/lil-bub-platformer.png';
 import hdogScreenshotGroundCombat from '../img/games/hyperspace-dogfights/hdog_screenshot_ground_combat.png';
 import bigRobDogIii from '../img/games/big_Rob_Dog_III.png';
 import bigModelo from '../img/games/big_modelo.png';
+import SkewedBackgroundContainer from '../components/Containers/SkewedBackgroundContainer';
+import SkewedBorderContainer from '../components/Containers/SkewedBorderContainer';
 
 export default class IndexPage extends React.Component {
   render() {
@@ -67,7 +68,9 @@ export default class IndexPage extends React.Component {
             <Navbar t={t} />
             <LandingContainer>
               <NavBarSpacer />
-              <WhiteBigTitle>{t('Create your own games')}</WhiteBigTitle>
+              <WhiteHugeTitle>
+                {t('The game engine for everyone')}
+              </WhiteHugeTitle>
               <Spacer height={'20px'} />
               <Row reverse>
                 <CenteredColumn flex={8}>
@@ -84,7 +87,7 @@ export default class IndexPage extends React.Component {
                 <CenteredColumn flex={5}>
                   <WhiteParagraph textAlign="center">
                     {t(
-                      'GDevelop is an open-source, cross-platform game creator designed to be used by everyone - no programming skills required.'
+                      "GDevelop is an open-source, cross-platform game engine designed for everyone - it's extensible, fast and easy to learn."
                     )}
                   </WhiteParagraph>
                   <CenteredRow>
@@ -105,9 +108,7 @@ export default class IndexPage extends React.Component {
               </Row>
             </LandingContainer>
             <TransparentContainer>
-              <BigTitle>
-                <BigTitleIcon icon={faLightbulb} /> {t('Create any game')}
-              </BigTitle>
+              <BigTitle>{t('Create any game')}</BigTitle>
               <Paragraph>
                 <MarkdownText
                   source={t(
@@ -162,23 +163,22 @@ export default class IndexPage extends React.Component {
                 />
               </Carousel>
             </TransparentContainer>
-            <TransparentContainer>
-              <BigTitle>
-                <BigTitleIcon icon={faThList} />{' '}
-                {t('Events: game creation, intuitive for everyone')}
+            <SkewedBackgroundContainer>
+              <BigTitle white>
+                {t('Events: game creation, intuitive for all')}
               </BigTitle>
-              <Paragraph>
+              <WhiteParagraph>
                 {t(
                   'What makes GDevelop unique and so easy to use are the events. Events are a powerful way to express the logic of your game, without having to learn a programming language.'
                 )}
-              </Paragraph>
-              <Paragraph>
+              </WhiteParagraph>
+              <WhiteParagraph>
                 <MarkdownText
                   source={t(
                     'GDevelop takes visual programming to the next step, allowing you to add [ready-made behaviors](/features) to your game objects and [make new behaviors](/custom-behaviors) using these intuitive, easy to learn events.'
                   )}
                 />
-              </Paragraph>
+              </WhiteParagraph>
               <CenteredImage
                 maxWidth="800px"
                 src={events}
@@ -192,8 +192,9 @@ export default class IndexPage extends React.Component {
                   'When Space is pressed, the character animation and a sound are played. If a bomb touches the character, they both are destroyed.'
                 )}
               </ExplanationText>
+            </SkewedBackgroundContainer>
+            <TransparentContainer>
               <BigTitle>
-                <BigTitleIcon icon={faExternalLinkAlt} />{' '}
                 {t('Export your game anywhere, in one click')}
               </BigTitle>
               <Paragraph>
@@ -211,13 +212,13 @@ export default class IndexPage extends React.Component {
                   'Laptop, tablets or phone: games made with GDevelop can run everywhere'
                 )}
               />
-              <BigTitle>
-                <BigTitleIcon icon={faRocket} /> {t('Unlimited possibilities')}
-              </BigTitle>
+            </TransparentContainer>
+            <SkewedBorderContainer>
+              <BigTitle>{t('Unlimited possibilities')}</BigTitle>
               <Paragraph>
                 <MarkdownText
                   source={t(
-                    'Express your ideas without being blocked: you can prototype new features on your games in minutes, and refine them without limits. [Making games](/games-showcase) has never been as easy as assembling your ideas with [the visual editors](/game-editors) provided by GDevelop.'
+                    'Express your small and big ideas: you can prototype new features on your games in minutes, and refine them without limits. [Making games](/games-showcase) has never been so easy and fast, with [the visual editors](/game-editors) provided by GDevelop.'
                   )}
                 />{' '}
                 <MarkdownText
@@ -232,10 +233,9 @@ export default class IndexPage extends React.Component {
                   'See how to add a trigger button to your platformer game in 90 seconds'
                 )}
               </ExplanationText>
-              <BigTitle>
-                <BigTitleIcon icon={faFlagCheckered} />{' '}
-                {t('Get started with tutorials')}
-              </BigTitle>
+            </SkewedBorderContainer>
+            <TransparentContainer>
+              <BigTitle>{t('Get started with tutorials')}</BigTitle>
               <Paragraph>
                 {t(
                   'Learn step-by-step how to use GDevelop or get help about a specific feature: the wiki has tutorials for beginners and a complete documentation for the software.'

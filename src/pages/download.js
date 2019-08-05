@@ -15,7 +15,7 @@ import BigButton from '../components/BigButton';
 import BannerContainer from '../components/Containers/BannerContainer';
 import TransparentContainer from '../components/Containers/TransparentContainer';
 import TransparentDeprecatedContainer from '../components/Containers/TransparentDeprecatedContainer';
-import WhiteBigTitle from '../components/WhiteBigTitle';
+import WhiteHugeTitle from '../components/WhiteHugeTitle';
 import WhiteParagraph from '../components/WhiteParagraph';
 import config from '../config';
 
@@ -51,7 +51,7 @@ export default class DownloadPage extends React.Component {
             <Navbar t={t} />
             <BannerContainer>
               <NavBarSpacer />
-              <WhiteBigTitle>{t('Download GDevelop')}</WhiteBigTitle>
+              <WhiteHugeTitle>{t('Download GDevelop')}</WhiteHugeTitle>
               <WhiteParagraph>
                 {t(
                   'GDevelop is free and can be used for profit or non-profit game making.'

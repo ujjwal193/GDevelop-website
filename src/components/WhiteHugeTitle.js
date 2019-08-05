@@ -2,10 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 import { media } from '../lib/media';
 
-const WhiteBigTitle = styled.h1`
+// Rename to white huge title
+const WhiteHugeTitle = styled.h1`
   font-size: 72px;
   line-height: 89px;
-  font-family: 'Asap', Arial, sans-serif;
+  font-family: 'PT Sans', Arial, sans-serif;
   display: inline-block;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -21,6 +22,6 @@ const WhiteBigTitle = styled.h1`
 
 export default ({ children }) => (
   <div>
-    <WhiteBigTitle>{children}</WhiteBigTitle>
+    <WhiteHugeTitle>{children}</WhiteHugeTitle>
   </div>
 );

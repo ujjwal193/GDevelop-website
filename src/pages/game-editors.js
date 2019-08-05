@@ -7,7 +7,7 @@ import PageContainer from '../lib/PageContainer';
 import BigTitle from '../components/BigTitle';
 import BannerContainer from '../components/Containers/BannerContainer';
 import TransparentContainer from '../components/Containers/TransparentContainer';
-import WhiteBigTitle from '../components/WhiteBigTitle';
+import WhiteHugeTitle from '../components/WhiteHugeTitle';
 import WhiteParagraph from '../components/WhiteParagraph';
 
 import CenteredYoutubeVideo from '../components/CenteredYoutubeVideo';
@@ -48,7 +48,7 @@ export default class FeaturesPage extends React.Component {
             <Navbar t={t} />
             <BannerContainer>
               <NavBarSpacer />
-              <WhiteBigTitle>{t('The game editors')}</WhiteBigTitle>
+              <WhiteHugeTitle>{t('The game editors')}</WhiteHugeTitle>
               <WhiteParagraph>
                 {t(
                   'The interface of GDevelop is made of intuitive editors to design your own games from scratch.'

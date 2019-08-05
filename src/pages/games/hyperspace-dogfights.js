@@ -7,7 +7,7 @@ import PageContainer from '../../lib/PageContainer';
 import BigTitle from '../../components/BigTitle';
 import BannerContainer from '../../components/Containers/BannerContainer';
 import TransparentContainer from '../../components/Containers/TransparentContainer';
-import WhiteBigTitle from '../../components/WhiteBigTitle';
+import WhiteHugeTitle from '../../components/WhiteHugeTitle';
 import WhiteParagraph from '../../components/WhiteParagraph';
 import Paragraph from '../../components/Paragraph';
 
@@ -43,7 +43,7 @@ export default class FeaturesPage extends React.Component {
             <Navbar t={t} background={hdogPromoHeaderHeader} dimmed />
             <BannerContainer background={hdogPromoHeaderHeader} dimmed>
               <NavBarSpacer />
-              <WhiteBigTitle>{'Hyperspace Dogfights'}</WhiteBigTitle>
+              <WhiteHugeTitle>{'Hyperspace Dogfights'}</WhiteHugeTitle>
               <WhiteParagraph>
                 {t('A juicy jet-combat roguelike game, made with GDevelop.')}
               </WhiteParagraph>

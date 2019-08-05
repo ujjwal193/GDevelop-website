@@ -5,7 +5,7 @@ import { media } from '../lib/media';
 const Title = styled.h1`
   font-size: 36px;
   line-height: 40px;
-  font-family: 'Asap', Arial, sans-serif;
+  font-family: 'PT Sans', Arial, sans-serif;
   font-weight: 400;
   display: inline-block;
   margin-top: 15px;

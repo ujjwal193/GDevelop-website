@@ -7,7 +7,7 @@ import PageContainer from '../../lib/PageContainer';
 import BigTitle from '../../components/BigTitle';
 import BannerContainer from '../../components/Containers/BannerContainer';
 import TransparentContainer from '../../components/Containers/TransparentContainer';
-import WhiteBigTitle from '../../components/WhiteBigTitle';
+import WhiteHugeTitle from '../../components/WhiteHugeTitle';
 import WhiteParagraph from '../../components/WhiteParagraph';
 import Paragraph from '../../components/Paragraph';
 
@@ -43,7 +43,7 @@ export default class FeaturesPage extends React.Component {
             <Navbar t={t} background={bubGameBanner} dimmed />
             <BannerContainer background={bubGameBanner} dimmed>
               <NavBarSpacer />
-              <WhiteBigTitle>{"Lil BUB's HELLO EARTH"}</WhiteBigTitle>
+              <WhiteHugeTitle>{"Lil BUB's HELLO EARTH"}</WhiteHugeTitle>
               <WhiteParagraph>
                 {t(
                   'A retro 8-bit game, with beautiful arts and soundtrack, made with GDevelop.'

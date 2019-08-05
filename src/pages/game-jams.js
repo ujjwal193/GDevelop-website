@@ -7,7 +7,7 @@ import PageContainer from '../lib/PageContainer';
 import BigTitle from '../components/BigTitle';
 import BannerContainer from '../components/Containers/BannerContainer';
 import TransparentContainer from '../components/Containers/TransparentContainer';
-import WhiteBigTitle from '../components/WhiteBigTitle';
+import WhiteHugeTitle from '../components/WhiteHugeTitle';
 import WhiteParagraph from '../components/WhiteParagraph';
 
 import BigGhostButton from '../components/BigGhostButton';
@@ -37,7 +37,7 @@ export default class FeaturesPage extends React.Component {
             <Navbar t={t} />
             <BannerContainer>
               <NavBarSpacer />
-              <WhiteBigTitle>{t('Game jams')}</WhiteBigTitle>
+              <WhiteHugeTitle>{t('Game jams')}</WhiteHugeTitle>
               <WhiteParagraph>
                 {t(
                   'GDevelop is a perfect fit for quickly making games during game jams.'

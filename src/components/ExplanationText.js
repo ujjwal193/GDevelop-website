@@ -6,8 +6,8 @@ const ExplanationText = styled.p`
   text-align: center;
   font-family: 'Roboto', Arial, sans-serif;
   font-style: italic;
-  color: #B2B2B2;
-  
+  opacity: 0.37;
+
   ${defaultLink};
 `;
 

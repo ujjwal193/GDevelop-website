@@ -7,7 +7,7 @@ import PageContainer from '../lib/PageContainer';
 import Paragraph from '../components/Paragraph';
 import BannerContainer from '../components/Containers/BannerContainer';
 import TransparentContainer from '../components/Containers/TransparentContainer';
-import WhiteBigTitle from '../components/WhiteBigTitle';
+import WhiteHugeTitle from '../components/WhiteHugeTitle';
 import WhiteParagraph from '../components/WhiteParagraph';
 import MakeGameBanner from '../components/MakeGameBanner';
 import TweetContainer from '../components/TweetContainer';
@@ -30,7 +30,7 @@ export default class EducationPage extends React.Component {
             <Navbar t={t} />
             <BannerContainer>
               <NavBarSpacer />
-              <WhiteBigTitle>{t('GDevelop for education')}</WhiteBigTitle>
+              <WhiteHugeTitle>{t('GDevelop for education')}</WhiteHugeTitle>
               <WhiteParagraph>
                 {t(
                   'Using GDevelop in classroom is a perfect opportunity to teach programming, game making and unleash students creativity.'

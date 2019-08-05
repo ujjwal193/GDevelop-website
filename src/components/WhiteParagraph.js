@@ -1,5 +1,5 @@
-import React from 'react';
 import styled from 'styled-components';
+import { whiteLink } from './styles/white-link';
 
 const WhiteParagraph = styled.p`
   font-size: 22px;
@@ -7,6 +7,7 @@ const WhiteParagraph = styled.p`
   color: white;
   margin-top: 10px;
   margin-bottom: 10px;
+  ${whiteLink};
 `;
 
 export default WhiteParagraph;

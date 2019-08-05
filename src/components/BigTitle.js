@@ -3,17 +3,20 @@ import styled from 'styled-components';
 import { media, ie10and11 } from '../lib/media';
 
 const BigTitle = styled.h1`
-  font-size: 50px;
-  line-height: 68px;
-  font-family: 'Asap', Arial, sans-serif;
-  font-weight: 400;
+  font-size: 46px;
+  line-height: 55px;
+  font-family: 'PT Sans', Arial, sans-serif;
+  font-weight: 600;
   display: inline-block;
-  margin-top: 25px;
-  margin-bottom: 5px;
+  margin-top: 35px;
+  margin-bottom: 10px;
 
-  color: #51509c;
+  color: ${props => (props.white ? 'white' : '#51509c')};
 
-  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.05);
+  text-shadow: ${props =>
+    props.white
+      ? '0px 1px 2px rgba(0,0,0,0.8);'
+      : '0px 2px 2px rgba(0, 0, 0, 0.1)'};
 
   ${ie10and11`
     color: #3c4698;
@@ -22,14 +25,15 @@ const BigTitle = styled.h1`
   `};
 
   ${media.tablet`
+    margin-top: 25px;
     font-size: 36px;
     line-height: 40px;
     text-align: center;
   `};
 `;
 
-export default ({ children }) => (
+export default ({ children, white }) => (
   <div>
-    <BigTitle>{children}</BigTitle>
+    <BigTitle white={white}>{children}</BigTitle>
   </div>
 );

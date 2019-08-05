@@ -7,7 +7,7 @@ import PageContainer from '../lib/PageContainer';
 import BigTitle from '../components/BigTitle';
 import BannerContainer from '../components/Containers/BannerContainer';
 import TransparentContainer from '../components/Containers/TransparentContainer';
-import WhiteBigTitle from '../components/WhiteBigTitle';
+import WhiteHugeTitle from '../components/WhiteHugeTitle';
 import WhiteParagraph from '../components/WhiteParagraph';
 
 import BigGhostButton from '../components/BigGhostButton';
@@ -44,7 +44,7 @@ export default class CustomBehaviorsPage extends React.Component {
             <Navbar t={t} />
             <BannerContainer>
               <NavBarSpacer />
-              <WhiteBigTitle>{t('Create custom behaviors')}</WhiteBigTitle>
+              <WhiteHugeTitle>{t('Create custom behaviors')}</WhiteHugeTitle>
               <WhiteParagraph>
                 {t(
                   'In a few clicks, you can create new behaviors for your game objects - using events or JavaScript.'

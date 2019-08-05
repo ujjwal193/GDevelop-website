@@ -2,9 +2,9 @@ import styled from 'styled-components';
 import { defaultLink } from './styles/link';
 
 const Paragraph = styled.p`
-  font-size: 22px;
+  font-size: 20px;
   font-family: 'Roboto', Arial, sans-serif;
-  color: #6a6a6a;
+  color: #4a4a4a;
   margin-bottom: 25px;
   margin-top: 15px;
   margin-left: 5px;

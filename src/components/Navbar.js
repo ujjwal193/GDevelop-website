@@ -209,7 +209,7 @@ class Navbar extends React.Component {
             <LeftContainer>
               <NavLink to="/features">{t('Features')}</NavLink>
               <NavLink to="/games-showcase">{t('Games')}</NavLink>
-              <NavLink to="/education">{t('Education')}</NavLink>
+              <NavLink to="/game-studios-indies-and-education">{t('Game studios & education')}</NavLink>
             </LeftContainer>
             <RightContainer>
               <NavLink

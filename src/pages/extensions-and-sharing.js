@@ -7,7 +7,7 @@ import PageContainer from '../lib/PageContainer';
 import BigTitle from '../components/BigTitle';
 import BannerContainer from '../components/Containers/BannerContainer';
 import TransparentContainer from '../components/Containers/TransparentContainer';
-import WhiteBigTitle from '../components/WhiteBigTitle';
+import WhiteHugeTitle from '../components/WhiteHugeTitle';
 import WhiteParagraph from '../components/WhiteParagraph';
 
 import BigGhostButton from '../components/BigGhostButton';
@@ -40,9 +40,9 @@ export default class ExtensionsAndSharingPage extends React.Component {
             <Navbar t={t} />
             <BannerContainer>
               <NavBarSpacer />
-              <WhiteBigTitle>
+              <WhiteHugeTitle>
                 {t('Install new extensions and share them')}
-              </WhiteBigTitle>
+              </WhiteHugeTitle>
               <WhiteParagraph>
                 {t('Search and add new features to your game in a few clicks.')}
               </WhiteParagraph>

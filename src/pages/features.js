@@ -7,7 +7,7 @@ import PageContainer from '../lib/PageContainer';
 import BigTitle from '../components/BigTitle';
 import BannerContainer from '../components/Containers/BannerContainer';
 import TransparentContainer from '../components/Containers/TransparentContainer';
-import WhiteBigTitle from '../components/WhiteBigTitle';
+import WhiteHugeTitle from '../components/WhiteHugeTitle';
 import WhiteParagraph from '../components/WhiteParagraph';
 
 import chromeWithGame from '../img/chrome-with-game.png';
@@ -21,6 +21,9 @@ import MarkdownText from '../components/MarkdownText';
 import CenteredImage from '../components/CenteredImage';
 import lilBubPlatformer from '../img/games/lil-bub-hello-earth/lil-bub-platformer.png';
 import ExplanationText from '../components/ExplanationText';
+import SkewedBorderContainer from '../components/Containers/SkewedBorderContainer';
+import SkewedBackgroundContainer from '../components/Containers/SkewedBackgroundContainer';
+import WhiteBigButton from '../components/WhiteBigButton';
 
 export default class FeaturesPage extends React.Component {
   render() {
@@ -42,7 +45,7 @@ export default class FeaturesPage extends React.Component {
             <Navbar t={t} />
             <BannerContainer>
               <NavBarSpacer />
-              <WhiteBigTitle>{t('Fully featured')}</WhiteBigTitle>
+              <WhiteHugeTitle>{t('Fully featured')}</WhiteHugeTitle>
               <WhiteParagraph>
                 {t(
                   'GDevelop is bundled with dozens of features to imagine and create any kind of games.'
@@ -111,6 +114,8 @@ export default class FeaturesPage extends React.Component {
                   {t('Learn how to publish your game')}
                 </BigGhostButton>
               </CenteredRow>
+            </TransparentContainer>
+            <SkewedBorderContainer>
               <BigTitle>{t('Objects for your games')}</BigTitle>
               <List>
                 <ListItem>
@@ -171,7 +176,11 @@ export default class FeaturesPage extends React.Component {
               <ExplanationText>
                 <MarkdownText source="[Lil BUB's HELLO EARTH](/games/lil-bub-hello-earth), a game made with GDevelop" />
               </ExplanationText>
-              <BigTitle>{t('Add behaviors to your game objects')}</BigTitle>
+            </SkewedBorderContainer>
+            <SkewedBackgroundContainer>
+              <BigTitle white>
+                {t('Add behaviors to your game objects')}
+              </BigTitle>
               <List>
                 <ListItem>
                   <b>{t('Physics engine')}</b> -{' '}
@@ -213,16 +222,33 @@ export default class FeaturesPage extends React.Component {
                     'And more, to automate current tasks and behaviors in a few clicks!'
                   )}
                 </ListItem>
-                {/* TODO: Mention to custom behavior */}
               </List>
               <CenteredRow>
-                <BigGhostButton to="http://wiki.compilgames.net/doku.php/gdevelop5/behaviors">
+                <WhiteBigButton to="http://wiki.compilgames.net/doku.php/gdevelop5/behaviors">
                   {t('Read the documentation for all behaviors')}
-                </BigGhostButton>
-                <BigButton to="/custom-behaviors">
+                </WhiteBigButton>
+                <WhiteBigButton to="/custom-behaviors">
                   {t('Create your own custom behaviors')}
-                </BigButton>
+                </WhiteBigButton>
               </CenteredRow>
+            </SkewedBackgroundContainer>
+            <TransparentContainer>
+              <BigTitle>{t('Make desktop & mobile-ready games')}</BigTitle>
+              <List>
+                <ListItem>
+                  {t(
+                    'Save player data in the browser storage or on their devices'
+                  )}
+                </ListItem>
+                <ListItem>
+                  {t('Full support for sound effects and musics')}
+                </ListItem>
+                <ListItem>
+                  {t('Support for touchscreens & multi-touch')}
+                </ListItem>
+              </List>
+            </TransparentContainer>
+            <SkewedBorderContainer>
               <BigTitle>{t('Design advanced levels and interfaces')}</BigTitle>
               <List>
                 <ListItem>
@@ -276,20 +302,8 @@ export default class FeaturesPage extends React.Component {
                   {t('Discover GDevelop editors')}
                 </BigButton>
               </CenteredRow>
-              <BigTitle>{t('Make desktop & mobile-ready games')}</BigTitle>
-              <List>
-                <ListItem>
-                  {t(
-                    'Save player data in the browser storage or on their devices'
-                  )}
-                </ListItem>
-                <ListItem>
-                  {t('Full support for sound effects and musics')}
-                </ListItem>
-                <ListItem>
-                  {t('Support for touchscreens & multi-touch')}
-                </ListItem>
-              </List>
+            </SkewedBorderContainer>
+            <TransparentContainer>
               <BigTitle>
                 {t('Build ambitious games with advanced features')}
               </BigTitle>

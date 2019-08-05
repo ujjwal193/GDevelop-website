@@ -43,7 +43,7 @@ const FooterText = styled.p`
 const FooterLink = styled(Link)`
   font-size: 20px;
   color: #387eca;
-  font-weight: 600;
+  font-weight: 500;
   display: block;
 
   &:hover {
@@ -57,6 +57,10 @@ const FooterTitle = styled(Link)`
   color: white
   font-weight: 600;
   display: block;
+
+  &:hover {
+    color: white;
+  }
 `;
 
 const CopyrightText = styled.p`

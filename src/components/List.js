@@ -17,11 +17,9 @@ export const ListItem = styled.li`
   margin-left: 45px;
   font-size: 22px;
   font-family: 'Roboto', Arial, sans-serif;
-  color: #6a6a6a;
 
   &::before {
     content: '•';
-    color: #51509c;
     display: inline-block;
     width: 1em;
     margin-left: -1em;

@@ -1,7 +1,7 @@
 import React from 'react';
 import { translate } from 'react-i18next';
 import BannerContainer from './Containers/BannerContainer';
-import WhiteBigTitle from './WhiteBigTitle';
+import WhiteHugeTitle from './WhiteHugeTitle';
 import WhiteParagraph from './WhiteParagraph';
 import WhiteBigButton from './WhiteBigButton';
 import CenteredRow from './Grid/CenteredRow';
@@ -9,7 +9,7 @@ import config from '../config';
 
 const MakeGameBanner = ({ t, title, text, background, dimmed }) => (
   <BannerContainer background={background} dimmed={dimmed}>
-    <WhiteBigTitle>{title || t('Make your first game')}</WhiteBigTitle>
+    <WhiteHugeTitle>{title || t('Make your first game')}</WhiteHugeTitle>
     <WhiteParagraph>
       {text ||
         t(
