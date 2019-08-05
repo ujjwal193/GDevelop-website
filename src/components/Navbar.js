@@ -217,7 +217,7 @@ class Navbar extends React.Component {
                 category="wiki"
                 label="navbar-tutorials"
               >
-                {t('Tutorials')}
+                {t('Learn')}
               </NavLink>
               <NavLink to="/download">{t('Download')}</NavLink>
               <NavLink
