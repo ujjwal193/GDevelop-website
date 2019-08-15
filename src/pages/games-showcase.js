@@ -186,6 +186,14 @@ const games = [
     linkType: 'Play Store',
   },
   {
+    imageSrc: require('../img/games/attack-on-human.png'),
+    title: "Attack On Human : Spider's Revenge",
+    author: 'shinobiRozs',
+    link:
+      'https://play.google.com/store/apps/details?id=com.shinobirozs.attackonhuman',
+    linkType: 'Play Store',
+  },
+  {
     imageSrc: require('../img/games/big_driftroads.jpg'),
     title: 'Drift Roads',
     author: 'donut_prod',
