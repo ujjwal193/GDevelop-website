@@ -55,20 +55,32 @@ const games = [
     linkType: 'download',
   },
   {
+    imageSrc: require('../img/games/Alkebulan.jpg'),
+    title: 'Alkebulan',
+    author: 'Darlington Games',
+    link: 'https://play.google.com/store/apps/details?id=com.da.al',
+    linkType: 'Play Store',
+  },
+  {
     imageSrc: require('../img/games/big_kungfu.png'),
     title: 'Endless Kung-Fu',
     author: 'NetDancer Games',
     link:
       'https://play.google.com/store/apps/details?id=com.netdancergames.endlesskungfu',
-    linkType: 'download',
+    linkType: 'Play Store',
+  },
+  {
+    imageSrc: require('../img/games/angryspacefighter.jpg'),
+    title: 'Angry Space Fighter',
+    author: 'GBL Studio',
+    link:
+      'https://play.google.com/store/apps/details?id=com.angryspacefighter.gbl',
+    linkType: 'Play Store',
   },
   {
     imageSrc: require('../img/games/big_Rob_Dog_III.png'),
     title: 'ROB, THE DOG!',
     author: 'MicosS',
-    link:
-      'http://forum.compilgames.net/viewtopic.php?f=37&t=9704&p=65695#p65239',
-    linkType: 'download',
   },
   {
     imageSrc: require('../img/games/inky_boy.jpg'),
@@ -146,10 +158,9 @@ const games = [
   },
   {
     imageSrc: require('../img/games/fandi_adventures.png'),
-    title: "Fandi's Adventure",
-    author: 'Deeveigames',
-    link:
-      'https://play.google.com/store/apps/details?id=com.deevei.fireandicee',
+    title: 'Fury FI',
+    author: 'Deevei Free Games',
+    link: 'https://play.google.com/store/apps/details?id=com.Deevei.Furyfi',
     linkType: 'Play Store',
   },
   {
@@ -167,6 +178,14 @@ const games = [
     linkType: 'play',
   },
   {
+    imageSrc: require('../img/games/wakandan-knuckles.png'),
+    title: 'Wakandan Knuckles',
+    author: 'shinobiRozs',
+    link:
+      'https://play.google.com/store/apps/details?id=com.shinobirozs.wakandanknuckles',
+    linkType: 'Play Store',
+  },
+  {
     imageSrc: require('../img/games/big_driftroads.jpg'),
     title: 'Drift Roads',
     author: 'donut_prod',
@@ -175,6 +194,13 @@ const games = [
     imageSrc: require('../img/games/big_euf.jpg'),
     title: 'Eternity Under Fire',
     author: '4ian',
+  },
+  {
+    imageSrc: require('../img/games/armadura-de-orion.jpg'),
+    title: 'Armadura De Orion',
+    author: 'Natanael Vasconcelos Leitão ',
+    link: 'https://nomad-natan.itch.io/armor-of-orion-armadura-de-orion',
+    linkType: 'download',
   },
   {
     imageSrc: require('../img/games/big_tva.png'),
@@ -454,6 +480,23 @@ const bannerGames = {
       },
     ],
   },
+  escapeFromTheCursedCity: {
+    imageSrc: require('../img/games/escape-from-the-cursed-city.jpg'),
+    secondaryImageSrc: require('../img/games/escape-from-the-cursed-city2.jpg'),
+    title: 'Escape from the cursed city',
+    author: 'Gabor Gyenei',
+    descriptionParagraphs: [
+      'As a member of the Special Forces, you will be alone in a city prison after a misguided mission. During an accident in a secret laboratory, the city got invaded by zombies.',
+      'Your duty is to find the lab and destroy it. Then escape the city, killing as many zombies as you can.',
+    ],
+    links: [
+      {
+        linkType: 'Play Store',
+        link:
+          'https://play.google.com/store/apps/details?id=com.AlienHunter.game',
+      },
+    ],
+  },
 };
 
 const groupByNUple = (array, n) => {
@@ -535,6 +578,10 @@ export default class EducationPage extends React.Component {
             />
             <GenericGameBanner t={t} game={bannerGames.karambola} />
             <GenericGameBanner t={t} game={bannerGames.eggventure} />
+            <GenericGameBanner
+              t={t}
+              game={bannerGames.escapeFromTheCursedCity}
+            />
             <TransparentContainer>
               <BigTitle>And tons of other games!</BigTitle>
               <Spacer height="30px" />
