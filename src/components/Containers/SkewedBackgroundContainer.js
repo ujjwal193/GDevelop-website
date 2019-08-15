@@ -24,7 +24,6 @@ const Container = styled.div`
   margin-bottom: 25px;
 `;
 const Content = styled.div`
-  margin: auto;
   color: white;
   max-width: 1300px;
   margin: auto;
