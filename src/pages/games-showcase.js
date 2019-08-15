@@ -194,6 +194,14 @@ const games = [
     linkType: 'Play Store',
   },
   {
+    imageSrc: require('../img/games/storm-area-51.png'),
+    title: 'Storm Area 51',
+    author: 'shinobiRozs',
+    link:
+      'https://play.google.com/store/apps/details?id=com.shinobirozs.stormarea51',
+    linkType: 'Play Store',
+  },
+  {
     imageSrc: require('../img/games/big_driftroads.jpg'),
     title: 'Drift Roads',
     author: 'donut_prod',
