@@ -22,6 +22,7 @@ import BigButton from '../components/BigButton';
 import Title from '../components/Title';
 import Row from '../components/Grid/Row';
 import Column from '../components/Grid/Column';
+import { renderWebMonetizationMeta } from '../lib/WebMonetization';
 
 const formatExampleName = name => {
   if (!name.length) return '';
@@ -69,6 +70,7 @@ export default class FeaturesPage extends React.Component {
                 name="description"
                 content="GDevelop is a game creator bundled with dozens of features to imagine and create any kind of games. No coding skills are required."
               />
+              {renderWebMonetizationMeta()}
             </Helmet>
             <Navbar t={t} />
             <BannerContainer>

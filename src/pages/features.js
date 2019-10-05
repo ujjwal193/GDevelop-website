@@ -24,6 +24,7 @@ import ExplanationText from '../components/ExplanationText';
 import SkewedBorderContainer from '../components/Containers/SkewedBorderContainer';
 import SkewedBackgroundContainer from '../components/Containers/SkewedBackgroundContainer';
 import WhiteBigButton from '../components/WhiteBigButton';
+import { renderWebMonetizationMeta } from '../lib/WebMonetization';
 
 export default class FeaturesPage extends React.Component {
   render() {
@@ -41,6 +42,7 @@ export default class FeaturesPage extends React.Component {
                 name="description"
                 content="GDevelop is a game creator bundled with dozens of features to imagine and create any kind of games. No coding skills are required."
               />
+              {renderWebMonetizationMeta()}
             </Helmet>
             <Navbar t={t} />
             <BannerContainer>

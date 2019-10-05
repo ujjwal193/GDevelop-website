@@ -21,6 +21,7 @@ import CenteredRow from '../components/Grid/CenteredRow';
 import BigButton from '../components/BigButton';
 import BigGhostButton from '../components/BigGhostButton';
 import config from '../config';
+import { renderWebMonetizationMeta } from '../lib/WebMonetization';
 
 export default class FeaturesPage extends React.Component {
   render() {
@@ -38,6 +39,7 @@ export default class FeaturesPage extends React.Component {
                 name="description"
                 content="Contribute to GDevelop, an open-source game creator that can be used by anyone to create games. Help us to develop GDevelop, translate and promote it!"
               />
+              {renderWebMonetizationMeta()}
             </Helmet>
             <Navbar t={t} />
             <BannerContainer>

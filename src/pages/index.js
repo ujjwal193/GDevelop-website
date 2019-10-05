@@ -43,6 +43,7 @@ import bigRobDogIii from '../img/games/big_Rob_Dog_III.png';
 import bigModelo from '../img/games/big_modelo.png';
 import SkewedBackgroundContainer from '../components/Containers/SkewedBackgroundContainer';
 import SkewedBorderContainer from '../components/Containers/SkewedBorderContainer';
+import { renderWebMonetizationMeta } from '../lib/WebMonetization';
 
 export default class IndexPage extends React.Component {
   render() {
@@ -64,6 +65,7 @@ export default class IndexPage extends React.Component {
                 name="description"
                 content="Create your own games with GDevelop: an open-source game creator. No programming skills are required! Quickly build and share your games on mobile (Android and iOS), desktop and on the web."
               />
+              {renderWebMonetizationMeta()}
             </Helmet>
             <Navbar t={t} />
             <LandingContainer>

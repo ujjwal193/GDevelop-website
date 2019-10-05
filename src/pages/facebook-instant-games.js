@@ -23,6 +23,7 @@ import gamesMessenger from '../img/games-messenger.png';
 import facebookDevelopersApp from '../img/facebook-developers-app.png';
 import CenteredImage from '../components/CenteredImage';
 import MarkdownText from '../components/MarkdownText';
+import { renderWebMonetizationMeta } from '../lib/WebMonetization';
 
 export default class FeaturesPage extends React.Component {
   render() {
@@ -40,6 +41,7 @@ export default class FeaturesPage extends React.Component {
                 name="description"
                 content="GDevelop is a game creator bundled with dozens of features to imagine and create any kind of games. No coding skills are required."
               />
+              {renderWebMonetizationMeta()}
             </Helmet>
             <Navbar t={t} />
             <BannerContainer>

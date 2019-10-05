@@ -25,6 +25,7 @@ import BigGhostButton from '../components/BigGhostButton';
 import BigTitle from '../components/BigTitle';
 import ExplanationText from '../components/ExplanationText';
 import MarkdownText from '../components/MarkdownText';
+import { renderWebMonetizationMeta } from '../lib/WebMonetization';
 
 export default class DownloadPage extends React.Component {
   state = {
@@ -47,6 +48,7 @@ export default class DownloadPage extends React.Component {
                 name="description"
                 content="Download GDevelop, an open-source game creator and create your own games! No programming skills are required. Build and share your games on mobile (Android and iOS), desktop and on the web."
               />
+              {renderWebMonetizationMeta()}
             </Helmet>
             <Navbar t={t} />
             <BannerContainer>

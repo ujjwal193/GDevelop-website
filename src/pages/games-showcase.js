@@ -24,6 +24,7 @@ import GenericGameBanner from '../components/GameBanners/GenericGameBanner';
 import GenericGameCard from '../components/GameBanners/GenericGameCard';
 import ReachBottomSpy from '../components/ReachBottomSpy';
 import CenteredColumn from '../components/Grid/CenteredColumn';
+import { renderWebMonetizationMeta } from '../lib/WebMonetization';
 
 const submitGameBody = `
 Hi all!
@@ -574,6 +575,7 @@ export default class EducationPage extends React.Component {
                 name="description"
                 content="Showcase of the games created with GDevelop: open-source game creator to build games without programming."
               />
+              {renderWebMonetizationMeta()}
             </Helmet>
             <Navbar t={t} />
             <BannerContainer>

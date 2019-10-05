@@ -23,6 +23,7 @@ import searchNewBehaviors from '../img/search-new-behaviors.png';
 import CenteredImage from '../components/CenteredImage';
 import Spacer from '../components/Grid/Spacer';
 import { List, ListItem } from '../components/List';
+import { renderWebMonetizationMeta } from '../lib/WebMonetization';
 
 export default class CustomBehaviorsPage extends React.Component {
   render() {
@@ -40,6 +41,7 @@ export default class CustomBehaviorsPage extends React.Component {
                 name="description"
                 content="GDevelop is a game creator bundled with dozens of features to imagine and create any kind of games. No coding skills are required."
               />
+              {renderWebMonetizationMeta()}
             </Helmet>
             <Navbar t={t} />
             <BannerContainer>

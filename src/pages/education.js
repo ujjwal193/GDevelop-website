@@ -11,6 +11,7 @@ import WhiteHugeTitle from '../components/WhiteHugeTitle';
 import WhiteParagraph from '../components/WhiteParagraph';
 import MakeGameBanner from '../components/MakeGameBanner';
 import TweetContainer from '../components/TweetContainer';
+import { renderWebMonetizationMeta } from '../lib/WebMonetization';
 
 export default class EducationPage extends React.Component {
   render() {
@@ -26,6 +27,7 @@ export default class EducationPage extends React.Component {
                 name="description"
                 content="GDevelop is a game creator requiring no coding skills. It is perfect to teach game creation to students or children."
               />
+              {renderWebMonetizationMeta()}
             </Helmet>
             <Navbar t={t} />
             <BannerContainer>
