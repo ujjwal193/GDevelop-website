@@ -7,6 +7,7 @@ const i18nPath = path.join(__dirname, 'i18n');
 const getShortestCode = langLongCode => {
   if (langLongCode === 'pt-BR') return langLongCode;
   if (langLongCode === 'zh-TW') return langLongCode;
+  if (langLongCode === 'sr-CS') return langLongCode;
 
   const langParts = langLongCode.split('-');
   return langParts[0];
@@ -29,6 +30,8 @@ const getLocaleName = langCode => {
     return 'Chinese Traditional';
   } else if (langCode === 'fil') {
     return 'Filipino';
+  } else if (langCode === 'sr-CS') {
+    return 'Serbian (Latin)';
   }
 
   return ISO6391.getName(langCode);

@@ -2,7 +2,29 @@ const chalk = require('chalk');
 const { createFilePath } = require('gatsby-source-filesystem');
 const { getAllLocales } = require('./i18n-helpers');
 
-const supportedLocales = ['en', 'es', 'fr', 'ja', 'ms', 'pl', 'pt', 'tr', 'zh'];
+const supportedLocales = [
+  'ar',
+  'de',
+  'el',
+  'es',
+  'en',
+  'fil',
+  'fr',
+  'id',
+  'it',
+  'ja',
+  'ms',
+  'nl',
+  'pl',
+  'pt-BR',
+  'pt',
+  'ru',
+  'sr',
+  'tr',
+  'yo',
+  'zh',
+  'zh-TW',
+];
 const locales = [
   {
     name: 'English',
@@ -15,7 +37,7 @@ const locales = [
   ...getAllLocales(),
 ].filter(locale => {
   if (
-    locale.translationRatio < 0.7 &&
+    locale.translationRatio < 0.6 &&
     !supportedLocales.includes(locale.langCode)
   ) {
     return false;
