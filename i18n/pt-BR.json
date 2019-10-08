@@ -59,7 +59,7 @@
   "Download GDevelop": "Baixar o GDevelop",
   "GDevelop is free and can be used for profit or non-profit game making.": "GDevelop é gratuito e pode ser usado para criar jogos com fins lucrativos ou não.",
   "GDevelop runs on Windows, macOS and most recent Linux distributions. You can also try it online using Chrome, Firefox or another recent web browser.": "GDevelop roda em Windows, macOS e nas distribuições mais recentes de Linux. Você também pode experimentar on-line usando o Chrome, Firefox ou outro navegador recente.",
-  "You need **libgconf-2-4** on your system. Type `sudo apt-get install libgconf-2-4` in a terminal or install it from your package manager.": "Você precisa da **libgconf-2-4** em seu sistema. Digite `udo apt-get install libgconf-2-4` no terminal ou instale por um gerenciador de pacotes.",
+  "You need **libgconf-2-4** on your system. Type `sudo apt-get install libgconf-2-4` in a terminal or install it from your package manager.": "Você precisa da **libgconf-2-4** em seu sistema. Digite `sudo apt-get install libgconf-2-4` no terminal ou instale por um gerenciador de pacotes.",
   "To create your first game, start by reading a tutorial:": "Para criar seu primeiro jogo, comece lendo um tutorial:",
   "Create a platformer game": "Crie um jogo de plataforma",
   "Create a tank shooter game": "Crie um jogo de tiro com tanques",
