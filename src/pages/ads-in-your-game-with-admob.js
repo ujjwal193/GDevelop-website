@@ -22,6 +22,7 @@ import googleAdmobLogo from '../img/google-admob-logo.png';
 import setupAdmobAppid from '../img/setup-admob-appid.png';
 import createAdmobApp from '../img/create-admob-app.png';
 import displayAdmobBannerEvents from '../img/display-admob-banner-events.png';
+import { renderWebMonetizationMeta } from '../lib/WebMonetization';
 
 export default class FeaturesPage extends React.Component {
   render() {
@@ -35,6 +36,7 @@ export default class FeaturesPage extends React.Component {
                 name="description"
                 content="GDevelop is a game creator bundled with dozens of features to imagine and create any kind of games. No coding skills are required."
               />
+              {renderWebMonetizationMeta()}
             </Helmet>
             <Navbar t={t} />
             <BannerContainer>
