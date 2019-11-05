@@ -63,6 +63,12 @@ exports.onCreatePage = ({ page, boundActionCreators }) => {
 
       resolve();
     });
+  } else if (
+    !page.path.includes('terms-and-conditions') &&
+    !page.path.includes('privacy-policy')
+  ) {
+    deletePage(page);
+    createPage(makeEnglishOnlyPage(page));
   } else {
     return new Promise(resolve => {
       const pages = makeLocalizedPages(page);
@@ -101,10 +107,11 @@ const makeLocalizedPages = page => {
   return pages;
 };
 
-const makeChooseLanguagePage = page => {
+const makeEnglishOnlyPage = page => {
   return {
     ...page,
     context: {
+      ...page.context,
       localeCode: 'en',
       stringifiedLocaleMessages: JSON.stringify({
         en: {
@@ -114,6 +121,16 @@ const makeChooseLanguagePage = page => {
           },
         },
       }),
+    },
+  };
+};
+
+const makeChooseLanguagePage = page => {
+  const englishOnlyPage = makeEnglishOnlyPage(page);
+  return {
+    ...englishOnlyPage,
+    context: {
+      ...englishOnlyPage.context,
       localeNamesAndPaths: locales.map(locale => ({
         name: locale.name,
         path: locale.path,

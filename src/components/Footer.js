@@ -70,7 +70,7 @@ const CopyrightText = styled.p`
   margin-top: 10px;
 `;
 
-const CopyrightLink = styled.a`
+const CopyrightLink = styled(Link)`
   font-weight: bold;
   color: #387eca;
 
@@ -195,7 +195,14 @@ export default ({ t }) => (
         </CopyrightLink>{' '}
         {t(
           'who added features, fixed bugs, sent new examples, wrote tutorials, and helped the community.'
-        )}
+        )}{' '}
+        <CopyrightLink to="/legal/terms-and-conditions" noLangPathPrefix>
+          Terms and Conditions
+        </CopyrightLink>{' '}
+        -{' '}
+        <CopyrightLink to="/legal/privacy-policy" noLangPathPrefix>
+          Privacy Policy
+        </CopyrightLink>
       </CopyrightText>
     </ContentContainer>
   </FooterContainer>
