@@ -86,9 +86,11 @@ export default class FeaturesPage extends React.Component {
                   />
                 </ListItem>
                 <ListItem>
-                  {t(
-                    'Publish your game on Kongregate, Itch.io and other gaming website!'
-                  )}
+                  <MarkdownText
+                    source={t(
+                      'Publish your game on [Poki](/poki), Kongregate, Itch.io and other gaming website!'
+                    )}
+                  />
                 </ListItem>
                 <ListItem>
                   {t(

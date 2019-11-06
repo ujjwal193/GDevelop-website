@@ -152,9 +152,6 @@ export default ({ t }) => (
           <FooterLink to="/extensions-and-sharing">
             {t('Install new features with extensions')}
           </FooterLink>
-          <FooterLink to="/facebook-instant-games">
-            {t('Facebook Instant Games')}
-          </FooterLink>
           <FooterLink to="/javascript-game-engine">
             {t('Use JavaScript with the game engine')}
           </FooterLink>
@@ -171,6 +168,12 @@ export default ({ t }) => (
           <FooterLink to="/education">{t('GDevelop for Education')}</FooterLink>
           <FooterLink to="/make-8bit-pixelart-games">
             {t('Make 8-bit games')}
+          </FooterLink>
+          <FooterLink to="/poki">
+            {t('Publish your web game on Poki')}
+          </FooterLink>
+          <FooterLink to="/facebook-instant-games">
+            {t('Create for Facebook Instant Games')}
           </FooterLink>
         </Column>
       </Row>
