@@ -64,8 +64,8 @@ exports.onCreatePage = ({ page, boundActionCreators }) => {
       resolve();
     });
   } else if (
-    !page.path.includes('terms-and-conditions') &&
-    !page.path.includes('privacy-policy')
+    page.path.includes('terms-and-conditions') ||
+    page.path.includes('privacy-policy')
   ) {
     deletePage(page);
     createPage(makeEnglishOnlyPage(page));
