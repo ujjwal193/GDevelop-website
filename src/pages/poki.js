@@ -29,7 +29,7 @@ export default class FeaturesPage extends React.Component {
       <PageContainer {...this.props.pathContext}>
         {t => (
           <React.Fragment>
-            <Helmet title={t('Publish your GDevelop game on Poki.com')}>
+            <Helmet title={t('Your GDevelop game on the Poki web platform')}>
               <html lang={this.props.pathContext.localeCode} />
               <meta
                 name="description"
@@ -40,7 +40,7 @@ export default class FeaturesPage extends React.Component {
             <Navbar t={t} />
             <BannerContainer>
               <NavBarSpacer />
-              <WhiteHugeTitle>{t('Publish your game on Poki')}</WhiteHugeTitle>
+              <WhiteHugeTitle>{t('Join the Poki web platform')}</WhiteHugeTitle>
               <CenteredImage maxWidth="290px" src={pokiLogo} alt="Poki logo" />
               <WhiteParagraph>
                 {t(
