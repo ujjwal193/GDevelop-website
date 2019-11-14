@@ -21,6 +21,8 @@ const TermsAndConditionsPage = props => (
           <MarkdownText
             useParagraphs
             source={`
+# Terms & Conditions
+
 ## Overview
 
 This website (https://gdevelop-app.com), related websites (https://forum.gdevelop-app.com, https://wiki.gdevelop-app.com, https://editor.gdevelop-app.com) and related applications (GDevelop), referred to as the Service, are operated by FLORIAN RIVAL. Throughout the site, the terms “we”, “us” and “our” refer to FLORIAN RIVAL. FLORIAN RIVAL offers these websites and applications, including all information, tools and services available from this site to you, the user, conditioned upon your acceptance of all terms, conditions, policies and notices stated here.
@@ -149,7 +151,12 @@ These Terms of Service and any policies or operating rules posted by us on this 
 Any ambiguities in the interpretation of these Terms of Service shall not be construed against the drafting party.
 
 
-## 15. Changes to This Terms and Conditions
+## 15. Governing Laws
+
+These Terms of Service and any separate agreements whereby we provide you Services shall be governed by and construed in accordance with the laws of France.
+
+
+## 16. Changes to This Terms and Conditions
 
 We may update our Terms and Conditions from time to time. Thus, you are advised to review this page periodically for any changes. We will notify you of any changes by posting the new Terms and Conditions on this page. These changes are effective immediately after they are posted on this page. By using this Service you are agreeing to be bound by the then current version of these terms of service.
 
