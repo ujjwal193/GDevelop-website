@@ -6,24 +6,28 @@ const supportedLocales = [
   'ar',
   'de',
   'el',
-  'es',
   'en',
+  'es',
   'fil',
   'fr',
+  'hu',
   'id',
   'it',
   'ja',
+  'ko',
   'ms',
   'nl',
   'pl',
   'pt-BR',
   'pt',
   'ru',
+  'sl',
+  'sr-CS',
   'sr',
   'tr',
   'yo',
-  'zh',
   'zh-TW',
+  'zh',
 ];
 const locales = [
   {
@@ -36,14 +40,15 @@ const locales = [
   },
   ...getAllLocales(),
 ].filter(locale => {
-  if (
-    locale.translationRatio < 0.6 &&
-    !supportedLocales.includes(locale.langCode)
-  ) {
-    return false;
+  if (supportedLocales.includes(locale.langCode)) return true;
+
+  if (locale.translationRatio > 0.6) {
+    console.warn(
+      `⚠️ Locale ${locale.langCode} has reached a translation ratio of >0.6. Consider adding it in supportedLocales.`
+    );
   }
 
-  return true;
+  return false;
 });
 
 console.log(
