@@ -21,6 +21,7 @@ import lilBubPlatformer from '../img/games/lil-bub-hello-earth/lil-bub-platforme
 import { List, ListItem } from '../components/List';
 import SkewedBorderContainer from '../components/Containers/SkewedBorderContainer';
 import { renderWebMonetizationMeta } from '../lib/WebMonetization';
+import Link from '../components/Link';
 
 export default class UseCasesPage extends React.Component {
   render() {
@@ -92,6 +93,26 @@ export default class UseCasesPage extends React.Component {
                   {t('GDevelop on GitHub')}
                 </BigGhostButton>
               </CenteredRow>
+            </TransparentContainer>
+            <SkewedBorderContainer>
+              <BigTitle>{t('Commercial support')}</BigTitle>
+              <Paragraph>
+                <MarkdownText
+                  source={t(
+                    'Companies can provide commercial or free support for GDevelop:'
+                  )}
+                />
+                <List>
+                  <ListItem>
+                    <Link to="http://m-craft.com/">MightyCraft (Asia)</Link> -{' '}
+                    <Link to="http://gdevelop.m-craft.com/">
+                      <i>{t('See GDevelop support and promotion website')}</i>
+                    </Link>
+                  </ListItem>
+                </List>
+              </Paragraph>
+            </SkewedBorderContainer>
+            <TransparentContainer>
               <BigTitle>{t('Indie game developers')}</BigTitle>
               <Paragraph>
                 <MarkdownText
@@ -148,11 +169,15 @@ export default class UseCasesPage extends React.Component {
               <CenteredImage
                 maxWidth="800px"
                 src={lilBubPlatformer}
-                alt="Screenshot of Lil BUB's HELLO EARTH, a game made with GDevelop, the open-source game making app"
+                alt={t(
+                  "Screenshot of Lil BUB's HELLO EARTH, a game made with GDevelop, the open-source game making app"
+                )}
                 shadow
               />
             </TransparentContainer>
-            <MakeGameBanner title="Make game with a fast, intuitive game engine" />
+            <MakeGameBanner
+              title={t('Make games with a fast, intuitive game engine')}
+            />
             <Footer t={t} />
           </React.Fragment>
         )}
