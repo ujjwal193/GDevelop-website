@@ -95,10 +95,10 @@ export default class JavascriptGameEnginePage extends React.Component {
                 />
               </Paragraph>
               <CenteredRow>
-                <BigButton to="https://github.com/4ian/GD/blob/master/newIDE/README-extensions.md">
+                <BigButton to="https://github.com/4ian/GDevelop/blob/master/newIDE/README-extensions.md">
                   {t('How to write extensions')}
                 </BigButton>
-                <BigGhostButton to="http://4ian.github.io/GD-Documentation/GDJS%20Runtime%20Documentation/index.html">
+                <BigGhostButton to="https://docs.gdevelop-app.com/GDJS%20Runtime%20Documentation/index.html">
                   {t('Game engine JavaScript documentation')}
                 </BigGhostButton>
               </CenteredRow>

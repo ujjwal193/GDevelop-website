@@ -181,6 +181,31 @@ export default class FeaturesPage extends React.Component {
                 <MarkdownText source="[Lil BUB's HELLO EARTH](/games/lil-bub-hello-earth), a game made with GDevelop" />
               </ExplanationText>
             </SkewedBorderContainer>
+            <TransparentContainer>
+              <BigTitle>{t('Use visual effects ("shaders")')}</BigTitle>
+              <List>
+                <ListItem>
+                  {t('Dozens of visual effects are bundled with GDevelop')} -{' '}
+                  <i>
+                    {t(
+                      'Blur, Noise, CRT effect, Color Map, Chromatic Aberration, Glow, Shadows...'
+                    )}
+                  </i>
+                </ListItem>
+                <ListItem>
+                  <MarkdownText
+                    source={t(
+                      'Add your own effects by [creating new extensions for the game engine](/javascript-game-engine).'
+                    )}
+                  />
+                </ListItem>
+              </List>
+              <CenteredRow>
+                <BigGhostButton to="http://wiki.compilgames.net/doku.php/gdevelop5/interface/scene-editor/layer-effects">
+                  {t('Learn how to use effects in GDevelop')}
+                </BigGhostButton>
+              </CenteredRow>
+            </TransparentContainer>
             <SkewedBackgroundContainer>
               <BigTitle white>
                 {t('Add behaviors to your game objects')}
