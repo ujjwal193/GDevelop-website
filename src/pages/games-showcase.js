@@ -42,11 +42,47 @@ I made/know a game made with GDevelop and I think it would be great to have it o
 
 const games = [
   {
+    imageSrc: require('../img/games/space-tapper.jpeg'),
+    title: 'Space Tappers',
+    author: 'Taqzwee',
+    link: 'https://play.google.com/store/apps/details?id=com.taqzwee.spacetappers',
+    linkType: 'Play Store',
+    // Also for Windows/macOS/Linux: https://taqzwee.itch.io/space-tappers
+  },
+  {
+    imageSrc: require('../img/games/impossiball.png'),
+    title: 'ImpossiBall',
+    author: 'CrazYBear',
+    link: 'https://crazybear-a.itch.io/impossiball',
+    linkType: 'play',
+  },
+  {
+    imageSrc: require('../img/games/dojorun.png'),
+    title: 'Dojo Run',
+    author: 'Bruno Silva de Souza',
+    link: 'https://gamejolt.com/games/dojorun/453378',
+    linkType: 'play',
+  },
+  {
     imageSrc: require('../img/games/mikos_adventures.jpg'),
     title: 'Miko’s Adventures',
     author: 'Coriander Games',
     link: 'https://coriandergames.itch.io/mikos-adventures',
     linkType: 'download',
+  },
+  {
+    imageSrc: require('../img/games/angry-colors.png'),
+    title: 'Angry Colors',
+    author: 'Deevei Free Games',
+    link: 'https://play.google.com/store/apps/details?id=com.deevei.angrycolors',
+    linkType: 'Play Store',
+  },
+  {
+    imageSrc: require('../img/games/skull-bat-boy.jpeg'),
+    title: 'Skull Bat Boy',
+    author: 'Super Villain',
+    link: 'https://supervillain.itch.io/skull-bat-boy-demo',
+    linkType: 'play',
   },
   {
     imageSrc: require('../img/games/durrburger.jpeg'),
@@ -149,6 +185,20 @@ const games = [
     author: 'Aydin Yildiz & Akin Yildiz',
     link: 'https://northstarstudio.itch.io/yellow-bus',
     linkType: 'download',
+  },
+  {
+    imageSrc: require('../img/games/survive-evil-resident-zombies.png'),
+    title: 'Survive Evil Resident Zombies',
+    author: 'shinobiRozs',
+    link: 'https://play.google.com/store/apps/details?id=com.residentevil.zombies',
+    linkType: 'Play Store',
+  },
+  {
+    imageSrc: require('../img/games/endless-demon.png'),
+    title: 'ENDLESS DEMON',
+    author: 'LockHeart Studio',
+    link: 'https://play.google.com/store/apps/details?id=com.lockheartstudio.endlessdemons',
+    linkType: 'Play Store',
   },
   {
     imageSrc: require('../img/games/big_iletait.png'),
