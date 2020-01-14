@@ -92,6 +92,13 @@ const games = [
     linkType: 'download',
   },
   {
+    imageSrc: require('../img/games/Runners.jpg'),
+    title: 'RUNNERS',
+    author: 'THE GEM TUTORIALS',
+    link: 'https://the-gem-tutorials.itch.io/runners',
+    linkType: 'download',
+  },
+  {
     imageSrc: require('../img/games/Alkebulan.jpg'),
     title: 'Alkebulan',
     author: 'Darlington Games',
