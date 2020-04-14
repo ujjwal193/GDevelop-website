@@ -126,6 +126,9 @@ export default ({ t }) => (
           >
             {t('Community forums')}
           </FooterLink>
+          <FooterLink to={config.discordUrl} category="discord" label="discord">
+            {t('Discord')}
+          </FooterLink>
           <FooterLink to="/contribute">{t('Contribute')}</FooterLink>
           <FooterLink
             to={config.facebookPageUrl}
