@@ -6,7 +6,7 @@ const ExplanationText = styled.p`
   text-align: center;
   font-family: 'Roboto', Arial, sans-serif;
   font-style: italic;
-  opacity: 0.37;
+  opacity: 0.7;
 
   ${defaultLink};
 `;

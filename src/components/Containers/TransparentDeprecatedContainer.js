@@ -1,19 +1,23 @@
 import styled from 'styled-components';
 import { media } from '../../lib/media';
 
-const TransparentContainer = styled.div`
+const TransparentDeprecatedContainer = styled.div`
+  position: relative;
   width: 100%;
   min-height: 20px;
   opacity: 0.78;
 
-  padding-left: ${props => props.noPadding ? '0' : '60px'};
-  padding-right: ${props => props.noPadding ? '0' : '60px'};
+  max-width: 1300px;
+  margin: auto;
+
+  padding-left: ${props => (props.noPadding ? '0' : '75px')};
+  padding-right: ${props => (props.noPadding ? '0' : '75px')};
   display: block;
 
   ${media.tablet`
-    padding-left: ${props => props.noPadding ? '0' : '30px'};
-    padding-right: ${props => props.noPadding ? '0' : '30px'};
+    padding-left: ${props => (props.noPadding ? '0' : '30px')};
+    padding-right: ${props => (props.noPadding ? '0' : '30px')};
   `};
 `;
 
-export default TransparentContainer;
+export default TransparentDeprecatedContainer;

@@ -126,13 +126,13 @@ export default class DownloadPage extends React.Component {
                     ℹ️{' '}
                     <MarkdownText
                       source={t(
-                        'You need **libgconf-2-4** on your system. Type `sudo apt-get install libgconf-2-4` in a terminal or install it from your package manager.'
+                        'This is an [AppImage](https://appimage.org/). **Make it executable first** and run it. For example: `chmod a+x GDevelop*.AppImage && ./GDevelop*.AppImage`.'
                       )}
                     />
                   </ExplanationText>
                 </CenteredRow>
               ) : (
-                <Spacer height="30px" />
+                <Spacer height="25px" />
               )}
               <Paragraph>
                 {t('To create your first game, start by reading a tutorial:')}
