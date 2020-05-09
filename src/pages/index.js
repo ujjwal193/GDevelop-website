@@ -191,7 +191,7 @@ export default class IndexPage extends React.Component {
               />
               <ExplanationText>
                 {t(
-                  'When Space is pressed, the character animation and a sound are played. If a bomb touches the character, they both are destroyed.'
+                  'When Space is pressed, the character animation and a sound are played. If an enemy touches the character, they both are destroyed.'
                 )}
               </ExplanationText>
             </SkewedBackgroundContainer>
@@ -254,14 +254,14 @@ export default class IndexPage extends React.Component {
                   target="_blank"
                   rel="noopener"
                 >
-                  {t('Create a platformer game')}
+                  {t('Create a platform game')}
                 </BigGhostButton>
                 <BigGhostButton
-                  to="http://wiki.compilgames.net/doku.php/gdevelop5/tutorials/tank-shooter"
+                  to="http://wiki.compilgames.net/doku.php/gdevelop5/tutorials/geometry-monster"
                   target="_blank"
                   rel="noopener"
                 >
-                  {t('Create a tank shooter game')}
+                  {t('Create a casual mobile game')}
                 </BigGhostButton>
               </CenteredRow>
             </TransparentContainer>
