@@ -1,10 +1,5 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import faLightbulb from '@fortawesome/fontawesome-free-solid/faLightbulb';
-import faThList from '@fortawesome/fontawesome-free-solid/faThList';
-import faExternalLinkAlt from '@fortawesome/fontawesome-free-solid/faExternalLinkAlt';
-import faFlagCheckered from '@fortawesome/fontawesome-free-solid/faFlagCheckered';
-import faRocket from '@fortawesome/fontawesome-free-solid/faRocket';
 
 import Navbar, { NavBarSpacer } from '../components/Navbar';
 import Footer from '../components/Footer';
@@ -39,8 +34,10 @@ import CenteredYoutubeVideo from '../components/CenteredYoutubeVideo';
 import MarkdownText from '../components/MarkdownText';
 import lilBubPlatformer from '../img/games/lil-bub-hello-earth/lil-bub-platformer.png';
 import hdogScreenshotGroundCombat from '../img/games/hyperspace-dogfights/hdog_screenshot_ground_combat.png';
+import mightyRuneCave from '../img/games/mighty-rune/mighty-rune-cave.jpg';
 import bigRobDogIii from '../img/games/big_Rob_Dog_III.png';
 import bigModelo from '../img/games/big_modelo.png';
+import swampLanding from '../img/games/swamp/swamp-landing.jpg';
 import SkewedBackgroundContainer from '../components/Containers/SkewedBackgroundContainer';
 import SkewedBorderContainer from '../components/Containers/SkewedBorderContainer';
 import { renderWebMonetizationMeta } from '../lib/WebMonetization';
@@ -49,7 +46,7 @@ export default class IndexPage extends React.Component {
   render() {
     return (
       <PageContainer {...this.props.pathContext}>
-        {t => (
+        {(t) => (
           <React.Fragment>
             <Helmet
               title={t(
@@ -143,6 +140,18 @@ export default class IndexPage extends React.Component {
                   },
                 }}
               >
+                <CarouselImage
+                  src={mightyRuneCave}
+                  alt={t('Make 8-bit or pixel art games with GDevelop')}
+                  shadow
+                />
+                <CarouselImage
+                  src={swampLanding}
+                  alt={t(
+                    "Make adventure and point'n'click games with GDevelop"
+                  )}
+                  shadow
+                />
                 <CarouselImage
                   src={lilBubPlatformer}
                   alt={t('Create platformer games with GDevelop')}

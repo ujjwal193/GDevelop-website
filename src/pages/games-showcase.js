@@ -45,7 +45,8 @@ const games = [
     imageSrc: require('../img/games/space-tapper.jpeg'),
     title: 'Space Tappers',
     author: 'Taqzwee',
-    link: 'https://play.google.com/store/apps/details?id=com.taqzwee.spacetappers',
+    link:
+      'https://play.google.com/store/apps/details?id=com.taqzwee.spacetappers',
     linkType: 'Play Store',
     // Also for Windows/macOS/Linux: https://taqzwee.itch.io/space-tappers
   },
@@ -74,7 +75,8 @@ const games = [
     imageSrc: require('../img/games/angry-colors.png'),
     title: 'Angry Colors',
     author: 'Deevei Free Games',
-    link: 'https://play.google.com/store/apps/details?id=com.deevei.angrycolors',
+    link:
+      'https://play.google.com/store/apps/details?id=com.deevei.angrycolors',
     linkType: 'Play Store',
   },
   {
@@ -197,14 +199,16 @@ const games = [
     imageSrc: require('../img/games/survive-evil-resident-zombies.png'),
     title: 'Survive Evil Resident Zombies',
     author: 'shinobiRozs',
-    link: 'https://play.google.com/store/apps/details?id=com.residentevil.zombies',
+    link:
+      'https://play.google.com/store/apps/details?id=com.residentevil.zombies',
     linkType: 'Play Store',
   },
   {
     imageSrc: require('../img/games/endless-demon.png'),
     title: 'ENDLESS DEMON',
     author: 'LockHeart Studio',
-    link: 'https://play.google.com/store/apps/details?id=com.lockheartstudio.endlessdemons',
+    link:
+      'https://play.google.com/store/apps/details?id=com.lockheartstudio.endlessdemons',
     linkType: 'Play Store',
   },
   {
@@ -495,6 +499,42 @@ const games = [
 ];
 
 const bannerGames = {
+  spaceWings: {
+    imageSrc: require('../img/games/space-wings/space-wings-banner.png'),
+    secondaryImageSrc: require('../img/games/space-wings/space-wings-thumb.png'),
+    title: 'SpaceWings',
+    author: 'Erwill',
+    descriptionParagraphs: [
+      `Many time ago, in the solar system, the sun has grown, causing a global warming in the system and the disappearance of all life on earth. SpaceWings studied this case and send Kyoko, an alien red panda, observe this phenomenon by moving closer and closer to the sun.`,
+      `SpaceWings is an original action game with a breakout vibe. Destroy enemies with the ball and shots while dodging bullets.`,
+    ],
+    links: [
+      {
+        link: 'https://erwill.itch.io/spacewings',
+        linkType: 'Itch.io',
+      },
+      {
+        link: 'https://gamejolt.com/games/SpaceWings/495980',
+        linkType: 'GameJolt',
+      },
+    ],
+  },
+  mightyRune: {
+    imageSrc: require('../img/games/mighty-rune/mighty-rune-banner.jpg'),
+    secondaryImageSrc: require('../img/games/mighty-rune/mighty-rune-village.jpg'),
+    title: 'The Mighty Rune (in development)',
+    author: 'Wishforge Games',
+    descriptionParagraphs: [
+      `The Mighty Rune is a 2D pixel art adventure platformer created by Andriy Mtviychuk at Wishforge Games.`,
+      `You will be helping a brave hunter to return the stolen Magical Rune to his village. Explore mystical and dangerous places while you fight evil creatures along your journey to unravel the mystery of The Mighty Rune.`,
+    ],
+    links: [
+      {
+        link: 'http://wishforge.games/',
+        linkType: 'learn-more',
+      },
+    ],
+  },
   swamp: {
     imageSrc: require('../img/games/swamp/swamp-banner.jpg'),
     secondaryImageSrc: require('../img/games/swamp/swamp.jpg'),
@@ -607,7 +647,7 @@ export default class EducationPage extends React.Component {
   };
 
   _showMoreGames = () => {
-    this.setState(state => ({
+    this.setState((state) => ({
       showingMore: true,
       gamesToShow: state.gamesToShow + 12,
     }));
@@ -624,7 +664,7 @@ export default class EducationPage extends React.Component {
     const areAllGamesDisplayed = this.state.gamesToShow >= games.length;
     return (
       <PageContainer {...this.props.pathContext}>
-        {t => (
+        {(t) => (
           <React.Fragment>
             <Helmet title={t('Showcase of the games created with GDevelop')}>
               <html lang={this.props.pathContext.localeCode} />
@@ -644,6 +684,11 @@ export default class EducationPage extends React.Component {
                 )}
               </WhiteParagraph>
             </BannerContainer>
+            <GenericGameBanner
+              t={t}
+              game={bannerGames.mightyRune}
+              bannerBackgroundPosition={'left top'}
+            />
             <BubBanner />
             <HyperspaceDogfightsBanner />
             <GenericGameBanner
@@ -651,6 +696,7 @@ export default class EducationPage extends React.Component {
               game={bannerGames.swamp}
               bannerBackgroundPosition={'left top'}
             />
+            <GenericGameBanner t={t} game={bannerGames.spaceWings} />
             <GenericGameBanner t={t} game={bannerGames.karambola} />
             <GenericGameBanner t={t} game={bannerGames.eggventure} />
             <GenericGameBanner
@@ -662,7 +708,7 @@ export default class EducationPage extends React.Component {
               <Spacer height="30px" />
               {groupByNUple(displayedGames, 2).map((groupedGames, index) => (
                 <Row key={index}>
-                  {groupedGames.map(game => (
+                  {groupedGames.map((game) => (
                     <Column key={`${game.title}-${game.author}`}>
                       <GenericGameCard t={t} game={game} />
                     </Column>

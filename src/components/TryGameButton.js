@@ -5,7 +5,11 @@ const TryGameButton = ({ t, to, linkType }) => (
   <BigButton to={to}>
     {linkType === 'play'
       ? t('Play Online')
-      : linkType === 'download' ? t('Download') : linkType}
+      : linkType === 'download'
+      ? t('Download')
+      : linkType === 'learn-more'
+      ? t('Learn More')
+      : linkType}
   </BigButton>
 );
 

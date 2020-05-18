@@ -9,10 +9,14 @@ const Container = styled.div`
   margin: auto;
 
   .alice-carousel {
-    padding: 30px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 30px;
+    padding-top: 30px;
   }
 
   .alice-carousel__wrapper {
+    padding-bottom: 30px;
     border: none;
   }
 `;

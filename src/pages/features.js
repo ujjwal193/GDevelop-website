@@ -30,7 +30,7 @@ export default class FeaturesPage extends React.Component {
   render() {
     return (
       <PageContainer {...this.props.pathContext}>
-        {t => (
+        {(t) => (
           <React.Fragment>
             <Helmet
               title={t(
@@ -148,6 +148,11 @@ export default class FeaturesPage extends React.Component {
                 </ListItem>
                 <ListItem>
                   <MarkdownText source={t('**Text** objects')} />
+                </ListItem>
+                <ListItem>
+                  <MarkdownText
+                    source={t('Formatted rich text with **BB Text** objects')}
+                  />
                 </ListItem>
                 <ListItem>
                   <MarkdownText

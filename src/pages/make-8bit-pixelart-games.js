@@ -20,6 +20,7 @@ import MakeGameBanner from '../components/MakeGameBanner';
 import MarkdownText from '../components/MarkdownText';
 import lilBubPlatformer from '../img/games/lil-bub-hello-earth/lil-bub-platformer.png';
 import lilBubShooter from '../img/games/lil-bub-hello-earth/lil-bub-shooter.png';
+import mightyRunCaveStandby from '../img/games/mighty-rune/mighty-rune-cave-standby.gif';
 import CenteredImage from '../components/CenteredImage';
 import Spacer from '../components/Grid/Spacer';
 import { renderWebMonetizationMeta } from '../lib/WebMonetization';
@@ -70,6 +71,15 @@ export default class FeaturesPage extends React.Component {
                   {t('Download GDevelop to try Piskel')}
                 </BigButton>
               </CenteredRow>
+              <CenteredImage
+                maxWidth="800px"
+                src={mightyRunCaveStandby}
+                alt="Screenshot of The Mighty Rune, a game made with GDevelop, the open-source game development engine for everyone"
+                shadow
+              />
+              <ExplanationText>
+                <MarkdownText source="[The Mighty Rune](/games-showcase), a game made with GDevelop" />
+              </ExplanationText>
               <BigTitle>{t('Ready-made behaviors')}</BigTitle>
               <Paragraph>
                 {t(
