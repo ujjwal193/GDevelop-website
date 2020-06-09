@@ -611,6 +611,26 @@ const bannerGames = {
       },
     ],
   },
+  apixelAdventureLegion: {
+    imageSrc: require('../img/games/apx-legion/apx-legion-banner-min.jpg'),
+    secondaryImageSrc: require('../img/games/apx-legion/apx-legion-village-min.jpg'),
+    title: 'A Pixel Adventure Legion',
+    author: 'Ulises Freitas',
+    descriptionParagraphs: [
+      'A castle in the middle of nowhere, a princess in danger, and of course a brand new hero to rescue her. Enjoy the most epic adventure inside and outside the great castle.',
+      'All kind of monsters are trying to stop you, but as a brave hero, you must fulfill your promise and rescue the princess.',
+    ],
+    links: [
+      {
+        linkType: 'play',
+        link: 'https://www.gamesalia.com/apx-legion/',
+      },
+      {
+        linkType: 'Itch.io (Windows)',
+        link: 'https://gamesalia.itch.io/a-pixel-adventure-legion',
+      },
+    ],
+  },
 };
 
 const groupByNUple = (array, n) => {
@@ -703,6 +723,7 @@ export default class EducationPage extends React.Component {
               t={t}
               game={bannerGames.escapeFromTheCursedCity}
             />
+            <GenericGameBanner t={t} game={bannerGames.apixelAdventureLegion} />
             <TransparentContainer>
               <BigTitle>And tons of other games!</BigTitle>
               <Spacer height="30px" />
