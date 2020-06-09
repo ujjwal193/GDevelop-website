@@ -631,6 +631,22 @@ const bannerGames = {
       },
     ],
   },
+  mikoAdventuresPuffball: {
+    imageSrc: require('../img/games/miko-adventurs-puffball/banner.jpg'),
+    secondaryImageSrc: require('../img/games/miko-adventurs-puffball/thumbnail.jpeg'),
+    title: 'Miko Adventures: Puffball',
+    author: 'Coriander Games',
+    descriptionParagraphs: [
+      'One day Miko was walking in the forest when suddenly he stumbled upon something that changed his life... uncover what happened to Miko and how can he make everything go back to normal again.',
+      "Miko's Adventures is a cute 2D platformer adventure-puzzle game, with tons of secrets to discover in each level.",
+    ],
+    links: [
+      {
+        linkType: 'Itch.io',
+        link: 'https://coriandergames.itch.io/mikos-adventures',
+      },
+    ],
+  },
 };
 
 const groupByNUple = (array, n) => {
@@ -724,6 +740,10 @@ export default class EducationPage extends React.Component {
               game={bannerGames.escapeFromTheCursedCity}
             />
             <GenericGameBanner t={t} game={bannerGames.apixelAdventureLegion} />
+            <GenericGameBanner
+              t={t}
+              game={bannerGames.mikoAdventuresPuffball}
+            />
             <TransparentContainer>
               <BigTitle>And tons of other games!</BigTitle>
               <Spacer height="30px" />

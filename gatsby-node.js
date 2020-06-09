@@ -4,6 +4,7 @@ const { getAllLocales } = require('./i18n-helpers');
 
 const supportedLocales = [
   'ar',
+  'ca',
   'de',
   'el',
   'en',
