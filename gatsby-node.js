@@ -11,6 +11,7 @@ const supportedLocales = [
   'es',
   'fil',
   'fr',
+  'hi',
   'hu',
   'id',
   'it',
@@ -40,7 +41,7 @@ const locales = [
     translationRatio: 1,
   },
   ...getAllLocales(),
-].filter(locale => {
+].filter((locale) => {
   if (supportedLocales.includes(locale.langCode)) return true;
 
   if (locale.translationRatio > 0.6) {
@@ -55,7 +56,7 @@ const locales = [
 console.log(
   chalk.blue(
     `${locales.length} locales loaded:`,
-    locales.map(locale => locale.langCode)
+    locales.map((locale) => locale.langCode)
   )
 );
 
@@ -63,7 +64,7 @@ exports.onCreatePage = ({ page, boundActionCreators }) => {
   const { createPage, deletePage } = boundActionCreators;
 
   if (page.path.includes('choose-language')) {
-    return new Promise(resolve => {
+    return new Promise((resolve) => {
       deletePage(page);
       createPage(makeChooseLanguagePage(page));
 
@@ -76,19 +77,19 @@ exports.onCreatePage = ({ page, boundActionCreators }) => {
     deletePage(page);
     createPage(makeEnglishOnlyPage(page));
   } else {
-    return new Promise(resolve => {
+    return new Promise((resolve) => {
       const pages = makeLocalizedPages(page);
       deletePage(page);
-      pages.map(page => createPage(page));
+      pages.map((page) => createPage(page));
 
       resolve();
     });
   }
 };
 
-const makeLocalizedPages = page => {
+const makeLocalizedPages = (page) => {
   const pages = [];
-  locales.map(locale => {
+  locales.map((locale) => {
     const langPathPrefix = locale.path;
     const path = langPathPrefix + page.path;
 
@@ -113,7 +114,7 @@ const makeLocalizedPages = page => {
   return pages;
 };
 
-const makeEnglishOnlyPage = page => {
+const makeEnglishOnlyPage = (page) => {
   return {
     ...page,
     context: {
@@ -131,13 +132,13 @@ const makeEnglishOnlyPage = page => {
   };
 };
 
-const makeChooseLanguagePage = page => {
+const makeChooseLanguagePage = (page) => {
   const englishOnlyPage = makeEnglishOnlyPage(page);
   return {
     ...englishOnlyPage,
     context: {
       ...englishOnlyPage.context,
-      localeNamesAndPaths: locales.map(locale => ({
+      localeNamesAndPaths: locales.map((locale) => ({
         name: locale.name,
         path: locale.path,
       })),
