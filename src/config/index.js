@@ -14,9 +14,9 @@ export default {
   onlineEditorUrl: 'https://editor.gdevelop-app.com',
 
   gdevelopWindowsUrl:
-    'https://github.com/4ian/GDevelop/releases/download/v5.0.0-beta95/GDevelop-5-Setup-5.0.0-beta95.exe',
+    'https://github.com/4ian/GDevelop/releases/download/v5.0.0-beta96/GDevelop-5-Setup-5.0.0-beta96.exe',
   gdevelopMacOSUrl:
-    'https://github.com/4ian/GDevelop/releases/download/v5.0.0-beta95/GDevelop-5-5.0.0-beta95.dmg',
+    'https://github.com/4ian/GDevelop/releases/download/v5.0.0-beta96/GDevelop-5-5.0.0-beta96.dmg',
   gdevelopLinuxUrl:
-    'https://github.com/4ian/GDevelop/releases/download/v5.0.0-beta95/GDevelop-5-5.0.0-beta95.AppImage',
+    'https://github.com/4ian/GDevelop/releases/download/v5.0.0-beta96/GDevelop-5-5.0.0-beta96.AppImage',
 };
