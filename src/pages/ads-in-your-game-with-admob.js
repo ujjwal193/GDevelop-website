@@ -84,7 +84,7 @@ export default class FeaturesPage extends React.Component {
               <BigTitle>{t('3) Trigger ads display from events')}</BigTitle>
               <Paragraph>
                 {t(
-                  'Add events in your game to load and show the ad when needed (this can be when a level is successfully completed for example). Paste in the parameters of the action the ad unit identifier. You can also enter "test" for loading a test ad.'
+                  'Add events in your game to load and show the ad when needed (this can be when a level is successfully completed for example). Paste the ad unit identifier into the parameters of the action. You can also enter "test" for loading a test ad.'
                 )}
               </Paragraph>
               <CenteredImage
