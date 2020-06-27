@@ -28,7 +28,7 @@ export default class FeaturesPage extends React.Component {
   render() {
     return (
       <PageContainer {...this.props.pathContext}>
-        {t => (
+        {(t) => (
           <React.Fragment>
             <Helmet title={t('Add ads to your game with AdMob')}>
               <html lang={this.props.pathContext.localeCode} />
@@ -72,7 +72,7 @@ export default class FeaturesPage extends React.Component {
               <Paragraph>
                 <MarkdownText
                   source={t(
-                    'In GDevelop, open the properties of your game and paste the AdMob **app id**. This will be identified to use your application for AdMob to deliver ads.'
+                    'In GDevelop, open the properties of your game and paste the AdMob **app id**. This acts as the identification that allows AdMob to serve ads in your app.'
                   )}
                 />
               </Paragraph>
