@@ -54,7 +54,7 @@ export default class FeaturesPage extends React.Component {
               <Paragraph>
                 <MarkdownText
                   source={t(
-                    'Go to [AdMob website](https://www.google.com/admob/) and create an account. Then, create a new app from the Admob interface and an ad unit. Note the identifiers for both the app and the ad unit, as they will be used in your game.'
+                    'Go to [AdMob website](https://www.google.com/admob/) and create an account. Then, create a new app from the AdMob interface and an ad unit. Note the identifiers for both the app and the ad unit, as they will be used in your game.'
                   )}
                 />
               </Paragraph>
