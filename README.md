@@ -8,7 +8,7 @@ If you want to **translate the website to your language**, just go on [the Crowd
 
 ## Development
 
-Ensure you have [Node.js](https://nodejs.org) installed. The website is based on [Gatsby.js](https://www.gatsbyjs.org/).
+Ensure you have [Node.js](https://nodejs.org) installed (Node v8). The website is based on [Gatsby.js](https://www.gatsbyjs.org/).
 
 Translations are stored into *i18n* directory, in plain JSON files.
 
