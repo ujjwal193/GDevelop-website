@@ -699,11 +699,11 @@ export default class EducationPage extends React.Component {
     const displayedGames = games.slice(0, this.state.gamesToShow);
     const areAllGamesDisplayed = this.state.gamesToShow >= games.length;
     return (
-      <PageContainer {...this.props.pathContext}>
+      <PageContainer {...this.props.pageContext}>
         {(t) => (
           <React.Fragment>
             <Helmet title={t('Showcase of the games created with GDevelop')}>
-              <html lang={this.props.pathContext.localeCode} />
+              <html lang={this.props.pageContext.localeCode} />
               <meta
                 name="description"
                 content="Showcase of the games created with GDevelop: open-source game creator to build games without programming."

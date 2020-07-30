@@ -13,7 +13,7 @@ import config from '../config';
 import BigGhostButton from '../components/BigGhostButton';
 
 const NotFoundPage = props => (
-  <PageContainer {...props.pathContext}>
+  <PageContainer {...props.pageContext}>
     {t => (
       <React.Fragment>
         <Helmet title="GDevelop - Choose your language">
@@ -25,7 +25,7 @@ const NotFoundPage = props => (
           <BigTitle>Choose your language</BigTitle>
           <Paragraph>GDevelop website is available in:</Paragraph>
           <CenteredRow>
-            {props.pathContext.localeNamesAndPaths.map(({ name, path }) => (
+            {props.pageContext.localeNamesAndPaths.map(({ name, path }) => (
               <BigGhostButton to={'/' + path} noLangPathPrefix>
                 {name}
               </BigGhostButton>

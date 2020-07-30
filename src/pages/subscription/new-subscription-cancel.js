@@ -10,7 +10,7 @@ import Spacer from '../../components/Grid/Spacer';
 import MarkdownText from '../../components/MarkdownText';
 
 const NotFoundPage = props => (
-  <PageContainer {...props.pathContext}>
+  <PageContainer {...props.pageContext}>
     {t => (
       <React.Fragment>
         <Helmet title="GDevelop - Page not found">

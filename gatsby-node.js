@@ -60,8 +60,8 @@ console.log(
   )
 );
 
-exports.onCreatePage = ({ page, boundActionCreators }) => {
-  const { createPage, deletePage } = boundActionCreators;
+exports.onCreatePage = ({ page, actions }) => {
+  const { createPage, deletePage } = actions;
 
   if (page.path.includes('choose-language')) {
     return new Promise((resolve) => {
@@ -146,8 +146,8 @@ const makeChooseLanguagePage = (page) => {
   };
 };
 
-exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
-  const { createNodeField } = boundActionCreators;
+exports.onCreateNode = ({ node, actions, getNode }) => {
+  const { createNodeField } = actions;
 
   if (node.internal.type === `MarkdownRemark`) {
     const value = createFilePath({ node, getNode });

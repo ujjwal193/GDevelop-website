@@ -28,7 +28,7 @@ import { renderWebMonetizationMeta } from '../lib/WebMonetization';
 export default class CustomBehaviorsPage extends React.Component {
   render() {
     return (
-      <PageContainer {...this.props.pathContext}>
+      <PageContainer {...this.props.pageContext}>
         {t => (
           <React.Fragment>
             <Helmet
@@ -36,7 +36,7 @@ export default class CustomBehaviorsPage extends React.Component {
                 'Create custom behaviors for your game objects in GDevelop'
               )}
             >
-              <html lang={this.props.pathContext.localeCode} />
+              <html lang={this.props.pageContext.localeCode} />
               <meta
                 name="description"
                 content="GDevelop is a game creator bundled with dozens of features to imagine and create any kind of games. No coding skills are required."

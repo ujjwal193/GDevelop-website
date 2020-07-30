@@ -8,7 +8,7 @@ If you want to **translate the website to your language**, just go on [the Crowd
 
 ## Development
 
-Ensure you have [Node.js](https://nodejs.org) installed (Node v8). The website is based on [Gatsby.js](https://www.gatsbyjs.org/).
+Ensure you have [Node.js](https://nodejs.org) installed (v12 or more recent is recommended). The website is based on [Gatsby.js](https://www.gatsbyjs.org/).
 
 Translations are stored into *i18n* directory, in plain JSON files.
 
@@ -16,13 +16,13 @@ Translations are stored into *i18n* directory, in plain JSON files.
 
 Clone the repository and install dependencies:
 
-    npm install # or yarn install
+    npm install # or "yarn"
 
 ### Workflow
 
 For development with changes watch and hot reloading, run:
 
-    npm run develop
+    npm run develop # or "yarn develop"
 
 ### Updating translations
 

@@ -8,7 +8,7 @@ import TransparentContainer from '../../components/Containers/TransparentContain
 import MarkdownText from '../../components/MarkdownText';
 
 const PrivacyPolicyPage = props => (
-  <PageContainer {...props.pathContext}>
+  <PageContainer {...props.pageContext}>
     {t => (
       <React.Fragment>
         <Helmet title="GDevelop - Privacy Policy">

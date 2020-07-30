@@ -57,7 +57,7 @@ const Example = ({ t, name, exampleInformation }) => (
 export default class FeaturesPage extends React.Component {
   render() {
     return (
-      <PageContainer {...this.props.pathContext}>
+      <PageContainer {...this.props.pageContext}>
         {t => (
           <React.Fragment>
             <Helmet
@@ -65,7 +65,7 @@ export default class FeaturesPage extends React.Component {
                 'Examples of GDevelop - make platformer, shooter, rpg, action games...'
               )}
             >
-              <html lang={this.props.pathContext.localeCode} />
+              <html lang={this.props.pageContext.localeCode} />
               <meta
                 name="description"
                 content="GDevelop is a game creator bundled with dozens of features to imagine and create any kind of games. No coding skills are required."

@@ -9,7 +9,7 @@ import TransparentContainer from '../components/Containers/TransparentContainer'
 import Spacer from '../components/Grid/Spacer';
 
 const NotFoundPage = props => (
-  <PageContainer {...props.pathContext}>
+  <PageContainer {...props.pageContext}>
     {t => (
       <React.Fragment>
         <Helmet title="GDevelop - Page not found">

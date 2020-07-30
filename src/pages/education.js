@@ -16,13 +16,13 @@ import { renderWebMonetizationMeta } from '../lib/WebMonetization';
 export default class EducationPage extends React.Component {
   render() {
     return (
-      <PageContainer {...this.props.pathContext}>
+      <PageContainer {...this.props.pageContext}>
         {t => (
           <React.Fragment>
             <Helmet
               title={t('GDevelop for the education - Teach game creation')}
             >
-              <html lang={this.props.pathContext.localeCode} />
+              <html lang={this.props.pageContext.localeCode} />
               <meta
                 name="description"
                 content="GDevelop is a game creator requiring no coding skills. It is perfect to teach game creation to students or children."

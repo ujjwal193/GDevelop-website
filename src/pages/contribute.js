@@ -26,7 +26,7 @@ import { renderWebMonetizationMeta } from '../lib/WebMonetization';
 export default class FeaturesPage extends React.Component {
   render() {
     return (
-      <PageContainer {...this.props.pathContext}>
+      <PageContainer {...this.props.pageContext}>
         {t => (
           <React.Fragment>
             <Helmet
@@ -34,7 +34,7 @@ export default class FeaturesPage extends React.Component {
                 'Contribute to GDevelop - Open-source HTML5 game making tool'
               )}
             >
-              <html lang={this.props.pathContext.localeCode} />
+              <html lang={this.props.pageContext.localeCode} />
               <meta
                 name="description"
                 content="Contribute to GDevelop, an open-source game creator that can be used by anyone to create games. Help us to develop GDevelop, translate and promote it!"

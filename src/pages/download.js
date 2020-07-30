@@ -35,7 +35,7 @@ export default class DownloadPage extends React.Component {
 
   render() {
     return (
-      <PageContainer {...this.props.pathContext}>
+      <PageContainer {...this.props.pageContext}>
         {t => (
           <React.Fragment>
             <Helmet
@@ -43,7 +43,7 @@ export default class DownloadPage extends React.Component {
                 'Download GDevelop or try it online - create games without programming'
               )}
             >
-              <html lang={this.props.pathContext.localeCode} />
+              <html lang={this.props.pageContext.localeCode} />
               <meta
                 name="description"
                 content="Download GDevelop, an open-source game creator and create your own games! No programming skills are required. Build and share your games on mobile (Android and iOS), desktop and on the web."
