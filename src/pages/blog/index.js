@@ -1,5 +1,5 @@
 import React from 'react';
-import { graphql } from 'gatsby';
+import { graphql, useStaticQuery } from 'gatsby';
 
 import PageContainer from '../../lib/PageContainer';
 import Helmet from 'react-helmet';
@@ -14,6 +14,7 @@ import WhiteHugeTitle from '../../components/WhiteHugeTitle';
 import BlogCard from '../../components/BlogCard';
 
 const List = function ({ data, pageContext }) {
+  const thumbnails = data.allFile.edges;
   const posts = data.allMarkdownRemark.edges;
   return (
     <PageContainer {...pageContext}>
@@ -38,6 +39,18 @@ const List = function ({ data, pageContext }) {
               {posts.map(({ node }) => {
                 const title = node.frontmatter.title || node.fields.slug;
                 const content = node.frontmatter.description || node.excerpt;
+
+                const slug = node.fields.slug.replace("/", "");
+                let thumbnail = null;
+                for(let n of thumbnails) {
+                  const {node} = n;
+                  if(node.relativePath.indexOf(slug) !== -1 && node.relativePath.indexOf("thumbnail") !== -1) {
+                    thumbnail = node.publicURL;
+                    break;
+                  }
+                }
+                console.log(thumbnail);
+
                 return (
                   <React.Fragment>
                     <CenteredRow key={node.fields.slug}>
@@ -46,6 +59,7 @@ const List = function ({ data, pageContext }) {
                         content={content}
                         link={'/blog/post' + node.fields.slug}
                         date={node.frontmatter.date}
+                        thumbnail={thumbnail}
                       />
                     </CenteredRow>
                     <Spacer height="50px" />
@@ -61,8 +75,6 @@ const List = function ({ data, pageContext }) {
 };
 
 export default List;
-
-//      filter: { frontmatter: { hidden: { ne: true } } }
 
 export const pageQuery = graphql`
   query {
@@ -82,6 +94,14 @@ export const pageQuery = graphql`
             description
             hidden
           }
+        }
+      }
+    }
+    allFile(filter: {sourceInstanceName: {eq: "blog"}}) {
+      edges {
+        node {
+          publicURL
+          relativePath
         }
       }
     }
