@@ -24,7 +24,7 @@ import Row from '../components/Grid/Row';
 import Column from '../components/Grid/Column';
 import { renderWebMonetizationMeta } from '../lib/WebMonetization';
 
-const formatExampleName = name => {
+const formatExampleName = (name) => {
   if (!name.length) return '';
 
   return name[0].toUpperCase() + name.substr(1).replace(/-/g, ' ');
@@ -57,15 +57,15 @@ const Example = ({ t, name, exampleInformation }) => (
 export default class FeaturesPage extends React.Component {
   render() {
     return (
-      <PageContainer {...this.props.pathContext}>
-        {t => (
+      <PageContainer {...this.props.pageContext}>
+        {(t) => (
           <React.Fragment>
             <Helmet
               title={t(
                 'Examples of GDevelop - make platformer, shooter, rpg, action games...'
               )}
             >
-              <html lang={this.props.pathContext.localeCode} />
+              <html lang={this.props.pageContext.localeCode} />
               <meta
                 name="description"
                 content="GDevelop is a game creator bundled with dozens of features to imagine and create any kind of games. No coding skills are required."
@@ -88,7 +88,7 @@ export default class FeaturesPage extends React.Component {
                   "These are the examples bundled with GDevelop. Curious? You can open and try them directly from your browser. GDevelop is fast to start and you'll be playing with the examples in seconds."
                 )}
               </Paragraph>
-              {Object.keys(ExamplesInformation).map(name => (
+              {Object.keys(ExamplesInformation).map((name) => (
                 <Example
                   t={t}
                   name={name}

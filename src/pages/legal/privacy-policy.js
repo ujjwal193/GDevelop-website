@@ -7,9 +7,9 @@ import BigTitle from '../../components/BigTitle';
 import TransparentContainer from '../../components/Containers/TransparentContainer';
 import MarkdownText from '../../components/MarkdownText';
 
-const PrivacyPolicyPage = props => (
-  <PageContainer {...props.pathContext}>
-    {t => (
+const PrivacyPolicyPage = (props) => (
+  <PageContainer {...props.pageContext}>
+    {(t) => (
       <React.Fragment>
         <Helmet title="GDevelop - Privacy Policy">
           <html lang="en" />

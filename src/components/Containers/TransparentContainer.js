@@ -9,13 +9,13 @@ const TransparentContainer = styled.div`
   max-width: 1300px;
   margin: auto;
 
-  padding-left: ${props => (props.noPadding ? '0' : '75px')};
-  padding-right: ${props => (props.noPadding ? '0' : '75px')};
+  padding-left: ${(props) => (props.noPadding ? '0' : '75px')};
+  padding-right: ${(props) => (props.noPadding ? '0' : '75px')};
   display: block;
 
   ${media.tablet`
-    padding-left: ${props => (props.noPadding ? '0' : '30px')};
-    padding-right: ${props => (props.noPadding ? '0' : '30px')};
+    padding-left: ${(props) => (props.noPadding ? '0' : '30px')};
+    padding-right: ${(props) => (props.noPadding ? '0' : '30px')};
   `};
 `;
 

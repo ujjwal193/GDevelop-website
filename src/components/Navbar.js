@@ -18,11 +18,11 @@ const NavigationBar = styled.nav`
   position: fixed;
   z-index: 100;
 
-  background-image: ${props =>
+  background-image: ${(props) =>
       props.dimmed && !props.transparent
         ? 'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), '
         : ''}
-    ${props =>
+    ${(props) =>
       props.transparent ? 'none' : `url(${props.background || background})`};
   background-size: cover;
 
@@ -53,7 +53,7 @@ const ItemsContainer = styled.div`
   align-items: center;
 
   ${media.tablet`
-    display: ${props => (props.open ? 'block' : 'none')};
+    display: ${(props) => (props.open ? 'block' : 'none')};
   `};
 `;
 
@@ -209,7 +209,9 @@ class Navbar extends React.Component {
             <LeftContainer>
               <NavLink to="/features">{t('Features')}</NavLink>
               <NavLink to="/games-showcase">{t('Games')}</NavLink>
-              <NavLink to="/game-studios-indies-and-education">{t('Game studios & education')}</NavLink>
+              <NavLink to="/game-studios-indies-and-education">
+                {t('Game studios & education')}
+              </NavLink>
             </LeftContainer>
             <RightContainer>
               <NavLink

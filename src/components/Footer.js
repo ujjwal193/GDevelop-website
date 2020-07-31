@@ -54,7 +54,7 @@ const FooterLink = styled(Link)`
 const FooterTitle = styled(Link)`
   font-size: 20px;
   opacity: 0.8;
-  color: white
+  color: white;
   font-weight: 600;
   display: block;
 

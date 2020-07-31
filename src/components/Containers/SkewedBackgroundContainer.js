@@ -40,7 +40,7 @@ const Content = styled.div`
   `};
 `;
 
-export default props => (
+export default (props) => (
   <Container>
     <SkewedBackground />
     <Content>{props.children}</Content>

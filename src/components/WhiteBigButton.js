@@ -16,16 +16,16 @@ const WhiteBigButton = styled(Link)`
   background-color: white;
 
   border-radius: 4px;
-  box-shadow: 0 2px 3px 0 #51509C;
+  box-shadow: 0 2px 3px 0 #51509c;
 
   font-size: 20px;
-  color: #51509C;
+  color: #51509c;
 
   transition: box-shadow 0.3s ease-in-out;
 
   &:hover {
-    color: #51509C;
-    box-shadow: 0 4px 6px 0 #51509C;
+    color: #51509c;
+    box-shadow: 0 4px 6px 0 #51509c;
   }
 `;
 

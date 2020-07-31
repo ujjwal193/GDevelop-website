@@ -28,15 +28,15 @@ import { renderWebMonetizationMeta } from '../lib/WebMonetization';
 export default class FeaturesPage extends React.Component {
   render() {
     return (
-      <PageContainer {...this.props.pathContext}>
-        {t => (
+      <PageContainer {...this.props.pageContext}>
+        {(t) => (
           <React.Fragment>
             <Helmet
               title={t(
                 'Make Facebook Instant Games with GDevelop - publish your games on Messenger'
               )}
             >
-              <html lang={this.props.pathContext.localeCode} />
+              <html lang={this.props.pageContext.localeCode} />
               <meta
                 name="description"
                 content="GDevelop is a game creator bundled with dozens of features to imagine and create any kind of games. No coding skills are required."

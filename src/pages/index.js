@@ -45,7 +45,7 @@ import { renderWebMonetizationMeta } from '../lib/WebMonetization';
 export default class IndexPage extends React.Component {
   render() {
     return (
-      <PageContainer {...this.props.pathContext}>
+      <PageContainer {...this.props.pageContext}>
         {(t) => (
           <React.Fragment>
             <Helmet
@@ -53,7 +53,7 @@ export default class IndexPage extends React.Component {
                 'GDevelop - Create games without programming - Open source HTML5 and native game creator'
               )}
             >
-              <html lang={this.props.pathContext.localeCode} />
+              <html lang={this.props.pageContext.localeCode} />
               <meta
                 name="google-site-verification"
                 content="_Z29cn15gPQHT4iCkkAQ3G0ObsFmzc1s7rMTQxdfV84"

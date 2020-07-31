@@ -26,8 +26,7 @@ const Content = styled.div`
   color: white;
 `;
 
-
-export default props => (
+export default (props) => (
   <LandingContainer>
     <Content>{props.children}</Content>
   </LandingContainer>

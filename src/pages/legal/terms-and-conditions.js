@@ -7,9 +7,9 @@ import BigTitle from '../../components/BigTitle';
 import TransparentContainer from '../../components/Containers/TransparentContainer';
 import MarkdownText from '../../components/MarkdownText';
 
-const TermsAndConditionsPage = props => (
-  <PageContainer {...props.pathContext}>
-    {t => (
+const TermsAndConditionsPage = (props) => (
+  <PageContainer {...props.pageContext}>
+    {(t) => (
       <React.Fragment>
         <Helmet title="GDevelop - Terms And Conditions">
           <html lang="en" />

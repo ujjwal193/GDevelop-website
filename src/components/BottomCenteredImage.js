@@ -4,11 +4,11 @@ import { media } from '../lib/media';
 import { defaultBoxShadow } from './styles/shadows';
 
 const CenteredImage = styled.img`
-  max-width: ${props => props.maxWidth};
+  max-width: ${(props) => props.maxWidth};
   margin-top: 20px;
   margin-bottom: 0;
 
-  ${props => props.shadow && defaultBoxShadow} ${media.tablet`
+  ${(props) => props.shadow && defaultBoxShadow} ${media.tablet`
     max-width: 90%;
   `};
 `;
@@ -19,7 +19,7 @@ const Container = styled.div`
   text-align: center;
 `;
 
-export default props => (
+export default (props) => (
   <Container>
     <CenteredImage {...props} />
   </Container>

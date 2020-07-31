@@ -5,7 +5,7 @@ import { defaultBoxShadow } from './styles/shadows';
 const GameThumbnail = styled.div`
   max-width: 100%;
   height: 30vw;
-  background-image: url(${props => props.src});
+  background-image: url(${(props) => props.src});
   background-size: cover;
   background-position: center;
   border-radius: 6px;
