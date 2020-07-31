@@ -8,10 +8,10 @@ const Container = styled.div`
   margin-right: 20%;
 
   ${defaultBoxShadow}
-  
+
   margin-top: 30px;
   margin-bottom: 30px;
-  
+
   ${media.tablet`
     margin-left: 5%;
     margin-right: 5%;

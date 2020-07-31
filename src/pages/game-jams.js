@@ -26,7 +26,7 @@ export default class FeaturesPage extends React.Component {
   render() {
     return (
       <PageContainer {...this.props.pageContext}>
-        {t => (
+        {(t) => (
           <React.Fragment>
             <Helmet title={t('Make games for Game jams')}>
               <html lang={this.props.pageContext.localeCode} />

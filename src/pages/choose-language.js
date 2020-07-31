@@ -12,9 +12,9 @@ import BigButton from '../components/BigButton';
 import config from '../config';
 import BigGhostButton from '../components/BigGhostButton';
 
-const NotFoundPage = props => (
+const NotFoundPage = (props) => (
   <PageContainer {...props.pageContext}>
-    {t => (
+    {(t) => (
       <React.Fragment>
         <Helmet title="GDevelop - Choose your language">
           <html lang="en" />

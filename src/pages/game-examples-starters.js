@@ -24,7 +24,7 @@ import Row from '../components/Grid/Row';
 import Column from '../components/Grid/Column';
 import { renderWebMonetizationMeta } from '../lib/WebMonetization';
 
-const formatExampleName = name => {
+const formatExampleName = (name) => {
   if (!name.length) return '';
 
   return name[0].toUpperCase() + name.substr(1).replace(/-/g, ' ');
@@ -58,7 +58,7 @@ export default class FeaturesPage extends React.Component {
   render() {
     return (
       <PageContainer {...this.props.pageContext}>
-        {t => (
+        {(t) => (
           <React.Fragment>
             <Helmet
               title={t(
@@ -88,7 +88,7 @@ export default class FeaturesPage extends React.Component {
                   "These are the examples bundled with GDevelop. Curious? You can open and try them directly from your browser. GDevelop is fast to start and you'll be playing with the examples in seconds."
                 )}
               </Paragraph>
-              {Object.keys(ExamplesInformation).map(name => (
+              {Object.keys(ExamplesInformation).map((name) => (
                 <Example
                   t={t}
                   name={name}

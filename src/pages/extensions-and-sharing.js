@@ -27,7 +27,7 @@ export default class ExtensionsAndSharingPage extends React.Component {
   render() {
     return (
       <PageContainer {...this.props.pageContext}>
-        {t => (
+        {(t) => (
           <React.Fragment>
             <Helmet
               title={t('Install new extensions in GDevelop and share yours')}

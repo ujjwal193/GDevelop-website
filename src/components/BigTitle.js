@@ -11,9 +11,9 @@ const BigTitle = styled.h1`
   margin-top: 35px;
   margin-bottom: 10px;
 
-  color: ${props => (props.white ? 'white' : '#51509c')};
+  color: ${(props) => (props.white ? 'white' : '#51509c')};
 
-  text-shadow: ${props =>
+  text-shadow: ${(props) =>
     props.white
       ? '0px 1px 2px rgba(0,0,0,0.8);'
       : '0px 2px 2px rgba(0, 0, 0, 0.1)'};

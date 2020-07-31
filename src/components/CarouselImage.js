@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { defaultBoxShadow } from './styles/shadows';
 
 const CenteredImage = styled.img`
-  ${props => props.shadow && defaultBoxShadow};
+  ${(props) => props.shadow && defaultBoxShadow};
 `;
 
 const Container = styled.div`
@@ -12,7 +12,7 @@ const Container = styled.div`
   margin-right: 40px;
 `;
 
-export default props => (
+export default (props) => (
   <Container>
     <CenteredImage {...props} />
   </Container>

@@ -40,4 +40,4 @@ const RightImage = styled.img`
   `};
 `;
 
-export default props => <RightImage {...props} />;
+export default (props) => <RightImage {...props} />;

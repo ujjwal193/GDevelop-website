@@ -27,7 +27,7 @@ const GenericGameBanner = ({ t, game, bannerBackgroundPosition }) => (
       <Spacer height="30px" />
       <Row>
         <Column flex={3}>
-          {game.descriptionParagraphs.map(text => (
+          {game.descriptionParagraphs.map((text) => (
             <Paragraph>
               <MarkdownText source={text} />
             </Paragraph>

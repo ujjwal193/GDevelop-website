@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { I18n, I18nextProvider } from 'react-i18next';
 import i18n from './i18n';
-import "./styles.scss";
+import './styles.scss';
 
 // Embed a page with i18n provider AND expose `t` function (as a render prop),
 // so that pages can both use <Trans> component and `t` function.

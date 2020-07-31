@@ -27,7 +27,7 @@ export default class JavascriptGameEnginePage extends React.Component {
   render() {
     return (
       <PageContainer {...this.props.pageContext}>
-        {t => (
+        {(t) => (
           <React.Fragment>
             <Helmet
               title={t('Using JavaScript to make your games with GDevelop')}

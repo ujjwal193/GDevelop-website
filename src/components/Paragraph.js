@@ -9,7 +9,7 @@ const Paragraph = styled.p`
   margin-top: 15px;
   margin-left: 5px;
   margin-right: 5px;
-  text-align: ${props => props.textAlign || 'left'};
+  text-align: ${(props) => props.textAlign || 'left'};
 
   strong {
     color: inherit;

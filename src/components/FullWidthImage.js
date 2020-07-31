@@ -15,9 +15,10 @@ const fadeIn = keyframes`
 const FullWidthImage = styled.div`
   width: 100%;
   height: 400px;
-  background: url(${props => props.src});
+  background: url(${(props) => props.src});
   background-size: cover;
-  background-position: ${props => props.backgroundPosition || 'center center'};
+  background-position: ${(props) =>
+    props.backgroundPosition || 'center center'};
 
   animation: ${fadeIn} 0.5s ease-out forwards;
 
@@ -26,4 +27,4 @@ const FullWidthImage = styled.div`
   `};
 `;
 
-export default props => <FullWidthImage {...props} />;
+export default (props) => <FullWidthImage {...props} />;

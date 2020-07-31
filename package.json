@@ -43,15 +43,17 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "serve": "gatsby serve",
-    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",
+    "format": "prettier --write \"{gatsby-*.js,src/**/*.js}\"",
     "extract-translations": "i18next-scanner --config i18next-scanner.config.js 'src/**/*.{js,jsx}'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^3.7.1",
+    "@typescript-eslint/parser": "^3.7.1",
     "chalk": "^2.3.2",
-    "eslint": "^4.19.0",
-    "eslint-config-universe": "^1.0.7",
+    "eslint": "7.5.0",
+    "eslint-config-universe": "^4.0.0",
     "i18next-scanner": "^2.4.6",
-    "prettier": "^1.7.4"
+    "prettier": "^2.0.5"
   }
 }

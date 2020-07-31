@@ -27,7 +27,7 @@ export default class UseCasesPage extends React.Component {
   render() {
     return (
       <PageContainer {...this.props.pageContext}>
-        {t => (
+        {(t) => (
           <React.Fragment>
             <Helmet
               title={t('GDevelop for Game studios, indies and Education')}

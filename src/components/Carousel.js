@@ -21,7 +21,7 @@ const Container = styled.div`
   }
 `;
 
-export default props => (
+export default (props) => (
   <Container>
     <AliceCarousel {...props} />
   </Container>
