@@ -4,15 +4,18 @@ import { Link } from 'gatsby';
 class BlogCard extends React.Component {
   render() {
     let card = (
-      <div class="card">
+      <div className="card">
         {this.props.thumbnail && (
           <div className="card-image">
             <figure className="image">{this.props.thumbnail}</figure>
           </div>
         )}
         {this.props.title && (
-          <header class="card-header">
-            <p class="card-header-title">{this.props.title}</p>
+          <header className="card-header">
+            <p className="card-header-title">{this.props.title}</p>
+            {this.props.date && 
+                <p className="card-header-icon">{this.props.date}</p>
+            }
           </header>
         )}
         <div className="card-content">
@@ -35,7 +38,13 @@ class BlogCard extends React.Component {
       );
     }
 
-    return card;
+    return (
+      <div className="columns">
+        <div className="column is-one-quarter" />
+        <div className="column is-one-half">{card}</div>
+        <div className="column is-one-quarter" />
+      </div>
+    );
   }
 }
 

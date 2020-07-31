@@ -1,5 +1,5 @@
 ---
-title: Hello World
+title: Blog Opened 🎉
 date: "31-07-2020 15:03"
 ---
 

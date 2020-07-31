@@ -9,7 +9,7 @@ import { renderWebMonetizationMeta } from '../../lib/WebMonetization';
 
 import Spacer from '../../components/Grid/Spacer';
 import CenteredRow from '../../components/Grid/CenteredRow';
-import TransparentContainer from '../../components/Containers/TransparentContainer';
+import SkewedBorderContainer from '../../components/Containers/SkewedBorderContainer';
 import WhiteHugeTitle from '../../components/WhiteHugeTitle';
 import BlogCard from '../../components/BlogCard';
 
@@ -34,7 +34,7 @@ const List = function ({ data, pageContext }) {
               <WhiteHugeTitle>{t('GDevelop Blog')}</WhiteHugeTitle>
             </BannerContainer>
             <Spacer height="20px" />
-            <TransparentContainer>
+            <SkewedBorderContainer>
               {posts.map(({ node }) => {
                 const title = node.frontmatter.title || node.fields.slug;
                 const content = node.frontmatter.description || node.excerpt;
@@ -45,13 +45,14 @@ const List = function ({ data, pageContext }) {
                         title={title}
                         content={content}
                         link={'/blog/post' + node.fields.slug}
+                        date={node.frontmatter.date}
                       />
                     </CenteredRow>
                     <Spacer height="50px" />
                   </React.Fragment>
                 );
               })}
-            </TransparentContainer>
+            </SkewedBorderContainer>
           </React.Fragment>
         );
       }}
@@ -61,9 +62,11 @@ const List = function ({ data, pageContext }) {
 
 export default List;
 
+//      filter: { frontmatter: { hidden: { ne: true } } }
+
 export const pageQuery = graphql`
   query {
-    allMarkdownRemark(sort: {fields: [frontmatter___date], order: DESC}, filter: {frontmatter: {hidden: {ne: true}}}) {
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {
           excerpt(pruneLength: 350)
