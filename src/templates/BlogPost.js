@@ -5,6 +5,8 @@ import PageContainer from '../lib/PageContainer';
 import Helmet from 'react-helmet';
 import Navbar, { NavBarSpacer } from '../components/Navbar';
 import BannerContainer from '../components/Containers/BannerContainer';
+import BoxContainer from '../components/Containers/BoxContainer';
+import BigGhostButton from '../components/BigGhostButton';
 import { renderWebMonetizationMeta } from '../lib/WebMonetization';
 
 const BlogPost = ({ data, pageContext }) => {
@@ -38,46 +40,42 @@ const BlogPost = ({ data, pageContext }) => {
             <BannerContainer>
               <NavBarSpacer />
             </BannerContainer>
-            <article>
-              <header>
-                <h1
+            <BoxContainer
+              title={post.frontmatter.title}
+              subtitle={post.frontmatter.date}
+            >
+              <p dangerouslySetInnerHTML={{ __html: post.html }} />
+              <nav>
+                <ul
                   style={{
-                    marginBottom: 0,
+                    display: `flex`,
+                    flexWrap: `wrap`,
+                    justifyContent: `space-between`,
+                    listStyle: `none`,
+                    padding: 0,
                   }}
                 >
-                  {post.frontmatter.title}
-                </h1>
-                <p>{post.frontmatter.date}</p>
-              </header>
-              <section dangerouslySetInnerHTML={{ __html: post.html }} />
-            </article>
-
-            <nav>
-              <ul
-                style={{
-                  display: `flex`,
-                  flexWrap: `wrap`,
-                  justifyContent: `space-between`,
-                  listStyle: `none`,
-                  padding: 0,
-                }}
-              >
-                <li>
-                  {previous && previous.frontmatter.hidden !== true && (
-                    <Link to={'/blog/post' + previous.fields.slug} rel="prev">
-                      ← Previous - {previous.frontmatter.title}
-                    </Link>
-                  )}
-                </li>
-                <li>
-                  {next && next.frontmatter.hidden !== true && (
-                    <Link to={'/blog/post' + next.fields.slug} rel="next">
-                      {next.frontmatter.title} - Next →
-                    </Link>
-                  )}
-                </li>
-              </ul>
-            </nav>
+                  <li>
+                    {previous && previous.frontmatter.hidden !== true && (
+                      <Link to={'/blog/post' + previous.fields.slug} rel="prev">
+                        <BigGhostButton>
+                          ← Previous - {previous.frontmatter.title}
+                        </BigGhostButton>
+                      </Link>
+                    )}
+                  </li>
+                  <li>
+                    {next && next.frontmatter.hidden !== true && (
+                      <Link to={'/blog/post' + next.fields.slug} rel="next">
+                        <BigGhostButton>
+                          {next.frontmatter.title} - Next →
+                        </BigGhostButton>
+                      </Link>
+                    )}
+                  </li>
+                </ul>
+              </nav>
+            </BoxContainer>
           </React.Fragment>
         );
       }}

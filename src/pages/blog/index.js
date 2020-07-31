@@ -36,8 +36,6 @@ const List = function ({ data, pageContext }) {
             <Spacer height="20px" />
             <TransparentContainer>
               {posts.map(({ node }) => {
-                console.log(node.frontmatter);
-                if (node.frontmatter.hidden === true) return;
                 const title = node.frontmatter.title || node.fields.slug;
                 const content = node.frontmatter.description || node.excerpt;
                 return (
@@ -65,7 +63,7 @@ export default List;
 
 export const pageQuery = graphql`
   query {
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(sort: {fields: [frontmatter___date], order: DESC}, filter: {frontmatter: {hidden: {ne: true}}}) {
       edges {
         node {
           excerpt(pruneLength: 350)

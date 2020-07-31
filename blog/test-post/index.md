@@ -12,7 +12,6 @@ We can embed images, code and videos:
 
 ![GDevelop ++](GD++.png)
 
-youtube: [A Cool Video](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
 `youtube: https://www.youtube.com/watch?v=dQw4w9WgXcQ`
 
 ```js
