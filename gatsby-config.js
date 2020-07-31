@@ -54,6 +54,25 @@ module.exports = {
         name: 'images',
       },
     },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/blog`,
+        name: 'blog',
+      },
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          `gatsby-remark-embed-video`, // Auto embed video links as iframes
+          `gatsby-remark-images`,
+          `gatsby-remark-prismjs`, // JS Code highlighting
+          `gatsby-remark-copy-linked-files`,
+          `gatsby-remark-smartypants`, // Smart punctuation
+        ],
+      },
+    },
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
   ],
