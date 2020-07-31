@@ -13,9 +13,9 @@ class BlogCard extends React.Component {
         {this.props.title && (
           <header className="card-header">
             <p className="card-header-title">{this.props.title}</p>
-            {this.props.date && 
-                <p className="card-header-icon">{this.props.date}</p>
-            }
+            {this.props.date && (
+              <p className="card-header-icon">{this.props.date}</p>
+            )}
           </header>
         )}
         <div className="card-content">

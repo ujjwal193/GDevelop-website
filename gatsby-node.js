@@ -198,6 +198,8 @@ exports.createPages = async ({ graphql, actions }) => {
     const previous = index === posts.length - 1 ? null : posts[index + 1].node;
     const next = index === 0 ? null : posts[index - 1].node;
 
+    if (post.node.frontmatter.hidden) return;
+
     createPage({
       path: '/blog/post' + post.node.fields.slug,
       component: blogPost,
