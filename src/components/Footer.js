@@ -41,7 +41,7 @@ const FooterText = styled.p`
 `;
 
 const FooterLink = styled(Link)`
-  font-size: 20px;
+  font-size: 18px;
   color: #387eca;
   font-weight: 500;
   display: block;
@@ -163,6 +163,9 @@ export default ({ t }) => (
           </FooterLink>
           <FooterLink to="/custom-behaviors">
             {t('Create custom behaviors')}
+          </FooterLink>
+          <FooterLink to="/live-preview-and-network-preview">
+            {t('Live Preview and Network Preview')}
           </FooterLink>
           <FooterLink to="/game-editors">{t('Game editors')}</FooterLink>
           <FooterTitle>Use Cases</FooterTitle>

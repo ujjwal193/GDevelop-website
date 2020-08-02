@@ -25,6 +25,7 @@ import SkewedBorderContainer from '../components/Containers/SkewedBorderContaine
 import SkewedBackgroundContainer from '../components/Containers/SkewedBackgroundContainer';
 import WhiteBigButton from '../components/WhiteBigButton';
 import { renderWebMonetizationMeta } from '../lib/WebMonetization';
+import CenteredYoutubeVideo from '../components/CenteredYoutubeVideo';
 
 export default class FeaturesPage extends React.Component {
   render() {
@@ -337,6 +338,43 @@ export default class FeaturesPage extends React.Component {
                 </BigButton>
               </CenteredRow>
             </SkewedBorderContainer>
+            <SkewedBackgroundContainer>
+              <BigTitle white>
+                {t('Super fast development with Live Preview')}
+              </BigTitle>
+              <List>
+                <ListItem>
+                  <MarkdownText
+                    source={t(
+                      'When editing your game in the editor, just press a single button to **apply your changes to the running game**.'
+                    )}
+                  />{' '}
+                  <i>
+                    {t(
+                      "It's a great way to tweak your game, build your levels or test the gameplay without having to restart from scratch after every changes, helping you stay focused."
+                    )}
+                  </i>
+                </ListItem>
+                <ListItem>
+                  <MarkdownText
+                    source={t(
+                      'Preview your games **on other devices (phone, tablets, other computers)** using the *Network Preview* - without having to export them. Useful to quickly validate the gameplay on smaller devices, verify the game performance and playtest the game with testers.'
+                    )}
+                  />{' '}
+                  <i>
+                    {t(
+                      "Even better, it's compatible with Live Preview: do changes in the editor and they will be applied to the game run on your external devices or browsers."
+                    )}
+                  </i>
+                </ListItem>
+              </List>
+              <CenteredYoutubeVideo src="https://www.youtube.com/embed/ByouBpwzBOQ?autoplay=1&modestbranding=1&loop=1" />
+              <CenteredRow>
+                <WhiteBigButton to="/live-preview-and-network-preview">
+                  {t('Learn more about Live Preview and Network Preview')}
+                </WhiteBigButton>
+              </CenteredRow>
+            </SkewedBackgroundContainer>
             <TransparentContainer>
               <BigTitle>
                 {t('Build ambitious games with advanced features')}
