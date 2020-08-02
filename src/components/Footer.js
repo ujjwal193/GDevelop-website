@@ -211,6 +211,14 @@ export default ({ t }) => (
         -{' '}
         <CopyrightLink to="/legal/privacy-policy" noLangPathPrefix>
           Privacy Policy
+        </CopyrightLink>{' '}
+        -{' '}
+        <CopyrightLink
+          to="../download/GDevelop_press_kit.zip"
+          noLangPathPrefix
+          download
+        >
+          Press kit
         </CopyrightLink>
       </CopyrightText>
     </ContentContainer>

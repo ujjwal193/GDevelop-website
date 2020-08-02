@@ -7,12 +7,13 @@ const Link = ({
   to,
   t,
   noLangPathPrefix,
+  download,
   category,
   action,
   label,
   ...otherProps
 }) =>
-  to === undefined || to === null || /^https?:\/\//.test(to) ? (
+  to === undefined || to === null || download || /^https?:\/\//.test(to) ? (
     <a
       href={to}
       onClick={() => {
@@ -24,6 +25,7 @@ const Link = ({
             t,
           });
       }}
+      download={download ? true : false}
       {...otherProps}
     />
   ) : (
