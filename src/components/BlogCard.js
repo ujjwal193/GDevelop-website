@@ -16,7 +16,14 @@ class BlogCard extends React.Component {
         {this.props.thumbnail && (
           <div className="card-image">
             <figure className="image">
-              <img style={{objectFit:"cover", height: "200px", objectPosition: "50% 50%"}} src={this.props.thumbnail}/>
+              <img
+                style={{
+                  objectFit: 'cover',
+                  height: '200px',
+                  objectPosition: '50% 50%',
+                }}
+                src={this.props.thumbnail}
+              />
             </figure>
           </div>
         )}

@@ -30,10 +30,7 @@ const BlogPost = ({ data, pageContext }) => {
           <React.Fragment>
             <Helmet title={t`GDevelop Blog`}>
               <html lang={pageContext.localeCode} />
-              <meta
-                name="description"
-                content="GDevelop is a game creator bundled with dozens of features to imagine and create any kind of games. No coding skills are required."
-              />
+              <meta name="description" content={post.excerpt} />
               {renderWebMonetizationMeta()}
             </Helmet>
             <Navbar t={t} />
@@ -44,7 +41,7 @@ const BlogPost = ({ data, pageContext }) => {
               title={post.frontmatter.title}
               subtitle={post.frontmatter.date}
             >
-              <p dangerouslySetInnerHTML={{ __html: post.html }} />
+              <div dangerouslySetInnerHTML={{ __html: post.html }} />
               <nav>
                 <ul
                   style={{
@@ -90,6 +87,7 @@ export const pageQuery = graphql`
     markdownRemark(fields: { slug: { eq: $slug } }) {
       id
       html
+      excerpt(pruneLength: 350)
       frontmatter {
         title
         date

@@ -40,11 +40,14 @@ const List = function ({ data, pageContext }) {
                 const title = node.frontmatter.title || node.fields.slug;
                 const content = node.frontmatter.description || node.excerpt;
 
-                const slug = node.fields.slug.replace("/", "");
+                const slug = node.fields.slug.replace('/', '');
                 let thumbnail = null;
-                for(let n of thumbnails) {
-                  const {node} = n;
-                  if(node.relativePath.indexOf(slug) !== -1 && node.relativePath.indexOf("thumbnail") !== -1) {
+                for (let n of thumbnails) {
+                  const { node } = n;
+                  if (
+                    node.relativePath.indexOf(slug) !== -1 &&
+                    node.relativePath.indexOf('thumbnail') !== -1
+                  ) {
                     thumbnail = node.publicURL;
                     break;
                   }
@@ -97,7 +100,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    allFile(filter: {sourceInstanceName: {eq: "blog"}}) {
+    allFile(filter: { sourceInstanceName: { eq: "blog" } }) {
       edges {
         node {
           publicURL
