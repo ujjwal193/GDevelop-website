@@ -4,6 +4,8 @@ import { Link, graphql } from 'gatsby';
 import PageContainer from '../lib/PageContainer';
 import Helmet from 'react-helmet';
 import Navbar, { NavBarSpacer } from '../components/Navbar';
+import Footer from '../components/Footer';
+import Spacer from '../components/Grid/Spacer';
 import BannerContainer from '../components/Containers/BannerContainer';
 import BoxContainer from '../components/Containers/BoxContainer';
 import BigGhostButton from '../components/BigGhostButton';
@@ -37,6 +39,7 @@ const BlogPost = ({ data, pageContext }) => {
             <BannerContainer>
               <NavBarSpacer />
             </BannerContainer>
+            <Spacer height="10px" style={{backgroundColor: "#f1f1f1"}}/>
             <BoxContainer
               title={post.frontmatter.title}
               subtitle={post.frontmatter.date}
@@ -73,6 +76,8 @@ const BlogPost = ({ data, pageContext }) => {
                 </ul>
               </nav>
             </BoxContainer>
+            <Spacer height="30px" style={{backgroundColor: "#f1f1f1"}}/>
+            <Footer t={t}/>
           </React.Fragment>
         );
       }}

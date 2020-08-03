@@ -4,12 +4,13 @@ import { graphql, useStaticQuery } from 'gatsby';
 import PageContainer from '../../lib/PageContainer';
 import Helmet from 'react-helmet';
 import Navbar, { NavBarSpacer } from '../../components/Navbar';
+import Footer from '../../components/Footer';
 import BannerContainer from '../../components/Containers/BannerContainer';
 import { renderWebMonetizationMeta } from '../../lib/WebMonetization';
 
 import Spacer from '../../components/Grid/Spacer';
 import CenteredRow from '../../components/Grid/CenteredRow';
-import SkewedBorderContainer from '../../components/Containers/SkewedBorderContainer';
+import GreyContainer from '../../components/Containers/GreyContainer';
 import WhiteHugeTitle from '../../components/WhiteHugeTitle';
 import BlogCard from '../../components/BlogCard';
 
@@ -35,7 +36,7 @@ const List = function ({ data, pageContext }) {
               <WhiteHugeTitle>{t('GDevelop Blog')}</WhiteHugeTitle>
             </BannerContainer>
             <Spacer height="20px" />
-            <SkewedBorderContainer>
+            <GreyContainer>
               {posts.map(({ node }) => {
                 const title = node.frontmatter.title || node.fields.slug;
                 const content = node.frontmatter.description || node.excerpt;
@@ -69,7 +70,8 @@ const List = function ({ data, pageContext }) {
                   </React.Fragment>
                 );
               })}
-            </SkewedBorderContainer>
+            </GreyContainer>
+            <Footer t={t} />
           </React.Fragment>
         );
       }}
