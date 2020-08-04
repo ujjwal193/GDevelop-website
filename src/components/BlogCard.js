@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
+import Author from '../components/Author';
 
 class BlogCard extends React.Component {
   render() {
@@ -27,6 +28,7 @@ class BlogCard extends React.Component {
             </figure>
           </div>
         )}
+        <Author />
         <div className="card-content">
           <div className="content">
             <p

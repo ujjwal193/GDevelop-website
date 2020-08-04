@@ -163,7 +163,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
 
-  const blogPost = path.resolve(`./src/templates/BlogPost.js`);
+  const blogPost = path.resolve(`./src/templates/BlogPage.js`);
   const result = await graphql(
     `
       {
