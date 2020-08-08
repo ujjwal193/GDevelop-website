@@ -1,5 +1,5 @@
 import React from 'react';
-import { graphql, useStaticQuery } from 'gatsby';
+import { graphql } from 'gatsby';
 
 import PageContainer from '../../lib/PageContainer';
 import Helmet from 'react-helmet';
@@ -7,28 +7,12 @@ import Navbar, { NavBarSpacer } from '../../components/Navbar';
 import Footer from '../../components/Footer';
 import BannerContainer from '../../components/Containers/BannerContainer';
 import { renderWebMonetizationMeta } from '../../lib/WebMonetization';
-
-import BigTitle from '../../components/BigTitle';
-import TransparentContainer from '../../components/Containers/TransparentContainer';
-import Paragraph from '../../components/Paragraph';
-import WhiteParagraph from '../../components/WhiteParagraph';
-
-import MakeGameBanner from '../../components/MakeGameBanner';
-import BottomCenteredImage from '../../components/BottomCenteredImage';
-import BigGhostButton from '../../components/BigGhostButton';
-import BigButton from '../../components/BigButton';
-import MarkdownText from '../../components/MarkdownText';
-import CenteredImage from '../../components/CenteredImage';
-import ExplanationText from '../../components/ExplanationText';
-import SkewedBorderContainer from '../../components/Containers/SkewedBorderContainer';
-import SkewedBackgroundContainer from '../../components/Containers/SkewedBackgroundContainer';
-import WhiteBigButton from '../../components/WhiteBigButton';
-
-import Spacer from '../../components/Grid/Spacer';
-import CenteredRow from '../../components/Grid/CenteredRow';
-import GreyContainer from '../../components/Containers/GreyContainer';
 import WhiteHugeTitle from '../../components/WhiteHugeTitle';
-import BlogCard from '../../components/BlogCard';
+
+import TransparentContainer from '../../components/Containers/TransparentContainer';
+import SkewedBorderContainer from '../../components/Containers/SkewedBorderContainer';
+import CenteredRow from '../../components/Grid/CenteredRow';
+import BlogCard from '../../components/blog/BlogCard';
 
 const List = function ({ data, pageContext }) {
   const thumbnails = data.allFile.edges;
@@ -55,9 +39,9 @@ const List = function ({ data, pageContext }) {
               const title = node.frontmatter.title || node.fields.slug;
               const content = node.frontmatter.description || node.excerpt;
               const index = i;
-
               const slug = node.fields.slug.replace('/', '');
               let thumbnail = null;
+
               for (let n of thumbnails) {
                 const { node } = n;
                 if (
@@ -71,35 +55,31 @@ const List = function ({ data, pageContext }) {
               return (
                 <React.Fragment>
                   {index % 2 === 0 ? (
-                    <div>
-                      <TransparentContainer>
-                        <CenteredRow key={node.fields.slug}>
-                          <BlogCard
-                            title={title}
-                            content={content}
-                            link={'/blog/post' + node.fields.slug}
-                            date={node.frontmatter.date}
-                            thumbnail={thumbnail}
-                            author={node.frontmatter.author}
-                          />
-                        </CenteredRow>
-                      </TransparentContainer>
-                    </div>
+                    <TransparentContainer>
+                      <CenteredRow key={node.fields.slug}>
+                        <BlogCard
+                          title={title}
+                          content={content}
+                          link={'/blog/post' + node.fields.slug}
+                          date={node.frontmatter.date}
+                          thumbnail={thumbnail}
+                          author={node.frontmatter.author}
+                        />
+                      </CenteredRow>
+                    </TransparentContainer>
                   ) : (
-                    <div>
-                      <SkewedBorderContainer>
-                        <CenteredRow key={node.fields.slug}>
-                          <BlogCard
-                            title={title}
-                            content={content}
-                            link={'/blog/post' + node.fields.slug}
-                            date={node.frontmatter.date}
-                            thumbnail={thumbnail}
-                            author={node.frontmatter.author}
-                          />
-                        </CenteredRow>
-                      </SkewedBorderContainer>
-                    </div>
+                    <SkewedBorderContainer>
+                      <CenteredRow key={node.fields.slug}>
+                        <BlogCard
+                          title={title}
+                          content={content}
+                          link={'/blog/post' + node.fields.slug}
+                          date={node.frontmatter.date}
+                          thumbnail={thumbnail}
+                          author={node.frontmatter.author}
+                        />
+                      </CenteredRow>
+                    </SkewedBorderContainer>
                   )}
                 </React.Fragment>
               );

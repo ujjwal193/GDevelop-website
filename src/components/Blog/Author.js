@@ -1,10 +1,12 @@
 import React from 'react';
+import styled from 'styled-components';
 import { Link, graphql, useStaticQuery } from 'gatsby';
-import getAuthorData from '../../blog/authors';
+import getAuthorData from '../../../blog/authors';
+import Avatar from './Avatar';
 
-const left = {
-  float: 'left',
-};
+const Container = styled.div`
+  float: left;
+`;
 
 export default function (props) {
   const authorData = getAuthorData(props.author);
@@ -15,7 +17,7 @@ export default function (props) {
           node {
             base
             childImageSharp {
-              fluid(maxWidth: 96, maxHeight: 96) {
+              fluid(maxWidth: 50, maxHeight: 50) {
                 src
               }
             }
@@ -31,24 +33,16 @@ export default function (props) {
       picture = node.childImageSharp.fluid.src;
   }
   return (
-    <div style={left}>
-      <div style={{ float: 'left', marginRight: 10 }}>
-        <figure style={{ width: 50 }}>
-          <img
-            style={{ borderRadius: '100%' }}
-            src={picture}
-            alt={authorData.name}
-          />
-        </figure>
-      </div>
-      <div style={left}>
+    <Container>
+      <Avatar src={picture} name={authorData.name} />
+      <Container>
         <Link
           to={`https://forum.gdevelop-app.com/u/${authorData.forum}/summary`}
         >
           <p>{authorData.name}</p>
-          <p style={left}>@{authorData.forum}</p>
+          <Container>@{authorData.forum}</Container>
         </Link>
-      </div>
-    </div>
+      </Container>
+    </Container>
   );
 }

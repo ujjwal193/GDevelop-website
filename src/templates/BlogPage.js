@@ -8,7 +8,7 @@ import Footer from '../components/Footer';
 import Spacer from '../components/Grid/Spacer';
 import BannerContainer from '../components/Containers/BannerContainer';
 import { renderWebMonetizationMeta } from '../lib/WebMonetization';
-import BlogArticle from '../components/BlogArticle';
+import BlogArticle from '../components/blog/BlogArticle';
 
 const BlogPost = ({ data, pageContext }) => {
   // Add localization settings
@@ -41,6 +41,7 @@ const BlogPost = ({ data, pageContext }) => {
 
             <BlogArticle post={post} next={next} previous={previous} />
 
+            <Spacer height="30px" />
             <Footer t={t} />
           </React.Fragment>
         );

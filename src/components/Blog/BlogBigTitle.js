@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { media, ie10and11 } from '../lib/media';
+import { media, ie10and11 } from '../../lib/media';
 
 const BlogBigTitle = styled.h1`
   font-size: 46px;
@@ -12,6 +12,7 @@ const BlogBigTitle = styled.h1`
   display: flex;
   float: left;
   margin-bottom: 10px;
+  width: 100%;
 
   color: ${(props) => (props.white ? 'white' : '#51509c')};
 
