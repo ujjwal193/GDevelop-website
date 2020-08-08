@@ -28,7 +28,9 @@ class BlogCard extends React.Component {
             </figure>
           </div>
         )}
-        <Author />
+        <Author 
+          author={this.props.author}
+        />
         <div className="card-content">
           <div className="content">
             <p

@@ -11,7 +11,7 @@ export default function (props) {
       title={props.post.frontmatter.title}
       subtitle={props.post.frontmatter.date}
     >
-      <Author />
+      <Author author={props.post.frontmatter.author} />
       <hr />
       <div dangerouslySetInnerHTML={{ __html: props.post.html }} />
       <nav>

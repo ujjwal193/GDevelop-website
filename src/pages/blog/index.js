@@ -64,6 +64,7 @@ const List = function ({ data, pageContext }) {
                         link={'/blog/post' + node.fields.slug}
                         date={node.frontmatter.date}
                         thumbnail={thumbnail}
+                        author={node.frontmatter.author}
                       />
                     </CenteredRow>
                     <Spacer height="50px" />
@@ -98,6 +99,7 @@ export const pageQuery = graphql`
             title
             description
             hidden
+            author
           }
         }
       }

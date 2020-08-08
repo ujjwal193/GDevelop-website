@@ -2,6 +2,7 @@
 title: Hello World
 date: "31-07-2020 12:12"
 description: "A test post"
+author: "arthuro555"
 ---
 
 # Hello World!
