@@ -3,6 +3,7 @@ title: Hello World
 date: "31-07-2020 12:12"
 description: "A test post"
 author: "arthuro555"
+hidden: true
 ---
 
 # Hello World!
@@ -17,7 +18,7 @@ We can embed images, code and videos:
 ```js
 function(world) {
     world = world || "world";
-    return `Hello ${world}!`
+    return `Hello ${world}!`;
 }
 console.log(helloWorld());
 ```
