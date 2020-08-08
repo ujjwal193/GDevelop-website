@@ -2,22 +2,30 @@ import React from 'react';
 import { Link } from 'gatsby';
 import getAuthorData from '../../blog/authors';
 
+const authorTag = {
+  float: 'left',
+};
+
+
 export default function (props) {
   const authorData = getAuthorData(props.author);
   return (
-    <div class="media" style={{ marginTop: '1rem', marginBottom: '0' }}>
-      <div class="media-left">
-        <figure class="image is-70x70">
+    <div style={{float:'left'}}>
+      <div style={{float:'left', marginRight: 10}}>
+        <figure style={{ width: 50 }}>
           <img
+            style={{ borderRadius: '100%' }}
             src={authorData.picture}
             alt={authorData.name}
           />
         </figure>
       </div>
-      <div class="media-content" style={{ marginTop: '10px' }}>
-        <p class="title is-4">{authorData.name}</p>
-        <Link to={`https://forum.gdevelop-app.com/u/${authorData.forum}/summary`}>
-  <p class="subtitle is-6">@{authorData.forum}</p>
+      <div style={{float:'left'}}>
+        <Link
+          to={`https://forum.gdevelop-app.com/u/${authorData.forum}/summary`}
+        >
+          <p>{authorData.name}</p>
+          <p style={authorTag}>@{authorData.forum}</p>
         </Link>
       </div>
     </div>

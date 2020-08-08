@@ -8,6 +8,22 @@ import Footer from '../../components/Footer';
 import BannerContainer from '../../components/Containers/BannerContainer';
 import { renderWebMonetizationMeta } from '../../lib/WebMonetization';
 
+import BigTitle from '../../components/BigTitle';
+import TransparentContainer from '../../components/Containers/TransparentContainer';
+import Paragraph from '../../components/Paragraph';
+import WhiteParagraph from '../../components/WhiteParagraph';
+
+import MakeGameBanner from '../../components/MakeGameBanner';
+import BottomCenteredImage from '../../components/BottomCenteredImage';
+import BigGhostButton from '../../components/BigGhostButton';
+import BigButton from '../../components/BigButton';
+import MarkdownText from '../../components/MarkdownText';
+import CenteredImage from '../../components/CenteredImage';
+import ExplanationText from '../../components/ExplanationText';
+import SkewedBorderContainer from '../../components/Containers/SkewedBorderContainer';
+import SkewedBackgroundContainer from '../../components/Containers/SkewedBackgroundContainer';
+import WhiteBigButton from '../../components/WhiteBigButton';
+
 import Spacer from '../../components/Grid/Spacer';
 import CenteredRow from '../../components/Grid/CenteredRow';
 import GreyContainer from '../../components/Containers/GreyContainer';
@@ -35,28 +51,27 @@ const List = function ({ data, pageContext }) {
               <NavBarSpacer />
               <WhiteHugeTitle>{t('GDevelop Blog')}</WhiteHugeTitle>
             </BannerContainer>
-            <Spacer height="20px" />
-            <GreyContainer>
-              {posts.map(({ node }) => {
-                const title = node.frontmatter.title || node.fields.slug;
-                const content = node.frontmatter.description || node.excerpt;
+            {posts.map(({ node }) => {
+              const title = node.frontmatter.title || node.fields.slug;
+              const content = node.frontmatter.description || node.excerpt;
 
-                const slug = node.fields.slug.replace('/', '');
-                let thumbnail = null;
-                for (let n of thumbnails) {
-                  const { node } = n;
-                  if (
-                    node.relativePath.indexOf(slug) !== -1 &&
-                    node.relativePath.indexOf('thumbnail') !== -1
-                  ) {
-                    thumbnail = node.publicURL;
-                    break;
-                  }
+              const slug = node.fields.slug.replace('/', '');
+              let thumbnail = null;
+              for (let n of thumbnails) {
+                const { node } = n;
+                if (
+                  node.relativePath.indexOf(slug) !== -1 &&
+                  node.relativePath.indexOf('thumbnail') !== -1
+                ) {
+                  thumbnail = node.publicURL;
+                  break;
                 }
-                console.log(thumbnail);
+              }
+              console.log(thumbnail);
 
-                return (
-                  <React.Fragment>
+              return (
+                <React.Fragment>
+                  <SkewedBorderContainer>
                     <CenteredRow key={node.fields.slug}>
                       <BlogCard
                         title={title}
@@ -67,11 +82,26 @@ const List = function ({ data, pageContext }) {
                         author={node.frontmatter.author}
                       />
                     </CenteredRow>
-                    <Spacer height="50px" />
-                  </React.Fragment>
-                );
-              })}
-            </GreyContainer>
+                    {/*
+                    <TransparentContainer>
+                      <CenteredRow>
+                        <BigTitle>{'Make your first game'}</BigTitle>
+                        <div> 10 aout 2020 </div>
+
+                      </CenteredRow>
+                      <Paragraph>
+                        {
+                          'Imagine and publis*.jsundled with tutorials and examples.'
+                        }
+                      </Paragraph>
+                    </TransparentContainer>
+                    */}
+
+                    {/*  */}
+                  </SkewedBorderContainer>
+                </React.Fragment>
+              );
+            })}
             <Footer t={t} />
           </React.Fragment>
         );
