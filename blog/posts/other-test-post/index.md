@@ -1,7 +1,7 @@
 ---
 title: TesT PosT
-date: "31-07-2020 12:12"
-hidden: true
+date: "08-08-2020 12:12"
+hidden: false
 ---
 
 # A test Post

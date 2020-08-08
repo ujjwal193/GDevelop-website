@@ -1,6 +1,6 @@
 ---
 title: Blog Opened 🎉
-date: "31-07-2020 15:03"
+date: "01-06-2020 15:03"
 author: "4ian"
 ---
 

@@ -45,14 +45,10 @@ class BlogCard extends React.Component {
           <Row>
             <BlogBigTitle>{this.props.title}</BlogBigTitle>
           </Row>
-          <Row style={{ display: 'inline' }}>
-            <div>
-              <Author author={this.props.author} />
-            </div>
-            <div style={{ float: 'right' }}>
-              <FormatedDate>{this.props.date}</FormatedDate>
-            </div>
-          </Row>
+          <div>
+            <Author white author={this.props.author} />
+            <FormatedDate>{this.props.date}</FormatedDate>
+          </div>
         </Column>
         {this.props.thumbnail && (
           <div className="card-image">
@@ -68,7 +64,6 @@ class BlogCard extends React.Component {
             </figure>
           </div>
         )}
-
         <Paragraph>{this.props.content}</Paragraph>
       </div>
     );

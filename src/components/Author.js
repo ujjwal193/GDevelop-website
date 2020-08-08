@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, graphql, useStaticQuery } from 'gatsby';
 import getAuthorData from '../../blog/authors';
 
-const authorTag = {
+const left = {
   float: 'left',
 };
 
@@ -25,14 +25,13 @@ export default function (props) {
         }
       }      
     `);
-    console.log(query);
   let picture;
   for (let node of query.allFile.edges) {
     node = node.node;
     if(node.base === authorData.picture) picture = node.childImageSharp.fluid.src;
   }
   return (
-    <div style={{float:'left'}}>
+    <div style={left}>
       <div style={{float:'left', marginRight: 10}}>
         <figure style={{ width: 50 }}>
           <img
@@ -42,12 +41,12 @@ export default function (props) {
           />
         </figure>
       </div>
-      <div style={{float:'left'}}>
+      <div style={left}>
         <Link
           to={`https://forum.gdevelop-app.com/u/${authorData.forum}/summary`}
         >
           <p>{authorData.name}</p>
-          <p style={authorTag}>@{authorData.forum}</p>
+          <p style={left}>@{authorData.forum}</p>
         </Link>
       </div>
     </div>

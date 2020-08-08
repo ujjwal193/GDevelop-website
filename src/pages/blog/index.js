@@ -51,9 +51,10 @@ const List = function ({ data, pageContext }) {
               <NavBarSpacer />
               <WhiteHugeTitle>{t('GDevelop Blog')}</WhiteHugeTitle>
             </BannerContainer>
-            {posts.map(({ node }) => {
+            {posts.map(({ node }, i) => {
               const title = node.frontmatter.title || node.fields.slug;
               const content = node.frontmatter.description || node.excerpt;
+              const index = i;
 
               const slug = node.fields.slug.replace('/', '');
               let thumbnail = null;
@@ -67,38 +68,39 @@ const List = function ({ data, pageContext }) {
                   break;
                 }
               }
-              console.log(thumbnail);
-
               return (
                 <React.Fragment>
-                  <SkewedBorderContainer>
-                    <CenteredRow key={node.fields.slug}>
-                      <BlogCard
-                        title={title}
-                        content={content}
-                        link={'/blog/post' + node.fields.slug}
-                        date={node.frontmatter.date}
-                        thumbnail={thumbnail}
-                        author={node.frontmatter.author}
-                      />
-                    </CenteredRow>
-                    {/*
-                    <TransparentContainer>
-                      <CenteredRow>
-                        <BigTitle>{'Make your first game'}</BigTitle>
-                        <div> 10 aout 2020 </div>
-
-                      </CenteredRow>
-                      <Paragraph>
-                        {
-                          'Imagine and publis*.jsundled with tutorials and examples.'
-                        }
-                      </Paragraph>
-                    </TransparentContainer>
-                    */}
-
-                    {/*  */}
-                  </SkewedBorderContainer>
+                  {index % 2 === 0 ? (
+                    <div>
+                      <TransparentContainer>
+                        <CenteredRow key={node.fields.slug}>
+                          <BlogCard
+                            title={title}
+                            content={content}
+                            link={'/blog/post' + node.fields.slug}
+                            date={node.frontmatter.date}
+                            thumbnail={thumbnail}
+                            author={node.frontmatter.author}
+                          />
+                        </CenteredRow>
+                      </TransparentContainer>
+                    </div>
+                  ) : (
+                    <div>
+                      <SkewedBorderContainer>
+                        <CenteredRow key={node.fields.slug}>
+                          <BlogCard
+                            title={title}
+                            content={content}
+                            link={'/blog/post' + node.fields.slug}
+                            date={node.frontmatter.date}
+                            thumbnail={thumbnail}
+                            author={node.frontmatter.author}
+                          />
+                        </CenteredRow>
+                      </SkewedBorderContainer>
+                    </div>
+                  )}
                 </React.Fragment>
               );
             })}

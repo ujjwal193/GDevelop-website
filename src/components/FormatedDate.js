@@ -5,7 +5,7 @@ import { media, ie10and11 } from '../lib/media';
 const FormatedDate = {
   fontSize: 15,
   color: '#51509c',
-  float: 'left',
+  float: 'right',
 };
 
 export default ({ children, white }) => (
