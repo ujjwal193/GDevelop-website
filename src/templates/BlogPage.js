@@ -38,9 +38,9 @@ const BlogPost = ({ data, pageContext }) => {
             <BannerContainer>
               <NavBarSpacer />
             </BannerContainer>
-            
+
             <BlogArticle post={post} next={next} previous={previous} />
-            
+
             <Footer t={t} />
           </React.Fragment>
         );

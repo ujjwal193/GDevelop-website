@@ -9,5 +9,7 @@ const FormatedDate = {
 };
 
 export default ({ children, white }) => (
-    <div style={FormatedDate} white={white} >{children}</div>
+  <div style={FormatedDate} white={white}>
+    {children}
+  </div>
 );
