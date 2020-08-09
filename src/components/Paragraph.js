@@ -34,4 +34,4 @@ const DivParagraph = styled.div`
 `;
 
 export default Paragraph;
-export {DivParagraph};
+export { DivParagraph };

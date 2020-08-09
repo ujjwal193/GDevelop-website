@@ -6,11 +6,10 @@ import TransparentContainer from '../../components/Containers/TransparentContain
 import BigTitle from '../../components/BigTitle';
 import Author from '../../components/blog/Author';
 import FormatedDate from '../../components/blog/FormatedDate';
-import {DivParagraph} from '../../components/Paragraph';
+import { DivParagraph } from '../../components/Paragraph';
 import BigGhostButton from '../../components/BigGhostButton';
 
 import './videoStyle.css';
-
 
 const Container = styled.div`
   display: flex;
@@ -18,7 +17,6 @@ const Container = styled.div`
   flex-wrap: wrap;
   justify-content: space-between;
 `;
-
 
 export default function (props) {
   return (

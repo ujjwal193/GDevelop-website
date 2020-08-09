@@ -79,7 +79,16 @@ module.exports = {
             },
           }, // Auto embed video links as iframes
           { resolve: `gatsby-remark-images` },
-          { resolve: `gatsby-remark-prismjs` }, // JS Code highlighting
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              aliases: {
+                js: 'javascript',
+                sh: 'bash',
+                py: 'python',
+              },
+            },
+          }, // JS Code highlighting
           { resolve: `gatsby-remark-copy-linked-files` },
           { resolve: `gatsby-remark-smartypants` }, // Smart punctuation
         ],
