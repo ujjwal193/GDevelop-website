@@ -7,8 +7,8 @@ const FormatedDate = {
   float: 'right',
 };
 
-export default ({ children, white }) => (
+export default ({ date, white }) => (
   <div style={FormatedDate} white={white}>
-    {children}
+    <p>{new Date(date).toLocaleString(navigator.language)}</p>
   </div>
 );

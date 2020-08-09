@@ -25,7 +25,7 @@ export default function (props) {
         <BigTitle>{props.post.frontmatter.title}</BigTitle>
         <Container>
           <Author author={props.post.frontmatter.author} />
-          <FormatedDate>{props.post.frontmatter.date}</FormatedDate>
+          <FormatedDate date={props.post.frontmatter.date}/>
         </Container>
         <hr />
         <DivParagraph dangerouslySetInnerHTML={{ __html: props.post.html }} />

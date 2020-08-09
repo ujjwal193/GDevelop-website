@@ -27,7 +27,7 @@ class BlogCard extends React.Component {
         </Container>
         <Container>
           <Author author={this.props.author} />
-          <FormatedDate>{this.props.date}</FormatedDate>
+          <FormatedDate date={this.props.date}/>
         </Container>
         {this.props.thumbnail && (
           <div className="card-image">
