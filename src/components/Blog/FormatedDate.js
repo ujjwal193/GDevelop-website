@@ -1,5 +1,4 @@
 import React from 'react';
-import styled from 'styled-components';
 
 const FormatedDate = {
   fontSize: 15,
@@ -9,6 +8,6 @@ const FormatedDate = {
 
 export default ({ date, white }) => (
   <div style={FormatedDate} white={white}>
-    <p>{new Date(date).toLocaleString(navigator.language)}</p>
+    <p>{date}</p>
   </div>
 );
