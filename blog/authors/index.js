@@ -18,7 +18,6 @@ const users = {
 
 export default function(id) {
     return users[id] || {
-        forum: "anonym",
         name: "Anonym",
         picture: "anonym.png",
     };

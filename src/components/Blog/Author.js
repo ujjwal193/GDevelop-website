@@ -26,23 +26,28 @@ export default function (props) {
       }
     }
   `);
+
   let picture;
   for (let node of query.allFile.edges) {
     node = node.node;
     if (node.base === authorData.picture)
       picture = node.childImageSharp.fluid.src;
   }
+
+  let nameContainer = <p>{authorData.name}</p>;
+
+  if (authorData.forum)
+    nameContainer = (
+      <Link to={`https://forum.gdevelop-app.com/u/${authorData.forum}/summary`}>
+        {nameContainer}
+        <Container>@{authorData.forum}</Container>
+      </Link>
+    );
+
   return (
     <Container>
       <Avatar src={picture} name={authorData.name} />
-      <Container>
-        <Link
-          to={`https://forum.gdevelop-app.com/u/${authorData.forum}/summary`}
-        >
-          <p>{authorData.name}</p>
-          <Container>@{authorData.forum}</Container>
-        </Link>
-      </Container>
+      <Container>{nameContainer}</Container>
     </Container>
   );
 }
