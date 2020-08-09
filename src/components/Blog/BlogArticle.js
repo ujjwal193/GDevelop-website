@@ -2,14 +2,11 @@ import React from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
 
-import Spacer from '../../components/Grid/Spacer';
-import Column from '../../components/Grid/Column';
-import Row from '../../components/Grid/Row';
 import TransparentContainer from '../../components/Containers/TransparentContainer';
 import BigTitle from '../../components/BigTitle';
 import Author from '../../components/blog/Author';
 import FormatedDate from '../../components/blog/FormatedDate';
-import Paragraph from '../../components/Paragraph';
+import {DivParagraph} from '../../components/Paragraph';
 import BigGhostButton from '../../components/BigGhostButton';
 
 import './videoStyle.css';
@@ -33,7 +30,7 @@ export default function (props) {
           <FormatedDate>{props.post.frontmatter.date}</FormatedDate>
         </Container>
         <hr />
-        <Paragraph dangerouslySetInnerHTML={{ __html: props.post.html }} />
+        <DivParagraph dangerouslySetInnerHTML={{ __html: props.post.html }} />
         <hr />
         <nav>
           <Container>
