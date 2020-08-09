@@ -72,11 +72,16 @@ module.exports = {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
-          `gatsby-remark-embed-video`, // Auto embed video links as iframes
-          `gatsby-remark-images`,
-          `gatsby-remark-prismjs`, // JS Code highlighting
-          `gatsby-remark-copy-linked-files`,
-          `gatsby-remark-smartypants`, // Smart punctuation
+          {
+            resolve: `gatsby-remark-embed-video`,
+            options: {
+              containerClass: 'embedVideo-container',
+            },
+          }, // Auto embed video links as iframes
+          { resolve: `gatsby-remark-images` },
+          { resolve: `gatsby-remark-prismjs` }, // JS Code highlighting
+          { resolve: `gatsby-remark-copy-linked-files` },
+          { resolve: `gatsby-remark-smartypants` }, // Smart punctuation
         ],
       },
     },

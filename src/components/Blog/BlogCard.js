@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
+import styled from 'styled-components';
+
 import Column from '../Grid/Column';
 import Row from '../Grid/Row';
 import BigButton from '../../components/BigButton';
@@ -9,15 +11,24 @@ import Author from '../../components/blog/Author';
 import FormatedDate from '../../components/blog/FormatedDate';
 import BlogBigTitle from '../../components/blog/BlogBigTitle';
 
+const Container = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+`;
+
 class BlogCard extends React.Component {
   render() {
     let card = (
       <div>
-        <Column>
+        <Container>
           <BlogBigTitle>{this.props.title}</BlogBigTitle>
-            <Author author={this.props.author} />
-            <FormatedDate>{this.props.date}</FormatedDate>
-        </Column>
+        </Container>
+        <Container>
+          <Author author={this.props.author} />
+          <FormatedDate>{this.props.date}</FormatedDate>
+        </Container>
         {this.props.thumbnail && (
           <div className="card-image">
             <figure className="image">

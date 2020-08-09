@@ -12,19 +12,26 @@ import FormatedDate from '../../components/blog/FormatedDate';
 import Paragraph from '../../components/Paragraph';
 import BigGhostButton from '../../components/BigGhostButton';
 
+import './videoStyle.css';
+
+
 const Container = styled.div`
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-between;
 `;
+
 
 export default function (props) {
   return (
     <React.Fragment>
       <TransparentContainer>
         <BigTitle>{props.post.frontmatter.title}</BigTitle>
-        <Author author={props.post.frontmatter.author} />
-        <FormatedDate>{props.post.frontmatter.date}</FormatedDate>
-        <Spacer height="40px" />
+        <Container>
+          <Author author={props.post.frontmatter.author} />
+          <FormatedDate>{props.post.frontmatter.date}</FormatedDate>
+        </Container>
         <hr />
         <Paragraph dangerouslySetInnerHTML={{ __html: props.post.html }} />
         <hr />
