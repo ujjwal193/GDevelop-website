@@ -8,7 +8,7 @@ import Footer from '../components/Footer';
 import Spacer from '../components/Grid/Spacer';
 import BannerContainer from '../components/Containers/BannerContainer';
 import { renderWebMonetizationMeta } from '../lib/WebMonetization';
-import BlogArticle from '../components/blog/BlogArticle';
+import BlogArticle from '../components/Blog/BlogArticle';
 
 const BlogPost = ({ data, pageContext }) => {
   // Add localization settings

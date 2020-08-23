@@ -20,7 +20,6 @@ const Container = styled.div`
 
 export default function (props) {
   return (
-    <React.Fragment>
       <TransparentContainer>
         <BigTitle>{props.post.frontmatter.title}</BigTitle>
         <Container>
@@ -49,6 +48,5 @@ export default function (props) {
           </Container>
         </nav>
       </TransparentContainer>
-    </React.Fragment>
   );
 }

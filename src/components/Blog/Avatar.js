@@ -31,8 +31,6 @@ export default (props) => {
     }
   `);
 
-  console.log(query.allFile.edges);
-
   let picture;
   for (let node of query.allFile.edges) {
     node = node.node;

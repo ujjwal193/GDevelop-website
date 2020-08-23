@@ -12,7 +12,7 @@ import WhiteHugeTitle from '../../components/WhiteHugeTitle';
 import TransparentContainer from '../../components/Containers/TransparentContainer';
 import SkewedBorderContainer from '../../components/Containers/SkewedBorderContainer';
 import CenteredRow from '../../components/Grid/CenteredRow';
-import BlogCard from '../../components/blog/BlogCard';
+import BlogCard from '../../components/Blog/BlogCard';
 
 const List = function ({ data, pageContext }) {
   const thumbnails = data.allFile.edges;
