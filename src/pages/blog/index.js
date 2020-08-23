@@ -39,14 +39,14 @@ const List = function ({ data, pageContext }) {
               const title = node.frontmatter.title || node.fields.slug;
               const content = node.frontmatter.description || node.excerpt;
               const index = i;
-              const slug = node.fields.slug.replace(/\//ig, '');
+              const slug = node.fields.slug.replace(/\//gi, '');
               let thumbnail = null;
 
               for (let n of thumbnails) {
                 const { node } = n;
                 if (
                   node.relativeDirectory === slug &&
-                  node.name === "thumbnail"
+                  node.name === 'thumbnail'
                 ) {
                   thumbnail = node.publicURL;
                   break;

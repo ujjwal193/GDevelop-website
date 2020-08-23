@@ -20,33 +20,31 @@ const Container = styled.div`
 
 export default function (props) {
   return (
-      <TransparentContainer>
-        <BigTitle>{props.post.frontmatter.title}</BigTitle>
+    <TransparentContainer>
+      <BigTitle>{props.post.frontmatter.title}</BigTitle>
+      <Container>
+        <Author author={props.post.frontmatter.author} />
+        <FormatedDate date={props.post.frontmatter.date} />
+      </Container>
+      <hr />
+      <DivParagraph dangerouslySetInnerHTML={{ __html: props.post.html }} />
+      <hr />
+      <nav>
         <Container>
-          <Author author={props.post.frontmatter.author} />
-          <FormatedDate date={props.post.frontmatter.date}/>
+          {props.previous && props.previous.frontmatter.hidden !== true && (
+            <Link to={'/blog/post' + props.previous.fields.slug} rel="prev">
+              <BigGhostButton>
+                ← {props.previous.frontmatter.title}
+              </BigGhostButton>
+            </Link>
+          )}
+          {props.next && props.next.frontmatter.hidden !== true && (
+            <Link to={'/blog/post' + props.next.fields.slug} rel="next">
+              <BigGhostButton>{props.next.frontmatter.title} →</BigGhostButton>
+            </Link>
+          )}
         </Container>
-        <hr />
-        <DivParagraph dangerouslySetInnerHTML={{ __html: props.post.html }} />
-        <hr />
-        <nav>
-          <Container>
-            {props.previous && props.previous.frontmatter.hidden !== true && (
-              <Link to={'/blog/post' + props.previous.fields.slug} rel="prev">
-                <BigGhostButton>
-                  ← {props.previous.frontmatter.title}
-                </BigGhostButton>
-              </Link>
-            )}
-            {props.next && props.next.frontmatter.hidden !== true && (
-              <Link to={'/blog/post' + props.next.fields.slug} rel="next">
-                <BigGhostButton>
-                  {props.next.frontmatter.title} →
-                </BigGhostButton>
-              </Link>
-            )}
-          </Container>
-        </nav>
-      </TransparentContainer>
+      </nav>
+    </TransparentContainer>
   );
 }
