@@ -39,14 +39,14 @@ const List = function ({ data, pageContext }) {
               const title = node.frontmatter.title || node.fields.slug;
               const content = node.frontmatter.description || node.excerpt;
               const index = i;
-              const slug = node.fields.slug.replace('/', '');
+              const slug = node.fields.slug.replace(/\//ig, '');
               let thumbnail = null;
 
               for (let n of thumbnails) {
                 const { node } = n;
                 if (
-                  node.relativePath.indexOf(slug) !== -1 &&
-                  node.relativePath.indexOf('thumbnail') !== -1
+                  node.relativeDirectory === slug &&
+                  node.name === "thumbnail"
                 ) {
                   thumbnail = node.publicURL;
                   break;
@@ -120,7 +120,8 @@ export const pageQuery = graphql`
       edges {
         node {
           publicURL
-          relativePath
+          relativeDirectory
+          name
         }
       }
     }
