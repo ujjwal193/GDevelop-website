@@ -4,8 +4,8 @@ import styled from 'styled-components';
 
 import TransparentContainer from '../../components/Containers/TransparentContainer';
 import BigTitle from '../../components/BigTitle';
-import Author from '../../components/blog/Author';
-import FormatedDate from '../../components/blog/FormatedDate';
+import Author from '../../components/Blog/Author';
+import FormatedDate from '../../components/Blog/FormatedDate';
 import { DivParagraph } from '../../components/Paragraph';
 import BigGhostButton from '../../components/BigGhostButton';
 

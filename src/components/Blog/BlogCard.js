@@ -7,9 +7,9 @@ import Row from '../Grid/Row';
 import BigButton from '../../components/BigButton';
 import Paragraph from '../../components/Paragraph';
 
-import Author from '../../components/blog/Author';
-import FormatedDate from '../../components/blog/FormatedDate';
-import BlogBigTitle from '../../components/blog/BlogBigTitle';
+import Author from '../../components/Blog/Author';
+import FormatedDate from '../../components/Blog/FormatedDate';
+import BlogBigTitle from '../../components/Blog/BlogBigTitle';
 
 const Container = styled.div`
   display: flex;
