@@ -4,7 +4,8 @@ import { graphql, useStaticQuery } from 'gatsby';
 
 
 const Container = styled.div`
-  float: left;
+  display: flex;
+  justify-content: left;
   margin-right: 10px;
 `;
 

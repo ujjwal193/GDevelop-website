@@ -5,7 +5,8 @@ import getAuthorData from '../../../blog/authors';
 import Avatar from './Avatar';
 
 const Container = styled.div`
-  float: left;
+  display: flex;
+  justify-content: left;
 `;
 
 export default function (props) {
