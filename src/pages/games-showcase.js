@@ -634,7 +634,7 @@ const bannerGames = {
   mikoAdventuresPuffball: {
     imageSrc: require('../img/games/miko-adventurs-puffball/banner.jpg'),
     secondaryImageSrc: require('../img/games/miko-adventurs-puffball/thumbnail.jpeg'),
-    title: 'Miko Adventures: Puffball',
+    title: 'Miko Adventures: Puffball (in development)',
     author: 'Coriander Games',
     descriptionParagraphs: [
       'One day Miko was walking in the forest when suddenly he stumbled upon something that changed his life... uncover what happened to Miko and how can he make everything go back to normal again.',
@@ -642,8 +642,12 @@ const bannerGames = {
     ],
     links: [
       {
-        linkType: 'Itch.io',
-        link: 'https://coriandergames.itch.io/mikos-adventures',
+        linkType: 'Twitter',
+        link: 'https://twitter.com/CorianderGames',
+      },
+      {
+        linkType: 'Instagram',
+        link: 'https://www.instagram.com/coriandergames',
       },
     ],
   },
