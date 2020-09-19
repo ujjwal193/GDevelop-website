@@ -129,7 +129,7 @@ export default class FeaturesPage extends React.Component {
             />
             <MakeGameBanner
               title="Ready to make web games for Poki?"
-              text="GDevelop is an powerful game development tool for building web games."
+              text="GDevelop is a powerful game development tool for building web games."
             />
             <Footer t={t} />
           </React.Fragment>

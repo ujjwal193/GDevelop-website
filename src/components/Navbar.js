@@ -212,6 +212,7 @@ class Navbar extends React.Component {
               <NavLink to="/game-studios-indies-and-education">
                 {t('Game studios & education')}
               </NavLink>
+              <NavLink to="/blog">{t('Blog')}</NavLink>
             </LeftContainer>
             <RightContainer>
               <NavLink
