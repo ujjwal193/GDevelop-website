@@ -144,6 +144,13 @@ export default ({ t }) => (
           >
             {t('Twitter')}
           </FooterLink>
+          <FooterLink
+            to={"/blog"}
+            category="blog"
+            label="footer-blog"
+          >
+            {t('Blog')}
+          </FooterLink>
           <FooterLink to="/choose-language" noLangPathPrefix>
             <FontAwesomeIcon icon={faLanguage} />{' '}
             {t('This website in your language')}

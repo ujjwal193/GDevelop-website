@@ -2,9 +2,6 @@ import React from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
 
-import Column from '../Grid/Column';
-import Row from '../Grid/Row';
-import BigButton from '../../components/BigButton';
 import Paragraph from '../../components/Paragraph';
 
 import Author from '../../components/Blog/Author';

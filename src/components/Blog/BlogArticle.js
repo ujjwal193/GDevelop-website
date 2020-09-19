@@ -6,10 +6,9 @@ import TransparentContainer from '../../components/Containers/TransparentContain
 import BigTitle from '../../components/BigTitle';
 import Author from '../../components/Blog/Author';
 import FormatedDate from '../../components/Blog/FormatedDate';
-import { DivParagraph } from '../../components/Paragraph';
 import BigGhostButton from '../../components/BigGhostButton';
-
 import './videoStyle.css';
+import { BlogContentContainer } from './BlogContentContainer';
 
 const Container = styled.div`
   display: flex;
@@ -27,7 +26,7 @@ export default function (props) {
         <FormatedDate date={props.post.frontmatter.date} />
       </Container>
       <hr />
-      <DivParagraph dangerouslySetInnerHTML={{ __html: props.post.html }} />
+      <BlogContentContainer dangerouslySetInnerHTML={{ __html: props.post.html }} />
       <hr />
       <nav>
         <Container>

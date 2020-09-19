@@ -13,6 +13,7 @@ import TransparentContainer from '../../components/Containers/TransparentContain
 import SkewedBorderContainer from '../../components/Containers/SkewedBorderContainer';
 import CenteredRow from '../../components/Grid/CenteredRow';
 import BlogCard from '../../components/Blog/BlogCard';
+import WhiteParagraph from '../../components/WhiteParagraph';
 
 const List = function ({ data, pageContext }) {
   const thumbnails = data.allFile.edges;
@@ -34,6 +35,11 @@ const List = function ({ data, pageContext }) {
             <BannerContainer>
               <NavBarSpacer />
               <WhiteHugeTitle>{t('GDevelop Blog')}</WhiteHugeTitle>
+              <WhiteParagraph>
+                {t(
+                  'The blog of the GDevelop team, contributors and community.'
+                )}
+              </WhiteParagraph>
             </BannerContainer>
             {posts.map(({ node }, i) => {
               const title = node.frontmatter.title || node.fields.slug;
