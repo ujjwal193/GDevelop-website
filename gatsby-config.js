@@ -54,6 +54,46 @@ module.exports = {
         name: 'images',
       },
     },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/blog/posts`,
+        name: 'blog',
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/blog/authors`,
+        name: 'authors',
+      },
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-embed-video`,
+            options: {
+              containerClass: 'embedVideo-container',
+            },
+          }, // Auto embed video links as iframes
+          { resolve: `gatsby-remark-images` },
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              aliases: {
+                js: 'javascript',
+                sh: 'bash',
+                py: 'python',
+              },
+            },
+          }, // JS Code highlighting
+          { resolve: `gatsby-remark-copy-linked-files` },
+          { resolve: `gatsby-remark-smartypants` }, // Smart punctuation
+        ],
+      },
+    },
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
   ],
