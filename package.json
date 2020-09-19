@@ -32,7 +32,7 @@
     "i18next": "^10.6.0",
     "iso-639-1": "^2.0.3",
     "node-sass": "^4.14.1",
-    "prismjs": "^1.20.0",
+    "prismjs": "^1.21.0",
     "prop-types": "^15.6.0",
     "react": "16.13.1",
     "react-alice-carousel": "^1.9.1",
