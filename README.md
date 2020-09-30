@@ -39,3 +39,5 @@ Deployment is done by Netlify after any commit on `master`.
 This work is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/).
 
 GDevelop is under the MIT license: check out the [GDevelop repository](https://github.com/4ian/GD) for more information on how to contribute to the software.
+
+Hope you like it
